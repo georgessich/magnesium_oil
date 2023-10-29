@@ -1,0 +1,85 @@
+.body-product {
+  &__items {
+    display: flex;
+    padding-top: 69px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__name {
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 44px;
+    margin-bottom: 12px;
+    span {
+      color: #034c75;
+      font-weight: 500;
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+  &__props {
+    list-style: disc;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__img {
+    position: relative;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-25px);
+    }
+  }
+
+  &__moss {
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 400px;
+  }
+}
+
+#hydration .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-top: 145px;
+  margin-left: -65px;
+}
+
+#beenergy .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-left: -230px;
+  margin-top: -15px;
+  z-index: -1;
+}
+
+#detox .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-left: -100px;
+  margin-top: -60px;
+}
+
+.product-info {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Скрыть блок за пределами экрана */
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    z-index: 999; /* Поверх других элементов */
+    transition: right 0.3s ease; /* Анимация выезда */
+    /* Добавьте другие стили, чтобы задать внешний вид блока */
+  }

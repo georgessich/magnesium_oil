@@ -1,0 +1,24 @@
+.hair {
+  color: #000;
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    padding-top: 120px;
+    &-text {
+      max-width: 361px;
+      padding-top: 150px;
+      font-size: 22px;
+    }
+    &-text:nth-child(1) {
+      position: absolute;
+      left: 0;
+    }
+    &-text:nth-child(3) {
+      position: absolute;
+      right: 5%;
+    }
+  }
+
+  
+}

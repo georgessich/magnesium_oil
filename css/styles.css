@@ -1,0 +1,665 @@
+#hair-booster::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/moss-top.png);
+  top: 0;
+  left: 0;
+  width: 252px;
+  height: 258px;
+}
+#hair-booster::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/moss-bottom.png);
+  right: 0;
+  bottom: 0;
+  width: 252px;
+  height: 258px;
+}
+
+#hydration-product::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/drop-top.png);
+  top: 50px;
+  left: 0;
+  width: 105px;
+  height: 115px;
+}
+#hydration-product::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/drop-bottom.png);
+  right: 0;
+  bottom: 0;
+  width: 90px;
+  height: 85px;
+}
+
+#hydration-info {
+  position: relative;
+}
+#hydration-info::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/drop-block.png);
+  top: -60px;
+  right: 14px;
+  width: 43px;
+  height: 43px;
+}
+
+#beenergy-product::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/beenergy-top.png);
+  top: 10px;
+  left: 0;
+  width: 185px;
+  height: 250px;
+  z-index: -1;
+}
+#beenergy-product::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/beenergy-bottom.png);
+  right: 0;
+  bottom: 0;
+  width: 293px;
+  height: 374px;
+  z-index: -1;
+}
+
+#detox-product::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/detox-top.png);
+  top: 0;
+  left: 0;
+  width: 359px;
+  height: 281px;
+  z-index: -1;
+}
+#detox-product::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/detox-bottom.png);
+  right: 0;
+  bottom: 0;
+  width: 462px;
+  height: 653px;
+  z-index: -1;
+}
+@charset "UTF-8";
+.body-product__items {
+  display: flex;
+  padding-top: 69px;
+  justify-content: space-between;
+}
+.body-product__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-product__item ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.body-product__name {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 44px;
+  margin-bottom: 12px;
+}
+.body-product__name span {
+  color: #034c75;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+.body-product__props {
+  list-style: disc;
+  font-size: 18px;
+  font-weight: 500;
+}
+.body-product__img {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.body-product__img:hover {
+  transform: translateY(-25px);
+}
+.body-product__moss {
+  position: absolute;
+  margin-left: -150px;
+  margin-top: 400px;
+}
+
+#hydration .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-top: 145px;
+  margin-left: -65px;
+}
+
+#beenergy .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-left: -230px;
+  margin-top: -15px;
+  z-index: -1;
+}
+
+#detox .body-product__bottle .body-product__bg {
+  position: absolute;
+  margin-left: -100px;
+  margin-top: -60px;
+}
+
+.product-info {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Скрыть блок за пределами экрана */
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  z-index: 999; /* Поверх других элементов */
+  transition: right 0.3s ease; /* Анимация выезда */
+  /* Добавьте другие стили, чтобы задать внешний вид блока */
+}
+.body {
+  position: relative;
+}
+.body::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/body-leaf-top.png);
+  width: 293px;
+  height: 520px;
+  top: 25%;
+}
+.body::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/body-leaf-bottom.png);
+  width: 172px;
+  height: 248px;
+  bottom: 0;
+  right: 0;
+}
+.body__info {
+  padding-top: 56px;
+  display: flex;
+  font-size: 22px;
+  line-height: 140%;
+  gap: 68px;
+}
+.body__info p {
+  max-width: 670px;
+}
+.body__img {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 68px;
+  padding-bottom: 78px;
+}
+.buy__inner {
+  padding-top: 50px;
+}
+.buy__wrapper {
+  margin-bottom: 42px;
+}
+.buy__wrapper-text {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.buy__wrapper-link {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 277px;
+  height: 104px;
+  margin-right: 26px;
+}
+.buy__wrapper-marketplaces {
+  display: flex;
+  align-items: center;
+}
+.buy__info {
+  font-size: 18px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 200px;
+}
+.buy__info-text {
+  max-width: 430px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 21px;
+}
+.buy__info-link {
+  color: #000;
+}
+.buy__disclaimer {
+  margin-top: 43px;
+  font-size: 41px;
+  font-weight: 600;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.16em;
+}
+
+.buy__info-link.underline {
+  text-decoration: underline;
+}
+.hair-product {
+  position: relative;
+}
+.hair-product--wrapper {
+  display: flex;
+  padding-top: 69px;
+}
+.hair {
+  color: #000;
+}
+.hair__wrapper {
+  display: flex;
+  position: relative;
+  padding-top: 120px;
+}
+.hair__wrapper-text {
+  max-width: 361px;
+  padding-top: 150px;
+  font-size: 22px;
+}
+.hair__wrapper-text:nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+.hair__wrapper-text:nth-child(3) {
+  position: absolute;
+  right: 5%;
+}
+.hero {
+  background-image: url(../img/hero-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  background-position: center center;
+}
+.hero__title {
+  font-size: 70px;
+  font-weight: 500;
+  padding-top: 254px;
+}
+.hero__subtitle {
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 38px;
+}
+.hero__descr {
+  font-size: 26px;
+  font-weight: 200;
+  max-width: 747px;
+  margin-bottom: 43px;
+}
+.hero__links {
+  display: flex;
+  padding-bottom: 430px;
+}
+.hero__link {
+  color: #fff;
+}
+.hero__link-wrapper {
+  backdrop-filter: blur(27px);
+  font-weight: 400;
+  font-size: 22px;
+  border-radius: 21px;
+  border: 1px solid #fff;
+  margin-right: 46px;
+}
+.hero__link-wrapper:nth-child(1) {
+  padding: 9px 57px;
+}
+.hero__link-wrapper:nth-child(2) {
+  padding: 9px 62px;
+}
+.hero__product {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.production {
+  padding-bottom: 252px;
+  position: relative;
+}
+.production::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/leaf-top.png);
+  width: 292px;
+  height: 294px;
+  top: 0;
+  left: 0;
+}
+.production::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/leaf-bottom.png);
+  width: 173px;
+  height: 177px;
+  right: 0;
+  bottom: 0;
+}
+.production__items {
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 18px;
+  column-gap: 100px;
+  font-weight: 400;
+}
+.production__item {
+  position: relative;
+}
+.production__item:nth-child(1)::after, .production__item:nth-child(2)::after, .production__item:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/chevron-brown.png);
+  width: 66px;
+  height: 66px;
+  top: 0;
+  left: 200px;
+}
+.production__item-img {
+  margin-bottom: 20px;
+  position: relative;
+}
+.production__item-list li {
+  list-style: disc;
+  margin-bottom: 12px;
+}
+.production__item-steps {
+  padding-top: 44px;
+}
+.production__item-step {
+  background: linear-gradient(180deg, #CEC9C5 0%, #948982 96.46%);
+  font-size: 18px;
+  padding: 9px 17px;
+  position: relative;
+  border-radius: 7px;
+}
+.production__item-step:first-child::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/chevron-steps.png);
+  width: 66px;
+  height: 66px;
+  left: 115px;
+  top: 94px;
+}
+.production__item-step:last-child {
+  margin-top: 94px;
+}
+.production__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 1428px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1465px) {
+  .container {
+    width: 1085px;
+  }
+}
+.nav-scrolled a {
+  color: black;
+}
+
+.nav-scrolled .header__btn {
+  border: 1px solid #000;
+}
+
+.active-link {
+  border-bottom: 1px solid #000;
+}
+
+.nav-scrolled .active-btn {
+  background-color: #000;
+  color: #fff;
+}
+.video {
+  position: relative;
+  padding-bottom: 94px;
+}
+.video::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/leafs-bg.png);
+  bottom: 0;
+  right: 0;
+  width: 349px;
+  height: 442px;
+}
+.video__wrapper {
+  padding-top: 44px;
+}
+.video__wrapper-name {
+  font-size: 26px;
+  padding-top: 48px;
+  font-weight: 400;
+}
+.video__wrapper-btn img {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 98px;
+}
+.accordeon__item {
+  border-top: 1px solid #000;
+  padding: 30px 0 5px;
+}
+.accordeon__item:last-child {
+  border-bottom: 1px solid #000;
+}
+.accordeon__title {
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  width: 854px;
+  cursor: pointer;
+}
+.accordeon__title img {
+  transition: transform 0.3s ease;
+}
+.accordeon__content {
+  max-height: 0;
+  padding-top: 25px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.accordeon__content-lists {
+  display: flex;
+}
+.accordeon__content ul li {
+  list-style: disc;
+  margin-left: 20px;
+  max-width: 420px;
+}
+.accordeon__content-text {
+  margin-bottom: 30px;
+}
+.accordeon__works {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 54px;
+  row-gap: 48px;
+  margin-bottom: 30px;
+}
+.accordeon__works-item {
+  display: flex;
+}
+.accordeon__works-img {
+  align-self: start;
+  margin-right: 20px;
+}
+.accordeon__works-text {
+  font-size: 18px;
+}
+
+.accordeon__item.active .accordeon__title {
+  font-weight: 600;
+}
+
+.accordeon__item.active .accordeon__title img {
+  transform: rotate(90deg);
+}
+
+.accordeon__item.active .accordeon__content {
+  max-height: 500px;
+}
+
+@media (max-width: 1465px) {
+  .accordeon__title {
+    width: auto;
+  }
+  .hair-product--img {
+    width: 50%;
+  }
+  .hair-product--info {
+    width: 50%;
+  }
+}
+.header {
+  backdrop-filter: blur(27px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+}
+.header__menu-list {
+  display: flex;
+}
+.header__menu-link {
+  margin-right: 50px;
+  color: #fff;
+  font-weight: 500;
+}
+.header__btn {
+  border: 1px solid #fff;
+  padding: 8px 50px;
+  border-radius: 21px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.header__wrap {
+  padding-top: 19px;
+}
+
+.product__header .header__menu-link {
+  color: #000;
+}
+
+.product__header .header__btn {
+  border: 1px solid #000;
+  padding: 8px 50px;
+  border-radius: 21px;
+  color: #000;
+}
+.title__wrapper {
+  padding-top: 180px;
+}
+.title__wrapper span {
+  font-size: 22px;
+  color: #bdbdbd;
+}
+.title__wrapper h2 {
+  font-size: 32px;
+  font-weight: 600;
+}

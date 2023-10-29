@@ -1,0 +1,93 @@
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  width: 1428px;
+  margin: 0 auto;
+}
+
+@media(max-width: 1465px) {
+  .container {
+    width: 1085px;
+  }
+}
+.nav-scrolled a {
+  color: black;
+}
+
+.nav-scrolled .header__btn{
+  border: 1px solid #000;
+}
+
+.active-link {
+  border-bottom: 1px solid #000;
+}
+
+.nav-scrolled .active-btn {
+  background-color: #000;
+  color:#fff;
+}
+

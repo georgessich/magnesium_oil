@@ -1,0 +1,101 @@
+#hair-booster {
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/moss-top.png);
+        top:0;
+        left: 0;
+        width: 252px;
+        height: 258px;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/moss-bottom.png);
+        right:0;
+        bottom: 0;
+        width: 252px;
+        height: 258px;
+    }
+}
+
+#hydration-product {
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/drop-top.png);
+        top:50px;
+        left: 0;
+        width: 105px;
+        height: 115px;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/drop-bottom.png);
+        right:0;
+        bottom: 0;
+        width: 90px;
+        height: 85px;
+    }
+}
+
+#hydration-info {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/drop-block.png);
+        top:-60px;
+        right: 14px;
+        width: 43px;
+        height: 43px;
+    }
+}
+
+#beenergy-product {
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/beenergy-top.png);
+        top:10px;
+        left: 0;
+        width: 185px;
+        height: 250px;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/beenergy-bottom.png);
+        right:0;
+        bottom: 0;
+        width: 293px;
+        height: 374px;
+        z-index: -1;
+    }
+}
+
+
+#detox-product {
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/detox-top.png);
+        top:0;
+        left: 0;
+        width: 359px;
+        height: 281px;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/detox-bottom.png);
+        right:0;
+        bottom: 0;
+        width: 462px;
+        height: 653px;
+        z-index: -1;
+    }
+}

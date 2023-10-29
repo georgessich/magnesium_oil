@@ -1,0 +1,91 @@
+.production {
+    padding-bottom: 252px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/leaf-top.png);
+        width: 292px;
+        height: 294px;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/leaf-bottom.png);
+        width: 173px;
+        height: 177px;
+        right: 0;
+        bottom: 0;
+    }
+    &__items {
+        padding-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 18px;
+        column-gap: 100px;
+       font-weight: 400;
+    }
+
+    &__item {
+        position: relative;
+        &:nth-child(1)::after,
+        &:nth-child(2)::after,
+        &:nth-child(3)::after{
+            position: absolute;
+            content: "";
+            background-image: url(../img/chevron-brown.png);
+            width: 66px;
+            height: 66px;
+            top:0;
+            left:200px;
+        }
+
+        &-img {
+            margin-bottom: 20px;
+            position: relative;
+
+            
+           
+        }
+
+     
+
+        &-list li {
+            list-style: disc;
+            margin-bottom: 12px;
+        }
+        &-steps {
+            padding-top: 44px;
+        }
+        &-step {
+            background: linear-gradient(180deg, #CEC9C5 0%, #948982 96.46%);
+            font-size: 18px;
+            padding: 9px 17px;
+            position: relative;
+            border-radius: 7px;
+            &:first-child::after {
+                content: "";
+                position: absolute;
+                background-image: url(../img/chevron-steps.png);
+                width: 66px;
+                height: 66px;
+                left: 115px;
+                top: 94px;
+            }
+            &:last-child {
+                margin-top: 94px;
+            }
+        }
+    }
+
+
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}

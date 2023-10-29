@@ -1,0 +1,32 @@
+.video {
+    position: relative;
+    padding-bottom: 94px;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/leafs-bg.png);
+        bottom: 0;
+        right: 0;
+        width: 349px;
+        height: 442px;
+    }
+    &__wrapper {
+        padding-top: 44px;
+
+        &-name {
+            font-size: 26px;
+            padding-top: 48px;
+            font-weight: 400;
+        }
+
+        &-btn {
+           
+            img {
+                display: flex;
+                margin: 0 auto;
+                padding-top: 98px;
+            }
+        }
+
+    }
+}

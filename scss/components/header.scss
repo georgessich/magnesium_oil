@@ -1,0 +1,50 @@
+.header {
+  backdrop-filter: blur(27px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+  }
+
+  &__menu-list {
+    display: flex;
+  }
+
+  &__menu-link {
+    margin-right: 50px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  &__btn {
+    border: 1px solid #fff;
+    padding: 8px 50px;
+    border-radius: 21px;
+    color: #fff;
+    font-weight: 500;
+  }
+}
+
+.header__wrap {
+  padding-top: 19px;
+}
+
+
+.product__header .header__menu-link {
+  color: #000;
+}
+
+.product__header .header__btn {
+  border: 1px solid #000;
+  padding: 8px 50px;
+  border-radius: 21px;
+  color: #000;
+}

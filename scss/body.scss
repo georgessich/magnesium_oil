@@ -1,0 +1,37 @@
+.body {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/body-leaf-top.png);
+    width: 293px;
+    height: 520px;
+    top: 25%;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/body-leaf-bottom.png);
+    width: 172px;
+    height: 248px;
+    bottom:0;
+    right: 0;
+  }
+  &__info {
+    padding-top: 56px;
+    display: flex;
+    font-size: 22px;
+    line-height: 140%;
+    gap: 68px;
+    p {
+      max-width: 670px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 68px;
+    padding-bottom: 78px;
+  }
+}
