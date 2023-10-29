@@ -30,3 +30,17 @@
 
     }
 }
+
+
+@media (max-width: 450px) {
+    .video {
+
+        &__wrapper {
+
+            iframe {
+                width: 346px;
+                height: 193px;
+            }
+        }
+    }
+}

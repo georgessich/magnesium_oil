@@ -52,6 +52,12 @@ const sectionObserver = new IntersectionObserver((entries) => {
       } else {
         headerBtn.classList.remove('active-btn')
       }
+      if(targetId === "hair-booster") {
+        headerLinks[0].classList.add('active-link');
+      }
+      if(targetId === "body-products") {
+        headerLinks[1].classList.add('active-link');
+      }
     }
   });
 }, { threshold: 0.5 });

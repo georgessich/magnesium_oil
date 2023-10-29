@@ -1,4 +1,4 @@
-#hair-booster::before {
+#hair-booster-wrap::before {
   position: absolute;
   content: "";
   background-image: url(../img/moss-top.png);
@@ -7,7 +7,7 @@
   width: 252px;
   height: 258px;
 }
-#hair-booster::after {
+#hair-booster-wrap::after {
   position: absolute;
   content: "";
   background-image: url(../img/moss-bottom.png);
@@ -298,7 +298,7 @@
 .hero__title {
   font-size: 70px;
   font-weight: 500;
-  padding-top: 254px;
+  padding-top: 230px;
 }
 .hero__subtitle {
   font-weight: 500;
@@ -415,6 +415,7 @@
   right: 0;
   z-index: -1;
 }
+@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -475,6 +476,23 @@ svg {
   height: auto;
 }
 
+::-webkit-scrollbar {
+  width: 0; /* Для Safari и Chrome */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Для Safari и Chrome */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Для Safari и Chrome */
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: none;
+}
+
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -530,6 +548,13 @@ body {
   display: flex;
   margin: 0 auto;
   padding-top: 98px;
+}
+
+@media (max-width: 450px) {
+  .video__wrapper iframe {
+    width: 346px;
+    height: 193px;
+  }
 }
 .accordeon__item {
   border-top: 1px solid #000;
@@ -662,4 +687,10 @@ body {
 .title__wrapper h2 {
   font-size: 32px;
   font-weight: 600;
+}
+
+@media (max-width: 450px) {
+  .title__wrapper h2 {
+    font-size: 24px;
+  }
 }
