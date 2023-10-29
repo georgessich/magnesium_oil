@@ -6,3 +6,12 @@
         padding-top: 69px;
     }
 }
+
+@media(max-width:450px) {
+    .hair-product {
+
+        &--wrapper {
+            flex-direction: column-reverse;
+        }
+    }
+}

@@ -5,6 +5,12 @@
     display: flex;
     position: relative;
     padding-top: 120px;
+
+    &-img {
+      &--mobile {
+        display: none;
+      }
+    }
     &-text {
       max-width: 361px;
       padding-top: 150px;
@@ -21,4 +27,32 @@
   }
 
   
+}
+
+@media (max-width: 450px) {
+  .hair {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      &-text {
+        max-width: auto;
+        padding-top: 0;
+        font-size: 14px;
+      }
+      &-text:nth-child(1), 
+      &-text:nth-child(3) {
+        position: inherit;
+        right: 0;
+      }
+      &-img {
+        display: none;
+
+        &--mobile {
+          display: block;
+        }
+      }
+    }
+  }
 }
