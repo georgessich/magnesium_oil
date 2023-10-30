@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   z-index: 2;
+
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -37,7 +38,9 @@
   padding-top: 19px;
 }
 
-
+.header__mobile {
+  display: none;
+}
 .product__header .header__menu-link {
   color: #000;
 }
@@ -47,4 +50,17 @@
   padding: 8px 50px;
   border-radius: 21px;
   color: #000;
+}
+
+@media(max-width: 724px) {
+  .header {
+    display: none;
+  }
+  .header__mobile {
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    backdrop-filter: blur(13.5px);
+  }
 }

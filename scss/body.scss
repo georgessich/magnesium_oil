@@ -33,5 +33,48 @@
     margin: 0 auto;
     padding-top: 68px;
     padding-bottom: 78px;
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+
+@media(max-width: 724px) {
+  .body {
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../img/body-leaf-bottom.png);
+      width: 172px;
+      height: 248px;
+      bottom:auto;
+      top:0;
+      right: 0;
+    }
+
+    &__info {
+      flex-direction: column;
+      padding-top: 26px;
+      font-size: 14px;
+      gap: 15px;
+      margin-bottom: 28px;
+      p {
+        max-width: none;
+      }
+    }
+    &__img {
+      display: none;
+
+      &-mobile {
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 }

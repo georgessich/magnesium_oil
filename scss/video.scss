@@ -1,6 +1,7 @@
 .video {
     position: relative;
     padding-bottom: 94px;
+
     &::after {
         content: "";
         position: absolute;
@@ -10,6 +11,7 @@
         width: 349px;
         height: 442px;
     }
+
     &__wrapper {
         padding-top: 44px;
 
@@ -20,7 +22,7 @@
         }
 
         &-btn {
-           
+
             img {
                 display: flex;
                 margin: 0 auto;
@@ -44,7 +46,25 @@
 
             &-name {
                 font-size: 14px;
+                margin-bottom: 250px;
             }
+
+            &-btn {
+
+                img {
+                    position: absolute;
+                    top: 75%;
+                    left: 45%;
+                    width: 30px;
+                }
+            }
+        }
+
+        &::after {
+
+            left: 35%;
+            right: auto;
+            width: 260px;
         }
     }
 }

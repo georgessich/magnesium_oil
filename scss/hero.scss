@@ -1,4 +1,4 @@
-.hero{
+.hero {
     background-image: url(../img/hero-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,6 +11,7 @@
         font-weight: 500;
         padding-top: 230px;
     }
+
     &__subtitle {
         font-weight: 500;
         font-size: 50px;
@@ -23,31 +24,85 @@
         max-width: 747px;
         margin-bottom: 43px;
     }
+
     &__links {
         display: flex;
         padding-bottom: 430px;
     }
-   &__link {
-    color: #fff;
 
-    &-wrapper {
-        backdrop-filter: blur(27px);
-        font-weight: 400;
-        font-size: 22px;
-        border-radius: 21px;
-        border: 1px solid #fff;
-        margin-right: 46px;
+    &__link {
+        color: #fff;
+
+        &-wrapper {
+            backdrop-filter: blur(27px);
+            font-weight: 400;
+            font-size: 22px;
+            border-radius: 21px;
+            border: 1px solid #fff;
+            margin-right: 46px;
+        }
+
+        &-wrapper:nth-child(1) {
+            padding: 9px 57px;
+        }
+
+        &-wrapper:nth-child(2) {
+            padding: 9px 62px;
+        }
     }
-    &-wrapper:nth-child(1){
-        padding: 9px 57px;
+
+    &__product {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &-mobile {
+            display: none;
+        }
     }
-    &-wrapper:nth-child(2){
-        padding: 9px 62px;
+}
+
+
+@media (max-width: 724px) {
+
+    .hero {
+        background-image: url(../img/hero-bg-mobile.png);
+        text-align: center;
+
+        &__title {
+            font-size: 33px;
+        }
+
+        &__subtitle {
+            font-size: 23px;
+        }
+
+        &__descr {
+            font-size: 16px;
+        }
+
+        &__links {
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        &__link {
+            &-wrapper {
+                margin-right: 0;
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__product {
+            display: none;
+
+            &-mobile {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
     }
-   }
-   &__product {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-   }
 }

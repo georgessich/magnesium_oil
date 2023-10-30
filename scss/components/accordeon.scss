@@ -80,3 +80,24 @@
     width: 50%;
   }
 }
+
+@media(max-width: 724px) {
+  .accordeon {
+
+    &__item {
+      padding: 10px 0 5px;
+    }
+    &__title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &__content {
+      padding-top: 10px;
+      &-text {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

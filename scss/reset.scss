@@ -89,6 +89,12 @@ body {
     width: 1085px;
   }
 }
+@media(max-width: 1024px) {
+  .container {
+    width: 786px;
+    padding: 0 22px;
+  }
+}
 .nav-scrolled a {
   color: black;
 }
@@ -108,6 +114,6 @@ body {
 
 @media(max-width: 450px) {
   .container {
-    padding: 0 22px;
+  
   }
 }

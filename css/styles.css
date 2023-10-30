@@ -90,6 +90,22 @@
   height: 653px;
   z-index: -1;
 }
+
+@media (max-width: 724px) {
+  #hair-booster-wrap::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/moss-mobile.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 199px;
+    height: 304px;
+  }
+  #hair-booster-wrap::after {
+    display: none;
+  }
+}
 @charset "UTF-8";
 .body-product__items {
   display: flex;
@@ -205,6 +221,43 @@
   padding-top: 68px;
   padding-bottom: 78px;
 }
+.body__img-mobile {
+  display: none;
+}
+
+@media (max-width: 724px) {
+  .body::before {
+    display: none;
+  }
+  .body::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/body-leaf-bottom.png);
+    width: 172px;
+    height: 248px;
+    bottom: auto;
+    top: 0;
+    right: 0;
+  }
+  .body__info {
+    flex-direction: column;
+    padding-top: 26px;
+    font-size: 14px;
+    gap: 15px;
+    margin-bottom: 28px;
+  }
+  .body__info p {
+    max-width: none;
+  }
+  .body__img {
+    display: none;
+  }
+  .body__img-mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+}
 .buy__inner {
   padding-top: 50px;
 }
@@ -270,6 +323,7 @@
 @media (max-width: 450px) {
   .hair-product--wrapper {
     flex-direction: column-reverse;
+    padding-top: 30px;
   }
 }
 .hair {
@@ -297,6 +351,22 @@
   right: 5%;
 }
 
+@media (max-width: 1435px) {
+  .hair__wrapper-text {
+    max-width: 280px;
+    padding-top: 100px;
+  }
+  .hair__wrapper-text:nth-child(3) {
+    position: absolute;
+    right: 0%;
+  }
+}
+@media (max-width: 1024px) {
+  .hair__wrapper-text {
+    max-width: 200px;
+    padding-top: 0;
+  }
+}
 @media (max-width: 450px) {
   .hair__wrapper {
     display: flex;
@@ -368,6 +438,43 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.hero__product-mobile {
+  display: none;
+}
+
+@media (max-width: 724px) {
+  .hero {
+    background-image: url(../img/hero-bg-mobile.png);
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 33px;
+  }
+  .hero__subtitle {
+    font-size: 23px;
+  }
+  .hero__descr {
+    font-size: 16px;
+  }
+  .hero__links {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .hero__link-wrapper {
+    margin-right: 0;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .hero__product {
+    display: none;
+  }
+  .hero__product-mobile {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
 .production {
   padding-bottom: 252px;
@@ -539,6 +646,12 @@ body {
     width: 1085px;
   }
 }
+@media (max-width: 1024px) {
+  .container {
+    width: 786px;
+    padding: 0 22px;
+  }
+}
 .nav-scrolled a {
   color: black;
 }
@@ -554,12 +667,6 @@ body {
 .nav-scrolled .active-btn {
   background-color: #000;
   color: #fff;
-}
-
-@media (max-width: 450px) {
-  .container {
-    padding: 0 22px;
-  }
 }
 .video {
   position: relative;
@@ -595,6 +702,18 @@ body {
   }
   .video__wrapper-name {
     font-size: 14px;
+    margin-bottom: 250px;
+  }
+  .video__wrapper-btn img {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    width: 30px;
+  }
+  .video::after {
+    left: 35%;
+    right: auto;
+    width: 260px;
   }
 }
 .accordeon__item {
@@ -672,6 +791,22 @@ body {
     width: 50%;
   }
 }
+@media (max-width: 724px) {
+  .accordeon__item {
+    padding: 10px 0 5px;
+  }
+  .accordeon__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .accordeon__content {
+    padding-top: 10px;
+  }
+  .accordeon__content-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
 .header {
   backdrop-filter: blur(27px);
   position: fixed;
@@ -708,6 +843,10 @@ body {
   padding-top: 19px;
 }
 
+.header__mobile {
+  display: none;
+}
+
 .product__header .header__menu-link {
   color: #000;
 }
@@ -717,6 +856,19 @@ body {
   padding: 8px 50px;
   border-radius: 21px;
   color: #000;
+}
+
+@media (max-width: 724px) {
+  .header {
+    display: none;
+  }
+  .header__mobile {
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    backdrop-filter: blur(13.5px);
+  }
 }
 .title__wrapper {
   padding-top: 180px;

@@ -99,3 +99,22 @@
         z-index: -1;
     }
 }
+
+
+@media (max-width: 724px) {
+    #hair-booster-wrap {
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url(../img/moss-mobile.png);
+            top:0;
+            right:0;
+            left: auto;
+            width: 199px;
+            height: 304px;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
