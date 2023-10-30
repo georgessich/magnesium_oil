@@ -40,6 +40,9 @@
 
 .header__mobile {
   display: none;
+  &-menu {
+    display: none;
+  }
 }
 .product__header .header__menu-link {
   color: #000;
@@ -54,13 +57,91 @@
 
 @media(max-width: 724px) {
   .header {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(13.5px);
+    
+  }
+  .mobile__wrapper {
+    width: 100%;
+    box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.25);
+  }
+  .header__wrap {
     display: none;
   }
   .header__mobile {
-    display: block;
-    position: fixed;
+    display: flex;
     background-color: #fff;
     width: 100%;
     backdrop-filter: blur(13.5px);
+    padding: 14px 22px;
+    align-items: flex-end;
+    &-list {
+      padding: 0 22px;
+    }
+    &-item {
+      padding: 20px 0;
+      border-top: 1px solid #DFDFDF;
+
+      &:last-child {
+        border-bottom: 1px solid #DFDFDF;
+      }
+    }
+    &-link {
+      font-size: 16px;
+      color: #000;
+    }
+    &-menu {
+
+      background-color: #fff;
+      height: 100vh;
+      transform: translateX(-100%); /* Начальная позиция вне экрана */
+      transition: transform 2.3s ease;
+    }
+    &-burger {
+      &:hover {
+        cursor: pointer;
+      }
+      &--bar {
+        width: 29px;
+        height: 2px;
+        margin-bottom: 7px;
+        background-color: black;
+      }
+    }
+
+    &--logo {
+      width: 117px;
+      height: 36px;
+      padding: 9px 0;
+      margin-left: 80px;
+    }
   }
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+.header__mobile.active {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+}
+.header__mobile.active .header__mobile--logo {
+  margin-left: 0;
+}
+.header__mobile-menu.active  {
+  display: block;
+  transform: translateX(0); 
+}
+
+.mobile__wrapper.active {
+  width: 90%;
 }

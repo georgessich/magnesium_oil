@@ -72,14 +72,20 @@
   margin-top: -60px;
 }
 
+#goodnight .body-product__bottle .body-product__bg {
+  width: 403px;
+  position: absolute;
+  margin-left: -280px;
+  z-index: -2;
+  margin-top: -95px;
+}
 .product-info {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Скрыть блок за пределами экрана */
-    width: 0%;
-    height: 100%;
-    background-color: white;
-    z-index: 999; /* Поверх других элементов */
-    transition: right 0.3s ease; /* Анимация выезда */
-    /* Добавьте другие стили, чтобы задать внешний вид блока */
-  }
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  transition: right 0.3s ease;
+}

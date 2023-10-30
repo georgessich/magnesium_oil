@@ -91,6 +91,27 @@
   z-index: -1;
 }
 
+#goodnight-product::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/goodnight-top.png);
+  top: 0;
+  left: 0;
+  width: 207px;
+  height: 251px;
+  z-index: -1;
+}
+#goodnight-product::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/goodnight-bottom.png);
+  right: 0;
+  bottom: 0;
+  width: 276px;
+  height: 303px;
+  z-index: -1;
+}
+
 @media (max-width: 724px) {
   #hair-booster-wrap::before {
     position: absolute;
@@ -105,8 +126,45 @@
   #hair-booster-wrap::after {
     display: none;
   }
+  #hydration-product::after,
+  #beenergy-product::after,
+  #detox-product::after,
+  #goodnight-product::after {
+    display: none;
+  }
+  #hydration-product::before {
+    background-image: url(../img/hydration-mobile-top.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 64px;
+    height: 96px;
+  }
+  #beenergy-product::before {
+    background-image: url(../img/beenergy-mobile-top.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 106px;
+    height: 173px;
+  }
+  #detox-product::before {
+    background-image: url(../img/detox-mobile-top.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 143px;
+    height: 193px;
+  }
+  #goodnight-product::before {
+    background-image: url(../img/goodnight-mobile-top.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 106px;
+    height: 204px;
+  }
 }
-@charset "UTF-8";
 .body-product__items {
   display: flex;
   padding-top: 69px;
@@ -174,16 +232,23 @@
   margin-top: -60px;
 }
 
+#goodnight .body-product__bottle .body-product__bg {
+  width: 403px;
+  position: absolute;
+  margin-left: -280px;
+  z-index: -2;
+  margin-top: -95px;
+}
+
 .product-info {
   position: fixed;
   top: 0;
-  right: -100%; /* Скрыть блок за пределами экрана */
+  right: -100%;
   width: 0%;
   height: 100%;
   background-color: white;
-  z-index: 999; /* Поверх других элементов */
-  transition: right 0.3s ease; /* Анимация выезда */
-  /* Добавьте другие стили, чтобы задать внешний вид блока */
+  z-index: 999;
+  transition: right 0.3s ease;
 }
 .body {
   position: relative;
@@ -233,8 +298,10 @@
     position: absolute;
     content: "";
     background-image: url(../img/body-leaf-bottom.png);
-    width: 172px;
-    height: 248px;
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 182px;
+    height: 198px;
     bottom: auto;
     top: 0;
     right: 0;
@@ -254,8 +321,6 @@
   }
   .body__img-mobile {
     display: block;
-    position: absolute;
-    left: 0;
   }
 }
 .buy__inner {
@@ -311,6 +376,42 @@
 
 .buy__info-link.underline {
   text-decoration: underline;
+}
+
+@media (max-width: 725px) {
+  .buy__info, .buy__disclaimer {
+    display: none;
+  }
+  .buy__wrapper-marketplaces {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+  }
+  .buy__wrapper-link {
+    width: 165px;
+    height: 71px;
+  }
+}
+.contacts__top, .contacts__bottom {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.contacts__top {
+  padding-top: 30px;
+}
+.contacts__top p, .contacts__top a {
+  margin-bottom: 15px;
+}
+.contacts__link {
+  color: #000;
+}
+.contacts__bottom {
+  font-weight: 500;
+  padding-top: 303px;
+}
+.contacts__bottom p {
+  margin-bottom: 15px;
 }
 .hair-product {
   position: relative;
@@ -582,6 +683,30 @@
   right: 0;
   z-index: -1;
 }
+
+@media (max-width: 725px) {
+  .production__img {
+    display: none;
+  }
+  .production__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .production__item {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+  }
+  .production__item-img {
+    width: 35px;
+    height: 35px;
+  }
+  .production__item-text {
+    padding-left: 8px;
+  }
+  .production__item ul {
+    margin-left: 20px;
+  }
+}
 @charset "UTF-8";
 /* Reset and base styles  */
 * {
@@ -845,6 +970,7 @@ body {
     height: 48px;
   }
 }
+@charset "UTF-8";
 .header {
   backdrop-filter: blur(27px);
   position: fixed;
@@ -884,6 +1010,9 @@ body {
 .header__mobile {
   display: none;
 }
+.header__mobile-menu {
+  display: none;
+}
 
 .product__header .header__menu-link {
   color: #000;
@@ -898,15 +1027,85 @@ body {
 
 @media (max-width: 724px) {
   .header {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(13.5px);
+  }
+  .mobile__wrapper {
+    width: 100%;
+    box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.25);
+  }
+  .header__wrap {
     display: none;
   }
   .header__mobile {
-    display: block;
-    position: fixed;
+    display: flex;
     background-color: #fff;
     width: 100%;
     backdrop-filter: blur(13.5px);
+    padding: 14px 22px;
+    align-items: flex-end;
   }
+  .header__mobile-list {
+    padding: 0 22px;
+  }
+  .header__mobile-item {
+    padding: 20px 0;
+    border-top: 1px solid #DFDFDF;
+  }
+  .header__mobile-item:last-child {
+    border-bottom: 1px solid #DFDFDF;
+  }
+  .header__mobile-link {
+    font-size: 16px;
+    color: #000;
+  }
+  .header__mobile-menu {
+    background-color: #fff;
+    height: 100vh;
+    transform: translateX(-100%); /* Начальная позиция вне экрана */
+    transition: transform 2.3s ease;
+  }
+  .header__mobile-burger:hover {
+    cursor: pointer;
+  }
+  .header__mobile-burger--bar {
+    width: 29px;
+    height: 2px;
+    margin-bottom: 7px;
+    background-color: black;
+  }
+  .header__mobile--logo {
+    width: 117px;
+    height: 36px;
+    padding: 9px 0;
+    margin-left: 80px;
+  }
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(2) {
+    opacity: 0;
+  }
+  .header__mobile-burger.active .header__mobile-burger--bar:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+.header__mobile.active {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.header__mobile.active .header__mobile--logo {
+  margin-left: 0;
+}
+
+.header__mobile-menu.active {
+  display: block;
+  transform: translateX(0);
+}
+
+.mobile__wrapper.active {
+  width: 90%;
 }
 .title__wrapper {
   padding-top: 180px;

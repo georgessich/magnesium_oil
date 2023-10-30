@@ -36,15 +36,14 @@
     column-gap: 200px;
 
     &-text {
-        max-width: 430px;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 21px;
-
+      max-width: 430px;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 21px;
     }
 
     &-link {
-        color: #000;
+      color: #000;
     }
   }
 
@@ -57,8 +56,29 @@
     text-align: center;
     letter-spacing: 0.16em;
   }
-
 }
 .buy__info-link.underline {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width: 725px) {
+  .buy {
+    &__info,
+    &__disclaimer {
+      display: none;
+    }
+
+    &__wrapper {
+      &-marketplaces {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+      }
+
+      &-link {
+        width: 165px;
+        height: 71px;
+      }
+    }
+  }
 }
