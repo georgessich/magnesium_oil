@@ -85,7 +85,7 @@
         &__links {
             flex-direction: column;
             margin: 0 auto;
-            padding-bottom: 390px;
+            padding-bottom: 0px;
         }
 
         &__link {
@@ -101,8 +101,6 @@
 
             &-mobile {
                 display: block;
-                position: absolute;
-                bottom: 0;
                 width: 100%;
             }
         }
