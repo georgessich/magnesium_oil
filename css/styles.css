@@ -478,6 +478,7 @@
   .hero__links {
     flex-direction: column;
     margin: 0 auto;
+    padding-bottom: 390px;
   }
   .hero__link-wrapper {
     margin-right: 0;
