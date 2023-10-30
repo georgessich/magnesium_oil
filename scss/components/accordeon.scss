@@ -3,7 +3,7 @@
     border-top: 1px solid #000;
     padding: 30px 0 5px;
     &:last-child {
-        border-bottom: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
   }
 
@@ -21,12 +21,11 @@
   &__content {
     max-height: 0;
     padding-top: 25px;
-   
+
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out; 
+    transition: max-height 0.5s ease-in-out;
     &-lists {
       display: flex;
-    
     }
     ul li {
       list-style: disc;
@@ -34,7 +33,7 @@
       max-width: 420px;
     }
     &-text {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
     }
   }
 
@@ -65,25 +64,18 @@
   transform: rotate(90deg);
 }
 .accordeon__item.active .accordeon__content {
-    max-height: 500px;
-
+  max-height: 500px;
 }
 
-@media(max-width: 1465px) {
+@media (max-width: 1465px) {
   .accordeon__title {
     width: auto;
   }
-  .hair-product--img {
-    width: 50%;
-  }
-  .hair-product--info {
-    width: 50%;
-  }
+
 }
 
-@media(max-width: 724px) {
+@media (max-width: 724px) {
   .accordeon {
-
     &__item {
       padding: 10px 0 5px;
     }
@@ -97,6 +89,18 @@
       &-text {
         font-size: 14px;
         margin-bottom: 15px;
+      }
+    }
+
+    &__works {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-text {
+        font-size: 14px;
+      }
+      &-img {
+        width: 48px;
+        height: 48px;
       }
     }
   }

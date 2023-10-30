@@ -320,10 +320,24 @@
   padding-top: 69px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1465px) {
+  .hair-product--img {
+    width: 50%;
+  }
+  .hair-product--info {
+    width: 50%;
+  }
+}
+@media (max-width: 724px) {
   .hair-product--wrapper {
     flex-direction: column-reverse;
     padding-top: 30px;
+  }
+  .hair-product--img {
+    width: 100%;
+  }
+  .hair-product--info {
+    width: 100%;
   }
 }
 .hair {
@@ -387,6 +401,9 @@
   }
   .hair__wrapper-img--mobile {
     display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 .hero {
@@ -450,6 +467,7 @@
   }
   .hero__title {
     font-size: 33px;
+    padding-top: 102px;
   }
   .hero__subtitle {
     font-size: 23px;
@@ -668,6 +686,12 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+@media (max-width: 725px) {
+  .container {
+    width: auto;
+  }
+}
 .video {
   position: relative;
   padding-bottom: 94px;
@@ -784,12 +808,6 @@ body {
   .accordeon__title {
     width: auto;
   }
-  .hair-product--img {
-    width: 50%;
-  }
-  .hair-product--info {
-    width: 50%;
-  }
 }
 @media (max-width: 724px) {
   .accordeon__item {
@@ -805,6 +823,16 @@ body {
   .accordeon__content-text {
     font-size: 14px;
     margin-bottom: 15px;
+  }
+  .accordeon__works {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .accordeon__works-text {
+    font-size: 14px;
+  }
+  .accordeon__works-img {
+    width: 48px;
+    height: 48px;
   }
 }
 .header {

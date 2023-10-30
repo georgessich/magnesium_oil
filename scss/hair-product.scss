@@ -7,12 +7,30 @@
     }
 }
 
-@media(max-width:450px) {
+@media (max-width: 1465px) {
+
+    .hair-product--img {
+      width: 50%;
+    }
+    .hair-product--info {
+      width: 50%;
+    }
+  }
+
+@media(max-width:724px) {
     .hair-product {
 
         &--wrapper {
             flex-direction: column-reverse;
             padding-top: 30px;
+        }
+
+        &--img {
+            width: 100%;
+        }
+
+        &--info {
+            width: 100%;
         }
     }
 }
