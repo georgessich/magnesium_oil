@@ -250,12 +250,6 @@
   z-index: 999;
   transition: right 0.3s ease;
 }
-
-@media (max-width: 725px) {
-  .body-product__items {
-    flex-direction: column;
-  }
-}
 .body {
   position: relative;
 }
