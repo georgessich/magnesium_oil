@@ -250,6 +250,15 @@
   z-index: 999;
   transition: right 0.3s ease;
 }
+
+@media (max-width: 725px) {
+  .body-product__items {
+    flex-direction: column;
+  }
+  .body-product__item {
+    height: 100vh;
+  }
+}
 .body {
   position: relative;
 }
@@ -1120,6 +1129,9 @@ body {
 }
 
 @media (max-width: 450px) {
+  .title__wrapper {
+    padding-top: 93px;
+  }
   .title__wrapper h2 {
     font-size: 24px;
   }

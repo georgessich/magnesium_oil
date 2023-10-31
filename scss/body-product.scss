@@ -89,3 +89,15 @@
   z-index: 999;
   transition: right 0.3s ease;
 }
+@media(max-width:725px) {
+
+  .body-product {
+
+    &__items {
+      flex-direction: column;
+    }
+    &__item {
+      height: 100vh;
+    }
+  }
+}
