@@ -255,9 +255,6 @@
   .body-product__items {
     flex-direction: column;
   }
-  .body-product__item {
-    height: 100vh;
-  }
 }
 .body {
   position: relative;
