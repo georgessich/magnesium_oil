@@ -746,7 +746,7 @@
 
 @media (max-width: 725px) {
   .production {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
   .production::after {
     display: none;
@@ -767,6 +767,7 @@
   .production__items {
     grid-template-columns: repeat(1, 350px);
     overflow: hidden;
+    padding-top: 25px;
   }
   .production__wrapper {
     margin-bottom: 51px;
