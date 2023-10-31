@@ -114,20 +114,22 @@
 
 @media (max-width: 724px) {
   #hair-booster-wrap::before {
-    display: none;
+    position: absolute;
+    content: "";
+    background-image: url(../img/moss-mobile.png);
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 199px;
+    height: 304px;
   }
   #hair-booster-wrap::after {
     display: none;
   }
-  #hair-booster-wrap #hydration-product::after, #hair-booster-wrap #hydration-product::before,
+  #hydration-product::after,
   #beenergy-product::after,
-  #beenergy-product::before,
   #detox-product::after,
-  #detox-product::before,
-  #goodnight-product::after,
-  #goodnight-product::before,
-  .body::after,
-  .body::before {
+  #goodnight-product::after {
     display: none;
   }
   #hydration-product::before {
@@ -219,8 +221,8 @@
 
 #beenergy .body-product__bottle .body-product__bg {
   position: absolute;
-  margin-left: -230px;
-  margin-top: -15px;
+  margin-left: -150px;
+  margin-top: 60px;
   z-index: -1;
 }
 
@@ -233,9 +235,9 @@
 #goodnight .body-product__bottle .body-product__bg {
   width: 403px;
   position: absolute;
-  margin-left: -280px;
+  margin-left: -106px;
   z-index: -2;
-  margin-top: -95px;
+  margin-top: -60px;
 }
 
 .product-info {
@@ -247,6 +249,19 @@
   background-color: white;
   z-index: 999;
   transition: right 0.3s ease;
+}
+
+@media (max-width: 725px) {
+  .body-product__items {
+    flex-direction: column;
+  }
+  .body-product__item {
+    margin-bottom: 100px;
+  }
+  #beenergy .body-product__bottle .body-product__bg {
+    margin-left: -147px;
+    margin-top: 61px;
+  }
 }
 .body {
   position: relative;
@@ -290,19 +305,19 @@
 
 @media (max-width: 724px) {
   .body::before {
-    display: none;
-  }
-  .body::after {
     position: absolute;
     content: "";
-    background-image: url(../img/body-leaf-bottom.png);
+    background-image: url(../img/body-top-mobile.png);
     background-position: right;
     background-repeat: no-repeat;
-    width: 182px;
-    height: 198px;
+    width: 107px;
+    height: 170px;
     bottom: auto;
     top: 0;
     right: 0;
+  }
+  .body::after {
+    display: none;
   }
   .body__info {
     flex-direction: column;
@@ -342,6 +357,9 @@
   height: 104px;
   margin-right: 26px;
 }
+.buy__wrapper-link img {
+  max-width: 100%;
+}
 .buy__wrapper-marketplaces {
   display: flex;
   align-items: center;
@@ -361,6 +379,9 @@
 }
 .buy__info-link {
   color: #000;
+}
+.buy__info-link img {
+  max-width: 100%;
 }
 .buy__disclaimer {
   margin-top: 43px;
@@ -390,6 +411,9 @@
     height: 71px;
   }
 }
+.contacts {
+  display: none;
+}
 .contacts__top, .contacts__bottom {
   display: flex;
   flex-direction: column;
@@ -410,6 +434,13 @@
 }
 .contacts__bottom p {
   margin-bottom: 15px;
+}
+
+@media (max-width: 725px) {
+  .contacts {
+    display: block;
+    height: 0;
+  }
 }
 .hair-product {
   position: relative;
@@ -626,24 +657,26 @@
   bottom: 0;
 }
 .production__items {
+  position: relative;
   padding-top: 70px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-size: 18px;
   column-gap: 100px;
   font-weight: 400;
+  overflow: hidden;
 }
-.production__item {
-  position: relative;
-}
-.production__item:nth-child(1)::after, .production__item:nth-child(2)::after, .production__item:nth-child(3)::after {
+.production__wrapper::after {
   position: absolute;
   content: "";
   background-image: url(../img/chevron-brown.png);
   width: 66px;
   height: 66px;
-  top: 0;
-  left: 200px;
+  top: 10%;
+  margin-left: 210px;
+}
+.production__item {
+  position: relative;
 }
 .production__item-img {
   margin-bottom: 20px;
@@ -663,18 +696,6 @@
   position: relative;
   border-radius: 7px;
 }
-.production__item-step:first-child::after {
-  content: "";
-  position: absolute;
-  background-image: url(../img/chevron-steps.png);
-  width: 66px;
-  height: 66px;
-  left: 115px;
-  top: 94px;
-}
-.production__item-step:last-child {
-  margin-top: 94px;
-}
 .production__img {
   position: absolute;
   bottom: 0;
@@ -682,12 +703,58 @@
   z-index: -1;
 }
 
+#button-right, #button-left {
+  display: none;
+}
+
+.step__wrapper {
+  margin-bottom: 94px;
+}
+.step__wrapper:first-child::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/chevron-steps.png);
+  width: 66px;
+  height: 66px;
+  left: 115px;
+  top: 136px;
+}
+
 @media (max-width: 725px) {
+  .production::after {
+    display: none;
+  }
+  .production::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/body-top-mobile.png);
+    width: 109px;
+    height: 170px;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
   .production__img {
     display: none;
   }
   .production__items {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 350px);
+    overflow: hidden;
+  }
+  .production__wrapper {
+    margin-bottom: 51px;
+  }
+  .production__wrapper::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/chevron-down-brown.png);
+    width: 66px;
+    height: 66px;
+    top: auto;
+    margin-left: 160px;
+  }
+  .production #button-right, .production #button-left {
+    display: block;
   }
   .production__item {
     display: flex;
@@ -704,6 +771,54 @@
   .production__item ul {
     margin-left: 20px;
   }
+  .production__item-steps {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .production__item-step {
+    font-size: 14px;
+    padding: 9px 12px;
+  }
+  .production__item-step:first-child::after {
+    display: none;
+  }
+  .production__item-step:first-child {
+    width: 200px;
+  }
+  .production__item-step:last-child {
+    margin-top: 0px;
+  }
+  .step__wrapper {
+    width: 200px;
+    margin-right: 21px;
+    margin-bottom: 0;
+  }
+  .step__wrapper img {
+    margin-right: 21px;
+    display: block;
+  }
+  .step__wrapper:last-child {
+    width: 290px;
+  }
+  .step__wrapper:first-child::after {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .production__item-text {
+    width: 320px;
+  }
+  .step__wrapper {
+    width: 200px;
+    margin-right: 21px;
+  }
+  .production__item-steps.process__active {
+    transform: translateX(-50%);
+  }
+}
+#button-right, #button-left {
+  cursor: pointer;
 }
 @charset "UTF-8";
 /* Reset and base styles  */
@@ -762,7 +877,6 @@ img {
 
 img,
 svg {
-  max-width: 100%;
   height: auto;
 }
 

@@ -1,6 +1,7 @@
 .production {
     padding-bottom: 252px;
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
@@ -10,6 +11,7 @@
         top: 0;
         left: 0;
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -19,64 +21,64 @@
         right: 0;
         bottom: 0;
     }
+
     &__items {
+        position: relative;
         padding-top: 70px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         font-size: 18px;
         column-gap: 100px;
-       font-weight: 400;
+        font-weight: 400;
+        overflow: hidden;
+
     }
 
-    &__item {
-        position: relative;
-        &:nth-child(1)::after,
-        &:nth-child(2)::after,
-        &:nth-child(3)::after{
+    &__wrapper {
+        &::after {
             position: absolute;
             content: "";
             background-image: url(../img/chevron-brown.png);
             width: 66px;
             height: 66px;
-            top:0;
-            left:200px;
+            top: 10%;
+            margin-left: 210px;
         }
+    }
+
+    &__item {
+        position: relative;
+
 
         &-img {
             margin-bottom: 20px;
             position: relative;
 
-            
-           
+
+
         }
 
-     
+
 
         &-list li {
             list-style: disc;
             margin-bottom: 12px;
         }
+
         &-steps {
             padding-top: 44px;
         }
+
         &-step {
             background: linear-gradient(180deg, #CEC9C5 0%, #948982 96.46%);
             font-size: 18px;
             padding: 9px 17px;
             position: relative;
             border-radius: 7px;
-            &:first-child::after {
-                content: "";
-                position: absolute;
-                background-image: url(../img/chevron-steps.png);
-                width: 66px;
-                height: 66px;
-                left: 115px;
-                top: 94px;
-            }
-            &:last-child {
-                margin-top: 94px;
-            }
+
+          
+
+          
         }
     }
 
@@ -89,16 +91,60 @@
         z-index: -1;
     }
 }
-
+#button-right, #button-left {
+    display: none;
+}
+.step__wrapper {
+    margin-bottom: 94px;
+    &:first-child::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/chevron-steps.png);
+        width: 66px;
+        height: 66px;
+        left: 115px;
+        top: 136px;
+    }
+}
 @media(max-width: 725px) {
     .production {
-
+        &::after {
+            display: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/body-top-mobile.png);
+            width: 109px;
+            height: 170px;
+            top: 0;
+            left: auto;
+            right: 0;
+        }
         &__img {
             display: none;
         }
 
         &__items {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(1, 350px);
+            overflow: hidden;
+        }
+
+        &__wrapper {
+            margin-bottom: 51px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background-image: url(../img/chevron-down-brown.png);
+                width: 66px;
+                height: 66px;
+                top: auto;
+                margin-left: 160px;
+            }
+        }
+        #button-right, #button-left {
+            display: block;
         }
 
         &__item {
@@ -118,6 +164,71 @@
             ul {
                 margin-left: 20px;
             }
+
+            &-steps {
+                display: flex;
+                align-items: center;
+                transition: transform .3s ease;
+            }
+
+            &-step {
+                font-size: 14px;
+                padding: 9px 12px;
+                &:first-child::after {
+                    display: none;
+                }
+                &:first-child {
+                    width: 200px;
+                }
+                &:last-child {
+                    margin-top: 0px;
+                }
+            }
         }
     }
+    .step__wrapper {
+        width: 200px;
+        margin-right: 21px;
+        margin-bottom: 0;
+        img {
+            margin-right: 21px;
+            display: block;
+        }
+        &:last-child {
+            width: 290px;
+        }
+        &:first-child::after {
+           display: none;
+        }
+        }
+}
+
+
+@media(max-width: 425px) {
+
+    .production {
+
+        &__item {
+
+
+            &-text {
+                width: 320px;
+            }
+        }
+
+    }
+
+    .step__wrapper {
+        width: 200px;
+        margin-right: 21px
+    }
+    .production__item-steps.process__active {
+        transform: translateX(-50%);
+    }
+    
+}
+
+
+#button-right, #button-left {
+    cursor: pointer;
 }

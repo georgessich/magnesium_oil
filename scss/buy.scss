@@ -19,6 +19,9 @@
       width: 277px;
       height: 104px;
       margin-right: 26px;
+      img {
+        max-width: 100%;
+      }
     }
 
     &-img {
@@ -43,7 +46,10 @@
     }
 
     &-link {
-      color: #000;
+      color: #000; 
+      img {
+        max-width: 100%;
+      }
     }
   }
 

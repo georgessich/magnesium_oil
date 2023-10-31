@@ -61,8 +61,8 @@
 
 #beenergy .body-product__bottle .body-product__bg {
   position: absolute;
-  margin-left: -230px;
-  margin-top: -15px;
+  margin-left: -150px;
+  margin-top: 60px;
   z-index: -1;
 }
 
@@ -75,9 +75,9 @@
 #goodnight .body-product__bottle .body-product__bg {
   width: 403px;
   position: absolute;
-  margin-left: -280px;
+  margin-left: -106px;
   z-index: -2;
-  margin-top: -95px;
+  margin-top: -60px;
 }
 .product-info {
   position: fixed;
@@ -94,10 +94,14 @@
   .body-product {
 
     &__items {
-      // flex-direction: column;
+      flex-direction: column;
     }
     &__item {
-      // height: 100vh;
+      margin-bottom: 100px;
     }
+  }
+  #beenergy .body-product__bottle .body-product__bg {
+    margin-left: -147px;
+    margin-top: 61px;
   }
 }
