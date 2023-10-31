@@ -5,6 +5,10 @@
     justify-content: space-between;
   }
 
+  &__show {
+    display: none;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -25,6 +29,7 @@
     text-align: center;
     padding-top: 44px;
     margin-bottom: 12px;
+
     span {
       color: #034c75;
       font-weight: 500;
@@ -32,6 +37,7 @@
       text-decoration: underline;
     }
   }
+
   &__props {
     list-style: disc;
     font-size: 18px;
@@ -41,6 +47,7 @@
   &__img {
     position: relative;
     transition: transform 0.3s ease;
+
     &:hover {
       transform: translateY(-25px);
     }
@@ -79,6 +86,7 @@
   z-index: -2;
   margin-top: -60px;
 }
+
 .product-info {
   position: fixed;
   top: 0;
@@ -89,17 +97,31 @@
   z-index: 999;
   transition: right 0.3s ease;
 }
+
 @media(max-width:725px) {
 
   .body-product {
+    &__show {
+      position: absolute;
+      display: block;
+      right: 20px;
+      top: 15%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #bdbdbd;
+      font-style: italic;
+      border-bottom: 1px solid #bdbdbd;
+    }
 
     &__items {
       flex-direction: column;
     }
+
     &__item {
       margin-bottom: 100px;
     }
   }
+
   #beenergy .body-product__bottle .body-product__bg {
     margin-left: -147px;
     margin-top: 61px;

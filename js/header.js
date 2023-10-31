@@ -14,12 +14,10 @@ const sectionOneObserver = new IntersectionObserver(function (
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       header.classList.add("nav-scrolled");
-      // Change the logo image source to the white version
-      logoImg.src = "../img/logo-black.png";
+      logoImg.src = "./img/logo-black.png";
     } else {
       header.classList.remove("nav-scrolled");
-      // Change the logo image source back to the black version
-      logoImg.src = "../img/logo-white.png";
+      logoImg.src = "./img/logo-white.png";
     }
   });
 },
@@ -32,12 +30,10 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const targetId = entry.target.id;
       
-      // Remove the "active" class from all navigation links
       headerLinks.forEach((link) => {
         link.classList.remove("active-link");
       });
 
-      // Find the corresponding navigation link and add the "active" class to it
       headerLinks.forEach((link) => {
         if (link.getAttribute("href") === `#${targetId}`) {
           link.classList.add("active-link");
@@ -62,7 +58,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
-// Observe all sections with an ID except for the hero section
 const sections = document.querySelectorAll("section");
 sections.forEach((section) => {
   sectionObserver.observe(section);

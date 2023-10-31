@@ -64,6 +64,7 @@
   .mobile__wrapper {
     width: 100%;
     box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.25);
+    
   }
   .header__wrap {
     display: none;
@@ -74,7 +75,7 @@
     width: 100%;
     backdrop-filter: blur(13.5px);
     padding: 14px 22px;
-    align-items: flex-end;
+    align-items: center;
     &-list {
       padding: 0 22px;
     }
@@ -112,7 +113,7 @@
     &--logo {
       width: 117px;
       height: 36px;
-      padding: 9px 0;
+  
       margin-left: 80px;
     }
   }
@@ -144,4 +145,14 @@
 
 .mobile__wrapper.active {
   width: 90%;
+  animation: animation 0.3s ease; /* указание времени (0.3s) и режима анимации (ease) */
+}
+
+@keyframes animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
