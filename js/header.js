@@ -64,25 +64,3 @@ sections.forEach((section) => {
 });
 
 
-
-// Находим элементы, управляющие скроллингом
-document.addEventListener('touchmove', function (e) {
-  var touchStartY = 0;
-  var touchEndY = 0;
-
-  // Событие начала касания
-  document.addEventListener('touchstart', function (e) {
-    touchStartY = e.touches[0].clientY;
-  });
-
-  // Событие окончания касания
-  document.addEventListener('touchend', function (e) {
-    touchEndY = e.changedTouches[0].clientY;
-
-    // Проверяем, если пользователь свайпнул вниз
-    if (touchEndY > touchStartY) {
-      // Предотвращаем стандартное поведение свайпа
-      e.preventDefault();
-    }
-  });
-});
