@@ -472,6 +472,7 @@
 }
 .hair {
   color: #000;
+  position: relative;
 }
 .hair__wrapper {
   display: flex;
