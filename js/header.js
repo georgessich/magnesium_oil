@@ -69,12 +69,21 @@ sections.forEach((section) => {
 let scrollContainers = document.querySelectorAll('section');
 
 scrollContainers.forEach(function(container) {
+  let isScrollingUp = false;
+  
   container.addEventListener('touchmove', function(e) {
-    // Проверяем, если пользователь скроллит вниз
+    // Проверяем, если пользователь скроллит вверх
     if (e.touches[0].clientY < this._startY) {
-      e.preventDefault(); // Предотвращаем скроллинг вверх
+      isScrollingUp = true;
     }
     this._startY = e.touches[0].clientY;
+  });
+
+  container.addEventListener('touchend', function(e) {
+    if (isScrollingUp) {
+      e.preventDefault(); // Предотвращаем обновление страницы при подъеме
+      isScrollingUp = false;
+    }
   });
 
   container.addEventListener('touchstart', function(e) {
