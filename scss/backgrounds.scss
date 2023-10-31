@@ -125,6 +125,7 @@
 @media (max-width: 724px) {
   #hair-booster-wrap {
     &::before {
+      display: none;
       // position: absolute;
       // content: "";
       // background-image: url(../img/moss-mobile.png);
@@ -138,11 +139,13 @@
       display: none;
     }
   }
+  #hair-booster-wrap
   #hydration-product,
   #beenergy-product,
   #detox-product,
-  #goodnight-product {
-    &::after {
+  #goodnight-product,
+  .body {
+    &::after, &::before {
       display: none;
     }
   }

@@ -113,13 +113,21 @@
 }
 
 @media (max-width: 724px) {
+  #hair-booster-wrap::before {
+    display: none;
+  }
   #hair-booster-wrap::after {
     display: none;
   }
-  #hydration-product::after,
+  #hair-booster-wrap #hydration-product::after, #hair-booster-wrap #hydration-product::before,
   #beenergy-product::after,
+  #beenergy-product::before,
   #detox-product::after,
-  #goodnight-product::after {
+  #detox-product::before,
+  #goodnight-product::after,
+  #goodnight-product::before,
+  .body::after,
+  .body::before {
     display: none;
   }
   #hydration-product::before {
