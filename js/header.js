@@ -62,3 +62,22 @@ const sections = document.querySelectorAll("section");
 sections.forEach((section) => {
   sectionObserver.observe(section);
 });
+
+
+
+// Находим элементы, управляющие скроллингом
+let scrollContainers = document.querySelectorAll('section');
+
+scrollContainers.forEach(function(container) {
+  container.addEventListener('touchmove', function(e) {
+    // Проверяем, если пользователь скроллит вниз
+    if (e.touches[0].clientY < this._startY) {
+      e.preventDefault(); // Предотвращаем скроллинг вверх
+    }
+    this._startY = e.touches[0].clientY;
+  });
+
+  container.addEventListener('touchstart', function(e) {
+    this._startY = e.touches[0].clientY;
+  });
+});
