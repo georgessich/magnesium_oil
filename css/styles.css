@@ -745,6 +745,9 @@
 }
 
 @media (max-width: 725px) {
+  .production {
+    padding-bottom: 20px;
+  }
   .production::after {
     display: none;
   }
