@@ -66,27 +66,23 @@ sections.forEach((section) => {
 
 
 // Находим элементы, управляющие скроллингом
-let scrollContainers = document.querySelectorAll('section');
+document.addEventListener('touchmove', function (e) {
+  var touchStartY = 0;
+  var touchEndY = 0;
 
-scrollContainers.forEach(function(container) {
-  let isScrollingUp = false;
-  
-  container.addEventListener('touchmove', function(e) {
-    // Проверяем, если пользователь скроллит вверх
-    if (e.touches[0].clientY < this._startY) {
-      isScrollingUp = true;
-    }
-    this._startY = e.touches[0].clientY;
+  // Событие начала касания
+  document.addEventListener('touchstart', function (e) {
+    touchStartY = e.touches[0].clientY;
   });
 
-  container.addEventListener('touchend', function(e) {
-    if (isScrollingUp) {
-      e.preventDefault(); // Предотвращаем обновление страницы при подъеме
-      isScrollingUp = false;
-    }
-  });
+  // Событие окончания касания
+  document.addEventListener('touchend', function (e) {
+    touchEndY = e.changedTouches[0].clientY;
 
-  container.addEventListener('touchstart', function(e) {
-    this._startY = e.touches[0].clientY;
+    // Проверяем, если пользователь свайпнул вниз
+    if (touchEndY > touchStartY) {
+      // Предотвращаем стандартное поведение свайпа
+      e.preventDefault();
+    }
   });
 });
