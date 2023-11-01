@@ -1,7 +1,7 @@
 .production {
     padding-bottom: 252px;
     position: relative;
-
+    height: 100vh;
     &::before {
         content: "";
         position: absolute;
@@ -171,6 +171,7 @@
                 display: flex;
                 align-items: center;
                 transition: transform .3s ease;
+                padding-top: 20px;
             }
 
             &-step {
