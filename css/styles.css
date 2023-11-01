@@ -165,6 +165,9 @@
     height: 149px;
   }
 }
+.body-product {
+  height: 100vh;
+}
 .body-product__items {
   display: flex;
   padding-top: 69px;
