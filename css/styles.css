@@ -489,11 +489,12 @@
 .hair {
   color: #000;
   position: relative;
+  height: 100vh;
 }
 .hair__wrapper {
   display: flex;
   position: relative;
-  padding-top: 120px;
+  padding-top: 46px;
 }
 .hair__wrapper-img {
   max-width: 100%;
@@ -551,7 +552,6 @@
     font-size: 14px;
     padding-left: 22px;
     margin-bottom: 43px;
-    max-width: 100%;
   }
   .hair__wrapper-text--mobile li {
     list-style: disc;
@@ -566,6 +566,7 @@
   }
   .hair__wrapper-img--mobile {
     display: block;
+    max-width: 100%;
   }
 }
 .hero {
@@ -575,6 +576,7 @@
   color: #fff;
   position: relative;
   background-position: center center;
+  height: 100vh;
 }
 .hero__title {
   font-size: 70px;
@@ -653,6 +655,8 @@
   .hero__product-mobile {
     display: block;
     width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }
 .production {
@@ -1253,7 +1257,7 @@ body {
   }
 }
 .title__wrapper {
-  padding-top: 180px;
+  padding-top: 140px;
 }
 .title__wrapper span {
   font-size: 22px;
