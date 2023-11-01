@@ -1,70 +1,66 @@
 .video {
-    position: relative;
-    padding-bottom: 94px;
+  position: relative;
+  padding-bottom: 94px;
 
-    &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/leafs-bg.png);
-        bottom: 0;
-        right: 0;
-        width: 349px;
-        height: 442px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/leafs-bg.png);
+    bottom: 0;
+    right: 0;
+    width: 349px;
+    height: 442px;
+  }
+
+  &__wrapper {
+    padding-top: 44px;
+
+    &-name {
+      font-size: 26px;
+      padding-top: 48px;
+      font-weight: 400;
     }
 
-    &__wrapper {
-        padding-top: 44px;
-
-        &-name {
-            font-size: 26px;
-            padding-top: 48px;
-            font-weight: 400;
-        }
-
-        &-btn {
-
-            img {
-                display: flex;
-                margin: 0 auto;
-                padding-top: 98px;
-            }
-        }
-
+    &-btn {
+      img {
+        display: flex;
+        margin: 0 auto;
+        padding-top: 98px;
+      }
     }
+  }
 }
 
-
 @media (max-width: 450px) {
-    .video {
+  .video {
+    &__wrapper {
+      iframe {
+        width: 346px;
+        height: 193px;
+      }
 
-        &__wrapper {
+      &-name {
+        font-size: 14px;
+        margin-bottom: 250px;
+      }
 
-            iframe {
-                width: 346px;
-                height: 193px;
-            }
-
-            &-name {
-                font-size: 14px;
-                margin-bottom: 250px;
-            }
-
-            &-btn {
-
-                img {
-                    position: absolute;
-                    top: 75%;
-                    left: 45%;
-                    width: 30px;
-                }
-            }
+      &-btn {
+        position: relative;
+        z-index: 2;
+        width: 30px;
+        display: flex;
+        height: 19px;
+        margin: 0 auto;
+        img {
+            padding-top: 0;
         }
-
-        &::after {
-
-            left: 35%;
-            right: auto;
-            width: 260px;
-        }
+      }
     }
+
+    &::after {
+        left: auto;
+        right: 0;
+        width: 234px;
+    }
+  }
 }

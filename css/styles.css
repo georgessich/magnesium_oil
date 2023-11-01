@@ -366,10 +366,10 @@
   }
   .body__info {
     flex-direction: column;
-    padding-top: 26px;
+    padding-top: 18px;
     font-size: 14px;
     gap: 15px;
-    margin-bottom: 28px;
+    margin-bottom: 5px;
   }
   .body__info p {
     max-width: none;
@@ -1064,16 +1064,21 @@ body {
     font-size: 14px;
     margin-bottom: 250px;
   }
-  .video__wrapper-btn img {
-    position: absolute;
-    top: 75%;
-    left: 45%;
+  .video__wrapper-btn {
+    position: relative;
+    z-index: 2;
     width: 30px;
+    display: flex;
+    height: 19px;
+    margin: 0 auto;
+  }
+  .video__wrapper-btn img {
+    padding-top: 0;
   }
   .video::after {
-    left: 35%;
-    right: auto;
-    width: 260px;
+    left: auto;
+    right: 0;
+    width: 234px;
   }
 }
 .accordeon__item {
