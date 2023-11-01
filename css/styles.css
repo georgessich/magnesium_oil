@@ -273,12 +273,22 @@
     flex-direction: column;
     padding-top: 20px;
   }
-  .body-product__bg, .body-product__img {
-    max-width: 80%;
+  .body-product__item {
+    padding-top: 20px;
+    height: 100vh;
+  }
+  .body-product__name {
+    padding-top: 20px;
   }
   #beenergy .body-product__bottle .body-product__bg {
-    margin-left: -147px;
-    margin-top: 61px;
+    margin-left: -91px;
+    margin-top: 173px;
+    width: 370px;
+  }
+  #goodnight .body-product__bottle .body-product__bg {
+    width: 363px;
+    margin-left: -89px;
+    margin-top: 0;
   }
 }
 .body {
@@ -881,11 +891,11 @@
     margin-top: 0px;
   }
   .step__wrapper {
-    margin-right: 21px;
+    margin-right: 10px;
     margin-bottom: 0;
   }
   .step__wrapper img {
-    margin-right: 21px;
+    margin-right: 10px;
     display: block;
   }
   .step__wrapper:first-child::after {
