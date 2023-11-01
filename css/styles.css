@@ -275,6 +275,8 @@
   }
   .body-product__item {
     padding-top: 20px;
+    max-height: 80vh;
+    overflow: hidden;
   }
   .body-product__name {
     padding-top: 20px;

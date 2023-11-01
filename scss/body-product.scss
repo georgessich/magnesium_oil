@@ -120,7 +120,8 @@
 
     &__item {
       padding-top: 20px;
-      // height: 100vh;
+      max-height: 80vh;
+      overflow: hidden;
     }
 
     &__name {
