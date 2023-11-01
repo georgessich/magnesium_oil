@@ -324,6 +324,14 @@
   display: none;
 }
 
+@media (max-width: 1465px) {
+  .body::before {
+    width: 150px;
+    height: 275px;
+    top: 35%;
+    background-size: cover;
+  }
+}
 @media (max-width: 724px) {
   .body::before {
     position: absolute;
@@ -466,10 +474,12 @@
 }
 .hair-product {
   position: relative;
+  height: 100vh;
 }
 .hair-product--wrapper {
   display: flex;
   padding-top: 69px;
+  align-items: flex-start;
 }
 
 @media (max-width: 1465px) {
@@ -478,6 +488,11 @@
   }
   .hair-product--info {
     width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .hair-product--img {
+    width: 38%;
   }
 }
 @media (max-width: 724px) {
@@ -630,7 +645,39 @@
   display: none;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 1465px) {
+  .hero__product {
+    width: 70%;
+  }
+  .hero__title {
+    font-size: 54px;
+  }
+  .hero__subtitle {
+    font-size: 38px;
+  }
+  .hero__descr {
+    max-width: 500px;
+  }
+  .hero__link:nth-child(1) {
+    padding: 9px 36px;
+  }
+  .hero__link:nth-child(2) {
+    padding: 9px 44px;
+  }
+}
+@media (max-width: 1105px) {
+  .hero__title {
+    font-size: 40px;
+    padding-top: 180px;
+  }
+  .hero__subtitle {
+    font-size: 28px;
+  }
+  .hero__descr {
+    max-width: 350px;
+  }
+}
+@media (max-width: 785px) {
   .hero {
     background-image: url(../img/hero-bg-mobile.png);
     text-align: center;
@@ -644,6 +691,7 @@
   }
   .hero__descr {
     font-size: 16px;
+    max-width: fit-content;
   }
   .hero__links {
     flex-direction: column;
@@ -932,6 +980,11 @@ body {
     width: 1085px;
   }
 }
+@media (max-width: 1140px) {
+  .container {
+    width: 988px;
+  }
+}
 @media (max-width: 1024px) {
   .container {
     width: 786px;
@@ -1010,13 +1063,13 @@ body {
 }
 .accordeon__item {
   border-top: 1px solid #000;
-  padding: 30px 0 5px;
 }
 .accordeon__item:last-child {
   border-bottom: 1px solid #000;
 }
 .accordeon__title {
   font-size: 22px;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
   width: 854px;
@@ -1027,7 +1080,6 @@ body {
 }
 .accordeon__content {
   max-height: 0;
-  padding-top: 25px;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
@@ -1075,6 +1127,10 @@ body {
 @media (max-width: 1465px) {
   .accordeon__title {
     width: auto;
+    font-size: 18px;
+  }
+  .accordeon__works-text {
+    font-size: 14px;
   }
 }
 @media (max-width: 724px) {

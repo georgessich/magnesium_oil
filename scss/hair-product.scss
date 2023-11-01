@@ -1,9 +1,10 @@
 .hair-product {
     position: relative;
-   
+    height: 100vh;
     &--wrapper {
         display: flex;
         padding-top: 69px;
+        align-items: flex-start;
     }
 }
 
@@ -17,6 +18,12 @@
     }
   }
 
+
+@media(max-width: 800px) {
+    .hair-product--img {
+        width: 38%;
+    }
+}
 @media(max-width:724px) {
     .hair-product {
 

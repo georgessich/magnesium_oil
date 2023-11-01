@@ -1,5 +1,6 @@
 .body {
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -8,21 +9,24 @@
     height: 520px;
     top: 25%;
   }
+
   &::after {
     position: absolute;
     content: "";
     background-image: url(../img/body-leaf-bottom.png);
     width: 172px;
     height: 248px;
-    bottom:0;
+    bottom: 0;
     right: 0;
   }
+
   &__info {
     padding-top: 56px;
     display: flex;
     font-size: 22px;
     line-height: 140%;
     gap: 68px;
+
     p {
       max-width: 670px;
     }
@@ -34,12 +38,23 @@
     padding-top: 68px;
     padding-bottom: 78px;
     max-width: 100%;
+
     &-mobile {
       display: none;
     }
   }
 }
 
+@media (max-width: 1465px) {
+  .body {
+    &::before {
+      width: 150px;
+      height: 275px;
+      top: 35%;
+      background-size: cover;
+    }
+  }
+}
 
 @media(max-width: 724px) {
   .body {
@@ -51,12 +66,13 @@
       background-repeat: no-repeat;
       width: 107px;
       height: 170px;
-      bottom:auto;
-      top:0;
+      bottom: auto;
+      top: 0;
       right: 0;
     }
+
     &::after {
-    
+
       display: none;
     }
 
@@ -66,10 +82,12 @@
       font-size: 14px;
       gap: 15px;
       margin-bottom: 28px;
+
       p {
         max-width: none;
       }
     }
+
     &__img {
       display: none;
 

@@ -89,6 +89,12 @@ body {
     width: 1085px;
   }
 }
+
+@media(max-width: 1140px) {
+  .container {
+    width: 988px;
+  }
+}
 @media(max-width: 1024px) {
   .container {
     width: 786px;
