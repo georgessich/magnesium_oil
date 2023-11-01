@@ -272,9 +272,6 @@
   .body-product__items {
     flex-direction: column;
   }
-  .body-product__item {
-    margin-bottom: 100px;
-  }
   .body-product__bg, .body-product__img {
     max-width: 80%;
   }
