@@ -79,43 +79,41 @@ accordeonItems.forEach((item, index) => {
       event.preventDefault();
   });
 
+  let startY = 0;
+  let endY = 0;
+  const touchSensitivity = 50; // Порог чувствительности для определения свайпа
+  
+
+  
   hairBoosterSection.addEventListener('touchstart', (event) => {
-    startY = event.touches[0].clientY;
-});
-
-hairBoosterSection.addEventListener('touchmove', (event) => {
-    endY = event.touches[0].clientY;
-});
-
-hairBoosterSection.addEventListener('touchend', () => {
-    const deltaY = endY - startY;
-    const accordeonItems = document.querySelectorAll('.accordeon__item');
-    const totalItems = accordeonItems.length;
-
-    if (deltaY > 0 && currentAccordeonItem < totalItems - 1) {
-        // Свайп вниз
-        // Открываем следующий элемент аккордеона
-        currentAccordeonItem++;
-        accordeonItems.forEach(item => {
-            item.classList.remove('active');
-            item.querySelector('.accordeon__content').style.maxHeight = '0';
-        });
-
-        accordeonItems[currentAccordeonItem].classList.add('active');
-        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-            accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
-    } else if (deltaY < 0 && currentAccordeonItem > 0) {
-        // Свайп вверх
-        // Открываем предыдущий элемент аккордеона
-        currentAccordeonItem--;
-
-        accordeonItems.forEach(item => {
-            item.classList.remove('active');
-            item.querySelector('.accordeon__content').style.maxHeight = '0';
-        });
-
-        accordeonItems[currentAccordeonItem].classList.add('active');
-        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-            accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
-    }
-});
+      startY = event.touches[0].clientY;
+  });
+  
+  hairBoosterSection.addEventListener('touchend', (event) => {
+      endY = event.changedTouches[0].clientY;
+      const deltaY = endY - startY;
+  
+      if (deltaY > touchSensitivity && currentAccordeonItem < totalItems - 1) {
+          // Свайп вниз
+          currentAccordeonItem++;
+      } else if (deltaY < -touchSensitivity && currentAccordeonItem > 0) {
+          // Свайп вверх
+          currentAccordeonItem--;
+      }
+  
+      updateAccordeon();
+  });
+  
+  function updateAccordeon() {
+      const accordeonItems = document.querySelectorAll('.accordeon__item');
+      const totalItems = accordeonItems.length;
+  
+      accordeonItems.forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.accordeon__content').style.maxHeight = '0';
+      });
+  
+      accordeonItems[currentAccordeonItem].classList.add('active');
+      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+          accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+  }
