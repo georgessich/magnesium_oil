@@ -15,12 +15,12 @@ const docSlider = (function () {
     let d = {};
 
     const op = {
-        speed        : 400,
+        speed        : 600,
         easing       : 'ease',
-        pager        : false,
+        pager        : true,
         horizontal   : false,
         startSpeed   : null,
-        scrollReset  : true,
+        scrollReset  : false,
         complete     : function () {},
         beforeChange : function () {},
         afterChange  : function () {},

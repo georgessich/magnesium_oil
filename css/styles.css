@@ -272,6 +272,9 @@
   .body-product__item {
     margin-bottom: 100px;
   }
+  .body-product__bg, .body-product__img {
+    max-width: 80%;
+  }
   #beenergy .body-product__bottle .body-product__bg {
     margin-left: -147px;
     margin-top: 61px;
@@ -746,6 +749,9 @@
 }
 
 @media (max-width: 725px) {
+  .production {
+    padding-bottom: 0px;
+  }
   .production::after {
     display: none;
   }
@@ -765,6 +771,7 @@
   .production__items {
     grid-template-columns: repeat(1, 350px);
     overflow: hidden;
+    padding-top: 25px;
   }
   .production__wrapper {
     margin-bottom: 51px;
@@ -845,7 +852,6 @@
 #button-right, #button-left {
   cursor: pointer;
 }
-@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -903,23 +909,6 @@ img {
 img,
 svg {
   height: auto;
-}
-
-::-webkit-scrollbar {
-  width: 0; /* Для Safari и Chrome */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Для Safari и Chrome */
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Для Safari и Chrome */
-}
-
-/* Для Firefox */
-* {
-  scrollbar-width: none;
 }
 
 body {

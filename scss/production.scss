@@ -108,6 +108,7 @@
 }
 @media(max-width: 725px) {
     .production {
+        padding-bottom: 0px;
         &::after {
             display: none;
         }
@@ -128,6 +129,7 @@
         &__items {
             grid-template-columns: repeat(1, 350px);
             overflow: hidden;
+            padding-top: 25px;
         }
 
         &__wrapper {
