@@ -1,241 +1,220 @@
 .production {
-    padding-bottom: 252px;
+  padding-bottom: 252px;
+  position: relative;
+  height: 100vh;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/leaf-top.png);
+    width: 292px;
+    height: 294px;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/leaf-bottom.png);
+    width: 173px;
+    height: 177px;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__items {
     position: relative;
-    height: 100vh;
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url(../img/leaf-top.png);
-        width: 292px;
-        height: 294px;
-        top: 0;
-        left: 0;
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 18px;
+    column-gap: 100px;
+    font-weight: 400;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../img/chevron-brown.png);
+      width: 66px;
+      height: 66px;
+      top: 10%;
+      margin-left: 210px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &-img {
+      margin-bottom: 20px;
+      position: relative;
     }
 
+    &-list li {
+      list-style: disc;
+      margin-bottom: 12px;
+    }
+
+    &-steps {
+      padding-top: 44px;
+    }
+
+    &-step {
+      background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
+      font-size: 18px;
+      padding: 9px 17px;
+      position: relative;
+      border-radius: 7px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+#button-right,
+#button-left {
+  display: none;
+}
+.step__wrapper {
+  margin-bottom: 94px;
+  &:first-child::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/chevron-steps.png);
+    width: 66px;
+    height: 66px;
+    left: 115px;
+    top: 136px;
+  }
+}
+@media (max-width: 725px) {
+  .production {
+    padding-bottom: 0px;
     &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/leaf-bottom.png);
-        width: 173px;
-        height: 177px;
-        right: 0;
-        bottom: 0;
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/body-top-mobile.png);
+      width: 109px;
+      height: 170px;
+      top: 0;
+      left: auto;
+      right: 0;
+    }
+    &__img {
+      display: none;
     }
 
     &__items {
-        position: relative;
-        padding-top: 70px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        font-size: 18px;
-        column-gap: 100px;
-        font-weight: 400;
-        overflow: hidden;
-
+      grid-template-columns: repeat(1, 350px);
+      overflow: hidden;
+      padding-top: 25px;
     }
 
     &__wrapper {
-        &::after {
-            position: absolute;
-            content: "";
-            background-image: url(../img/chevron-brown.png);
-            width: 66px;
-            height: 66px;
-            top: 10%;
-            margin-left: 210px;
-        }
+      margin-bottom: 40px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/chevron-down-brown.png);
+        width: 45px;
+        height: 28px;
+        top: auto;
+        margin-left: 160px;
+      }
+    }
+    #button-right,
+    #button-left {
+      display: block;
     }
 
     &__item {
-        position: relative;
+      display: flex;
+      font-size: 14px;
 
+      &-img {
+        width: 35px;
+        height: 35px;
+      }
 
-        &-img {
-            margin-bottom: 20px;
-            position: relative;
+      &-text {
+        padding-left: 8px;
+      }
 
+      ul {
+        margin-left: 20px;
+      }
 
+      ul li {
+        margin-bottom: 5px;
+      }
 
+      &-steps {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+        padding-top: 20px;
+      }
+
+      &-step {
+        font-size: 14px;
+        padding: 9px 12px;
+        &:first-child::after {
+          display: none;
         }
-
-
-
-        &-list li {
-            list-style: disc;
-            margin-bottom: 12px;
-        }
-
-        &-steps {
-            padding-top: 44px;
-        }
-
-        &-step {
-            background: linear-gradient(180deg, #CEC9C5 0%, #948982 96.46%);
-            font-size: 18px;
-            padding: 9px 17px;
-            position: relative;
-            border-radius: 7px;
-
-          
-
-          
-        }
-    }
-
-
-
-    &__img {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-    }
-}
-#button-right, #button-left {
-    display: none;
-}
-.step__wrapper {
-    margin-bottom: 94px;
-    &:first-child::after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/chevron-steps.png);
-        width: 66px;
-        height: 66px;
-        left: 115px;
-        top: 136px;
-    }
-}
-@media(max-width: 725px) {
-    .production {
-        padding-bottom: 0px;
-        &::after {
-            display: none;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            background-image: url(../img/body-top-mobile.png);
-            width: 109px;
-            height: 170px;
-            top: 0;
-            left: auto;
-            right: 0;
-        }
-        &__img {
-            display: none;
-        }
-
-        &__items {
-            grid-template-columns: repeat(1, 350px);
-            overflow: hidden;
-            padding-top: 25px;
-        }
-
-        &__wrapper {
-            margin-bottom: 40px;
-
-            &::after {
-                position: absolute;
-                content: "";
-                background-image: url(../img/chevron-down-brown.png);
-                width: 45px;
-                height: 28px;
-                top: auto;
-                margin-left: 160px;
-            }
-        }
-        #button-right, #button-left {
-            display: block;
-        }
-
-        &__item {
-            display: flex;
-            font-size: 14px;
-    
-
-            &-img {
-                width: 35px;
-                height: 35px;
-            }
-
-            &-text {
-                padding-left: 8px;
-            }
-
-            ul {
-                margin-left: 20px;
-            }
-
-            ul li {
-                margin-bottom: 5px;
-            }
-
-            &-steps {
-                display: flex;
-                align-items: center;
-                transition: transform .3s ease;
-                padding-top: 20px;
-            }
-
-            &-step {
-                font-size: 14px;
-                padding: 9px 12px;
-                &:first-child::after {
-                    display: none;
-                }
-                &:first-child {
-                    width: 200px;
-                }
-                &:last-child {
-                    margin-top: 0px;
-                }
-            }
-        }
-    }
-    .step__wrapper {
-        width: 200px;
-        margin-right: 21px;
-        margin-bottom: 0;
-        img {
-            margin-right: 21px;
-            display: block;
+        &:first-child {
+          width: 260px;
+          height: 83px;
         }
         &:last-child {
-            width: 290px;
+          margin-top: 0px;
         }
-        &:first-child::after {
-           display: none;
-        }
-        }
+      }
+    }
+  }
+  .step__wrapper {
+    margin-right: 21px;
+    margin-bottom: 0;
+    img {
+      margin-right: 21px;
+      display: block;
+    }
+    &:last-child {
+    }
+    &:first-child::after {
+      display: none;
+    }
+  }
 }
 
-
-@media(max-width: 425px) {
-
-    .production {
-
-        &__item {
-
-
-            &-text {
-                width: 320px;
-            }
-        }
-
+@media (max-width: 425px) {
+  .production {
+    &__item {
+      &-text {
+        width: 320px;
+      }
     }
+  }
 
-    .step__wrapper {
-        width: 200px;
-        margin-right: 21px
-    }
-    .production__item-steps.process__active {
-        transform: translateX(-50%);
-    }
-    
+  .step__wrapper {
+    margin-right: 21px;
+  }
+  .production__item-steps.process__active {
+    transform: translateX(-50%);
+  }
 }
 
-
-#button-right, #button-left {
-    cursor: pointer;
+#button-right,
+#button-left {
+  cursor: pointer;
 }

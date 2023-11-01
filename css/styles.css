@@ -499,9 +499,12 @@
   .hair-product--wrapper {
     flex-direction: column-reverse;
     padding-top: 30px;
+    align-items: center;
   }
   .hair-product--img {
-    width: 100%;
+    max-height: 20vh;
+    width: auto;
+    margin-top: 1rem;
   }
   .hair-product--info {
     width: 100%;
@@ -770,7 +773,7 @@
   padding-top: 44px;
 }
 .production__item-step {
-  background: linear-gradient(180deg, #CEC9C5 0%, #948982 96.46%);
+  background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
   font-size: 18px;
   padding: 9px 17px;
   position: relative;
@@ -783,7 +786,8 @@
   z-index: -1;
 }
 
-#button-right, #button-left {
+#button-right,
+#button-left {
   display: none;
 }
 
@@ -837,7 +841,8 @@
     top: auto;
     margin-left: 160px;
   }
-  .production #button-right, .production #button-left {
+  .production #button-right,
+  .production #button-left {
     display: block;
   }
   .production__item {
@@ -871,22 +876,19 @@
     display: none;
   }
   .production__item-step:first-child {
-    width: 200px;
+    width: 260px;
+    height: 83px;
   }
   .production__item-step:last-child {
     margin-top: 0px;
   }
   .step__wrapper {
-    width: 200px;
     margin-right: 21px;
     margin-bottom: 0;
   }
   .step__wrapper img {
     margin-right: 21px;
     display: block;
-  }
-  .step__wrapper:last-child {
-    width: 290px;
   }
   .step__wrapper:first-child::after {
     display: none;
@@ -897,14 +899,14 @@
     width: 320px;
   }
   .step__wrapper {
-    width: 200px;
     margin-right: 21px;
   }
   .production__item-steps.process__active {
     transform: translateX(-50%);
   }
 }
-#button-right, #button-left {
+#button-right,
+#button-left {
   cursor: pointer;
 }
 /* Reset and base styles  */

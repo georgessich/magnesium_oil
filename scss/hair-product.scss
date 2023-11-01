@@ -1,43 +1,43 @@
 .hair-product {
-    position: relative;
-    height: 100vh;
-    &--wrapper {
-        display: flex;
-        padding-top: 69px;
-        align-items: flex-start;
-    }
+  position: relative;
+  height: 100vh;
+  &--wrapper {
+    display: flex;
+    padding-top: 69px;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 1465px) {
+  .hair-product--img {
+    width: 50%;
+  }
+  .hair-product--info {
+    width: 50%;
+  }
+}
 
-    .hair-product--img {
-      width: 50%;
+@media (max-width: 800px) {
+  .hair-product--img {
+    width: 38%;
+  }
+}
+@media (max-width: 724px) {
+  .hair-product {
+    &--wrapper {
+      flex-direction: column-reverse;
+      padding-top: 30px;
+      align-items: center;
     }
-    .hair-product--info {
-      width: 50%;
+
+    &--img {
+      max-height: calc(100vh - 80vh);
+      width: auto;
+      margin-top: 1rem;
+    }
+
+    &--info {
+      width: 100%;
     }
   }
-
-
-@media(max-width: 800px) {
-    .hair-product--img {
-        width: 38%;
-    }
-}
-@media(max-width:724px) {
-    .hair-product {
-
-        &--wrapper {
-            flex-direction: column-reverse;
-            padding-top: 30px;
-        }
-
-        &--img {
-            width: 100%;
-        }
-
-        &--info {
-            width: 100%;
-        }
-    }
 }
