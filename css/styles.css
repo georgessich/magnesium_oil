@@ -1140,6 +1140,7 @@ body {
   .accordeon__title {
     font-size: 14px;
     font-weight: 600;
+    padding: 15px 0;
   }
   .accordeon__content {
     padding-top: 10px;
