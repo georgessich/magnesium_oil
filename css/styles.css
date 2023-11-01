@@ -775,14 +775,14 @@
     padding-top: 25px;
   }
   .production__wrapper {
-    margin-bottom: 51px;
+    margin-bottom: 40px;
   }
   .production__wrapper::after {
     position: absolute;
     content: "";
     background-image: url(../img/chevron-down-brown.png);
-    width: 66px;
-    height: 66px;
+    width: 45px;
+    height: 28px;
     top: auto;
     margin-left: 160px;
   }
@@ -792,7 +792,6 @@
   .production__item {
     display: flex;
     font-size: 14px;
-    align-items: center;
   }
   .production__item-img {
     width: 35px;
@@ -803,6 +802,9 @@
   }
   .production__item ul {
     margin-left: 20px;
+  }
+  .production__item ul li {
+    margin-bottom: 5px;
   }
   .production__item-steps {
     display: flex;
