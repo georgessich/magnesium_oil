@@ -137,6 +137,9 @@
     &__props {
       font-size: 14px;
     }
+    &__props p br {
+      display: none;
+    }
   }
 
   #beenergy .body-product__bottle .body-product__bg {
