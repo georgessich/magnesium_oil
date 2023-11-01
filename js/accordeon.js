@@ -78,3 +78,44 @@ accordeonItems.forEach((item, index) => {
       // Отменяем стандартное поведение скролла страницы
       event.preventDefault();
   });
+
+  hairBoosterSection.addEventListener('touchstart', (event) => {
+    startY = event.touches[0].clientY;
+});
+
+hairBoosterSection.addEventListener('touchmove', (event) => {
+    endY = event.touches[0].clientY;
+});
+
+hairBoosterSection.addEventListener('touchend', () => {
+    const deltaY = endY - startY;
+    const accordeonItems = document.querySelectorAll('.accordeon__item');
+    const totalItems = accordeonItems.length;
+
+    if (deltaY > 0 && currentAccordeonItem < totalItems - 1) {
+        // Свайп вниз
+        // Открываем следующий элемент аккордеона
+        currentAccordeonItem++;
+        accordeonItems.forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.accordeon__content').style.maxHeight = '0';
+        });
+
+        accordeonItems[currentAccordeonItem].classList.add('active');
+        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+            accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+    } else if (deltaY < 0 && currentAccordeonItem > 0) {
+        // Свайп вверх
+        // Открываем предыдущий элемент аккордеона
+        currentAccordeonItem--;
+
+        accordeonItems.forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.accordeon__content').style.maxHeight = '0';
+        });
+
+        accordeonItems[currentAccordeonItem].classList.add('active');
+        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+            accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+    }
+});
