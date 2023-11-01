@@ -271,6 +271,7 @@
   }
   .body-product__items {
     flex-direction: column;
+    padding-top: 20px;
   }
   .body-product__bg, .body-product__img {
     max-width: 80%;
