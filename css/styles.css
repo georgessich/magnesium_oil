@@ -275,6 +275,8 @@
   }
   .body-product__item {
     padding-top: 20px;
+  }
+  .body-product__bottle {
     max-height: 80vh;
     overflow: hidden;
   }
