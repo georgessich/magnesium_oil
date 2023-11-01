@@ -29,3 +29,52 @@ accordeonItems.forEach((item, index) => {
       content.style.maxHeight = content.scrollHeight + 'px';
     }
   });
+
+  let currentAccordeonItem = 0; // Индекс текущего активного элемента аккордеона
+  const hairBoosterSection = document.getElementById('hair-booster');
+  hairBoosterSection.addEventListener('wheel', (event) => {
+      const accordeonItems = document.querySelectorAll('.accordeon__item');
+      const totalItems = accordeonItems.length;
+  
+      // Определение направления скролла (1 - вниз, -1 - вверх)
+      const direction = event.deltaY > 0 ? 1 : -1;
+  
+      // Если скролл вниз и текущий элемент меньше общего количества элементов аккордеона
+      if (direction === 1 && currentAccordeonItem < totalItems) {
+          // Закрываем все активные элементы аккордеона
+          accordeonItems.forEach(item => {
+              item.classList.remove('active');
+              item.querySelector('.accordeon__content').style.maxHeight = '0';
+          });
+  
+          // Открываем следующий элемент аккордеона
+          accordeonItems[currentAccordeonItem].classList.add('active');
+          accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight = 
+              accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+  
+          // Увеличиваем переменную для следующего скролла
+          currentAccordeonItem++;
+      } else if (direction === -1 && currentAccordeonItem > 0) {
+          // Если скролл вверх и текущий элемент больше 0
+          // Закрываем текущий активный элемент и открываем предыдущий
+          currentAccordeonItem--;
+  
+          // Закрываем все элементы аккордеона
+          accordeonItems.forEach(item => {
+              item.classList.remove('active');
+              item.querySelector('.accordeon__content').style.maxHeight = '0';
+          });
+  
+          // Открываем предыдущий элемент аккордеона
+          accordeonItems[currentAccordeonItem].classList.add('active');
+          accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight = 
+              accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+      } else {
+          // Выполняйте вашу логику для перехода к следующему экрану
+          // ...
+          docSlider.jumpPage(3);
+      }
+  
+      // Отменяем стандартное поведение скролла страницы
+      event.preventDefault();
+  });
