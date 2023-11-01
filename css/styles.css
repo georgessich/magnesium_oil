@@ -579,19 +579,19 @@
   .hair__wrapper {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 8px;
   }
   .hair__wrapper-text {
     max-width: none;
     padding-top: 0;
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
   .hair__wrapper-text--mobile {
     display: block;
     font-size: 14px;
     padding-left: 22px;
-    margin-bottom: 43px;
+    margin-bottom: 15px;
   }
   .hair__wrapper-text--mobile li {
     list-style: disc;
