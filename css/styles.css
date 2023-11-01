@@ -282,6 +282,10 @@
   }
   .body-product__name {
     padding-top: 20px;
+    font-size: 15px;
+  }
+  .body-product__props {
+    font-size: 14px;
   }
   #beenergy .body-product__bottle .body-product__bg {
     margin-left: -91px;
