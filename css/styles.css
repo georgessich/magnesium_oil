@@ -541,7 +541,7 @@
     padding-top: 0;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 725px) {
   .hair__wrapper {
     display: flex;
     flex-direction: column;
@@ -612,6 +612,8 @@
   border-radius: 21px;
   border: 1px solid #fff;
   margin-right: 46px;
+  z-index: 20;
+  position: relative;
 }
 .hero__link:nth-child(1) {
   padding: 9px 57px;
@@ -652,8 +654,6 @@
     margin-right: 0;
     font-size: 16px;
     margin-bottom: 16px;
-    z-index: 20;
-    position: relative;
   }
   .hero__product {
     display: none;

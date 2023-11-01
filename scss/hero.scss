@@ -34,14 +34,15 @@
     &__link {
         color: #fff;
         backdrop-filter: blur(27px);
-            font-weight: 400;
-            font-size: 22px;
-            border-radius: 21px;
-            border: 1px solid #fff;
-            margin-right: 46px;
-        &-wrapper {
-            
-        }
+        font-weight: 400;
+        font-size: 22px;
+        border-radius: 21px;
+        border: 1px solid #fff;
+        margin-right: 46px;
+        z-index: 20;
+        position: relative;
+
+        &-wrapper {}
 
         &:nth-child(1) {
             padding: 9px 57px;
@@ -90,11 +91,10 @@
         }
 
         &__link {
-                margin-right: 0;
-                font-size: 16px;
-                margin-bottom: 16px;
-                z-index: 20;
-                position: relative;
+            margin-right: 0;
+            font-size: 16px;
+            margin-bottom: 16px;
+
         }
 
         &__product {
