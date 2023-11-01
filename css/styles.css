@@ -275,9 +275,7 @@
   }
   .body-product__item {
     padding-top: 20px;
-  }
-  .body-product__bottle {
-    max-height: 80vh;
+    max-width: 92vh;
     overflow: hidden;
   }
   .body-product__name {
@@ -912,9 +910,6 @@
 @media (max-width: 425px) {
   .production__item-text {
     width: 320px;
-  }
-  .step__wrapper {
-    margin-right: 21px;
   }
   .production__item-steps.process__active {
     transform: translateX(-50%);

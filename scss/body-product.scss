@@ -120,13 +120,14 @@
 
     &__item {
       padding-top: 20px;
-      
-    }
-
-    &__bottle {
-      max-height: 80vh;
+      max-width: 92vh;
       overflow: hidden;
     }
+
+    // &__bottle {
+    //   max-height: 80vh;
+    //   overflow: hidden;
+    // }
 
     &__name {
       padding-top: 20px;
