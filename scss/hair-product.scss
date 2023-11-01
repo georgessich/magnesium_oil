@@ -31,7 +31,7 @@
     }
 
     &--img {
-      max-height: calc(100vh - 80vh);
+      max-height: calc(100vh - 70vh);
       width: auto;
       margin-top: 1rem;
     }
@@ -40,4 +40,21 @@
       width: 100%;
     }
   }
+}
+.item--wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 724px) {
+  .item--wrapper {
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    align-items: center;
+  }
+}
+
+.item--wrapper {
+  display: flex;
+  align-items: flex-start;
 }

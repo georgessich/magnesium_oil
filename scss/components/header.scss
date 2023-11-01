@@ -54,17 +54,22 @@
   border-radius: 21px;
   color: #000;
 }
-
-@media(max-width: 724px) {
+@media(max-width: 1025px) {
+  .header__wrap {
+    font-size: 16px;
+  }
+  .header__menu-link {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 789px) {
   .header {
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(13.5px);
-    
   }
   .mobile__wrapper {
     width: 100%;
     box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.25);
-    
   }
   .header__wrap {
     display: none;
@@ -74,31 +79,40 @@
     background-color: #fff;
     width: 100%;
     backdrop-filter: blur(13.5px);
-    padding: 14px 22px;
+    padding: 14px 5px;
     align-items: center;
+    justify-content: space-between;
     &-list {
       padding: 0 22px;
     }
     &-item {
       padding: 20px 0;
-      border-top: 1px solid #DFDFDF;
+      border-top: 1px solid #dfdfdf;
 
       &:last-child {
-        border-bottom: 1px solid #DFDFDF;
+        border-bottom: 1px solid #dfdfdf;
       }
     }
     &-link {
       font-size: 16px;
       color: #000;
     }
-    &-menu {
 
+    &-btn {
+      border: 1px solid #000;
+      padding: 8px 8px;
+      color: #000;
+      border-radius: 21px;
+      font-weight: 500;
+    }
+    &-menu {
       background-color: #fff;
       height: 100vh;
       transform: translateX(-100%); /* Начальная позиция вне экрана */
       transition: transform 2.3s ease;
     }
     &-burger {
+      padding-top: 10px;
       &:hover {
         cursor: pointer;
       }
@@ -110,21 +124,15 @@
       }
     }
 
-    &--logo {
-      width: 117px;
-      height: 36px;
-  
-      margin-left: 80px;
-    }
   }
   .header__mobile-burger.active .header__mobile-burger--bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 5px);
   }
-  
+
   .header__mobile-burger.active .header__mobile-burger--bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .header__mobile-burger.active .header__mobile-burger--bar:nth-child(3) {
     transform: rotate(45deg) translate(-8px, -8px);
   }
@@ -133,16 +141,17 @@
 .header__mobile.active {
   flex-direction: row-reverse;
   justify-content: space-between;
-
 }
 .header__mobile.active .header__mobile--logo {
   margin-left: 0;
 }
-.header__mobile-menu.active  {
+.header__mobile-menu.active {
   display: block;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
-
+.header__mobile.active .header__mobile-btn {
+  display: none;
+}
 .mobile__wrapper.active {
   width: 90%;
   animation: animation 0.3s ease; /* указание времени (0.3s) и режима анимации (ease) */

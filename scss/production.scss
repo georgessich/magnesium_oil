@@ -6,8 +6,9 @@
     content: "";
     position: absolute;
     background-image: url(../img/leaf-top.png);
-    width: 292px;
-    height: 294px;
+    width: 241px;
+    height: 142px;
+    background-size: cover;
     top: 0;
     left: 0;
   }
@@ -40,14 +41,14 @@
       background-image: url(../img/chevron-brown.png);
       width: 66px;
       height: 66px;
-      top: 10%;
+      top: 8%;
       margin-left: 210px;
     }
   }
 
   &__item {
     position: relative;
-
+    margin-bottom: 44px;
     &-img {
       margin-bottom: 20px;
       position: relative;
@@ -58,9 +59,7 @@
       margin-bottom: 12px;
     }
 
-    &-steps {
-      padding-top: 44px;
-    }
+    
 
     &-step {
       background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
@@ -82,19 +81,40 @@
 #button-left {
   display: none;
 }
-.step__wrapper {
+.step__wrapper:first-child {
   margin-bottom: 94px;
-  &:first-child::after {
+ ::after {
     content: "";
     position: absolute;
     background-image: url(../img/chevron-steps.png);
     width: 66px;
     height: 66px;
-    left: 115px;
-    top: 136px;
+    left: 70px;
+    top: 95px;
   }
 }
-@media (max-width: 725px) {
+
+@media(max-width:1460px) {
+    .production__img {
+        width: 60%;
+    }
+}
+
+@media(max-width: 1140px) {
+    .production__wrapper::after {
+        margin-left: 150px;
+    }
+
+    .production__item-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .production__items {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1024px) {
   .production {
     padding-bottom: 0px;
     &::after {
@@ -122,7 +142,7 @@
 
     &__wrapper {
       margin-bottom: 40px;
-
+    
       &::after {
         position: absolute;
         content: "";
@@ -133,15 +153,14 @@
         margin-left: 160px;
       }
     }
-    #button-right,
-    #button-left {
+    #button-right{
       display: block;
     }
 
     &__item {
       display: flex;
       font-size: 14px;
-
+        margin-bottom: 0;
       &-img {
         width: 35px;
         height: 35px;
@@ -185,6 +204,9 @@
   .step__wrapper {
     margin-right: 10px;
     margin-bottom: 0;
+    &:first-child {
+        margin-bottom: 0;
+    }
     img {
       margin-right: 10px;
       display: block;
@@ -195,6 +217,12 @@
       display: none;
     }
   }
+}
+
+@media(max-width: 671px) {
+    #button-left {
+        display: block;
+    }
 }
 
 @media (max-width: 425px) {

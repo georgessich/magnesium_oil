@@ -27,24 +27,24 @@ accordeonItems.forEach((item, index) => {
   }
 });
 
-let currentAccordeonItem = 0; // Индекс текущего активного элемента аккордеона
+let currentAccordeonItem = 0; 
 const hairBoosterSection = document.getElementById("hair-booster");
 hairBoosterSection.addEventListener("wheel", (event) => {
   const accordeonItems = document.querySelectorAll(".accordeon__item");
   const totalItems = accordeonItems.length;
 
-  // Определение направления скролла (1 - вниз, -1 - вверх)
+
   const direction = event.deltaY > 0 ? 1 : -1;
 
-  // Если скролл вниз и текущий элемент меньше общего количества элементов аккордеона
+ 
   if (direction === 1 && currentAccordeonItem < totalItems) {
-    // Закрываем все активные элементы аккордеона
+
     accordeonItems.forEach((item) => {
       item.classList.remove("active");
       item.querySelector(".accordeon__content").style.maxHeight = "0";
     });
 
-    // Открываем следующий элемент аккордеона
+
     accordeonItems[currentAccordeonItem].classList.add("active");
     accordeonItems[currentAccordeonItem].querySelector(
       ".accordeon__content"
@@ -52,20 +52,19 @@ hairBoosterSection.addEventListener("wheel", (event) => {
       accordeonItems[currentAccordeonItem].querySelector(".accordeon__content")
         .scrollHeight + "px";
 
-    // Увеличиваем переменную для следующего скролла
+
     currentAccordeonItem++;
   } else if (direction === -1 && currentAccordeonItem > 0) {
-    // Если скролл вверх и текущий элемент больше 0
-    // Закрываем текущий активный элемент и открываем предыдущий
+
     currentAccordeonItem--;
 
-    // Закрываем все элементы аккордеона
+
     accordeonItems.forEach((item) => {
       item.classList.remove("active");
       item.querySelector(".accordeon__content").style.maxHeight = "0";
     });
 
-    // Открываем предыдущий элемент аккордеона
+  
     accordeonItems[currentAccordeonItem].classList.add("active");
     accordeonItems[currentAccordeonItem].querySelector(
       ".accordeon__content"
@@ -73,27 +72,34 @@ hairBoosterSection.addEventListener("wheel", (event) => {
       accordeonItems[currentAccordeonItem].querySelector(".accordeon__content")
         .scrollHeight + "px";
   } else {
-    // Выполняйте вашу логику для перехода к следующему экрану
-    // ...
+   
     docSlider.jumpPage(3);
   }
 
-  // Отменяем стандартное поведение скролла страницы
+
   event.preventDefault();
 });
-// const hairProductWrapper = document.querySelector(".hair-product--wrapper");
 
-// // Добавляем обработчик события изменения размера окна
-// window.addEventListener("resize", adjustImageHeight);
+// Функция, которая автоматически раскроет второй элемент аккордеона на устройствах с шириной экрана < 725 пикселей
+function autoOpenSecondAccordionItem() {
+  if (window.innerWidth < 725) {
+    // Убедимся, что второй элемент аккордеона существует
+    if (accordeonItems.length > 1) {
+      // Закроем все элементы аккордеона
+      accordeonItems.forEach((item) => {
+        item.classList.remove("active");
+        item.querySelector(".accordeon__content").style.maxHeight = "0";
+      });
 
-// // Функция для подстройки высоты изображения
-// function adjustImageHeight() {
-//   const windowHeight = window.innerHeight;
-//   const accordeonHeight = hairProductWrapper.scrollHeight;
-//   const img = document.querySelector(".hair-product--img");
+      // Откроем второй элемент аккордеона
+      const secondItem = accordeonItems[1]; // Второй элемент
+      secondItem.classList.add("active");
+      const content = secondItem.querySelector(".accordeon__content");
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+}
 
-//   img.style.maxHeight = windowHeight - accordeonHeight - 2 + "px"; // Вычтите 2 пикселя для отступов
-// }
-
-// // Вызываем функцию для подстройки высоты изображения при загрузке страницы
-// adjustImageHeight();
+// Вызовем функцию при загрузке страницы и при изменении размера окна
+window.addEventListener("load", autoOpenSecondAccordionItem);
+window.addEventListener("resize", autoOpenSecondAccordionItem);

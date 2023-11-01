@@ -79,12 +79,14 @@
 @media (max-width: 724px) {
   .accordeon {
     &__item {
-      padding: 10px 0 5px;
+      padding: 15px 0 5px;
+      z-index: 2;
+      position: relative;
     }
     &__title {
       font-size: 14px;
       font-weight: 600;
-      padding: 15px 0;
+      padding: 0;
     }
 
     &__content {
@@ -101,7 +103,7 @@
 
     &__works {
       grid-template-columns: repeat(1, 1fr);
-
+      row-gap: 15px;
       &-text {
         font-size: 14px;
       }

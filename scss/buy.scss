@@ -66,7 +66,11 @@
 .buy__info-link.underline {
   text-decoration: underline;
 }
-
+@media(max-width: 1154px) {
+  .buy__info {
+    column-gap: 20px;
+  }
+}
 @media (max-width: 725px) {
   .buy {
     &__info,
