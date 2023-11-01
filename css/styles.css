@@ -285,7 +285,7 @@
   .body-product__props {
     font-size: 14px;
   }
-  .body-product__props p br {
+  .body-product__props br {
     display: none;
   }
   #beenergy .body-product__bottle .body-product__bg {
