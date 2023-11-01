@@ -603,8 +603,6 @@
 }
 .hero__link {
   color: #fff;
-}
-.hero__link-wrapper {
   backdrop-filter: blur(27px);
   font-weight: 400;
   font-size: 22px;
@@ -612,10 +610,10 @@
   border: 1px solid #fff;
   margin-right: 46px;
 }
-.hero__link-wrapper:nth-child(1) {
+.hero__link:nth-child(1) {
   padding: 9px 57px;
 }
-.hero__link-wrapper:nth-child(2) {
+.hero__link:nth-child(2) {
   padding: 9px 62px;
 }
 .hero__product {
@@ -647,10 +645,12 @@
     margin: 0 auto;
     padding-bottom: 0px;
   }
-  .hero__link-wrapper {
+  .hero__link {
     margin-right: 0;
     font-size: 16px;
     margin-bottom: 16px;
+    z-index: 20;
+    position: relative;
   }
   .hero__product {
     display: none;

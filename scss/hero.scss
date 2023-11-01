@@ -33,21 +33,21 @@
 
     &__link {
         color: #fff;
-
-        &-wrapper {
-            backdrop-filter: blur(27px);
+        backdrop-filter: blur(27px);
             font-weight: 400;
             font-size: 22px;
             border-radius: 21px;
             border: 1px solid #fff;
             margin-right: 46px;
+        &-wrapper {
+            
         }
 
-        &-wrapper:nth-child(1) {
+        &:nth-child(1) {
             padding: 9px 57px;
         }
 
-        &-wrapper:nth-child(2) {
+        &:nth-child(2) {
             padding: 9px 62px;
         }
     }
@@ -90,11 +90,11 @@
         }
 
         &__link {
-            &-wrapper {
                 margin-right: 0;
                 font-size: 16px;
                 margin-bottom: 16px;
-            }
+                z-index: 20;
+                position: relative;
         }
 
         &__product {
