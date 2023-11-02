@@ -83,13 +83,13 @@
 }
 .step__wrapper:first-child {
   margin-bottom: 94px;
- ::after {
+ &::after {
     content: "";
     position: absolute;
     background-image: url(../img/chevron-steps.png);
     width: 66px;
     height: 66px;
-    left: 70px;
+    left: 109px;
     top: 95px;
   }
 }
@@ -97,6 +97,14 @@
 @media(max-width:1460px) {
     .production__img {
         width: 60%;
+    }
+    .step__wrapper:first-child {
+
+     &::after {
+    
+        left: 71px;
+
+      }
     }
 }
 
