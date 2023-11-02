@@ -30,7 +30,7 @@
     }
 
     &--img {
-      max-height: calc(100vh - 70vh);
+      max-height: calc(100vh - 80vh);
       width: auto;
       margin-top: 1rem;
     }
@@ -40,10 +40,10 @@
     }
   }
 }
-.item--wrapper {
-  display: flex;
-  align-items: flex-start;
-}
+// .item--wrapper {
+//   display: flex;
+//   align-items: flex-start;
+// }
 
 @media (max-width: 724px) {
   .item--wrapper {

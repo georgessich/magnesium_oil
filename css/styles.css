@@ -363,6 +363,9 @@
   }
 }
 @media (max-width: 724px) {
+  .body {
+    position: relative;
+  }
   .body::before {
     position: absolute;
     content: "";
@@ -533,7 +536,7 @@
     align-items: center;
   }
   .hair-product--img {
-    max-height: 30vh;
+    max-height: 20vh;
     width: auto;
     margin-top: 1rem;
   }
@@ -541,11 +544,6 @@
     width: 100%;
   }
 }
-.item--wrapper {
-  display: flex;
-  align-items: flex-start;
-}
-
 @media (max-width: 724px) {
   .item--wrapper {
     flex-direction: column-reverse;

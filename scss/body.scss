@@ -58,6 +58,7 @@
 
 @media (max-width: 724px) {
   .body {
+    position: relative;
     &::before {
       position: absolute;
       content: "";
