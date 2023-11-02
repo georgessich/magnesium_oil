@@ -60,22 +60,22 @@ svg {
 
   height: auto;
 }
-// ::-webkit-scrollbar {
-//   width: 0; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar {
+  width: 0; /* Для Safari и Chrome */
+}
 
-// ::-webkit-scrollbar-thumb {
-//   background-color: transparent; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Для Safari и Chrome */
+}
 
-// ::-webkit-scrollbar-track {
-//   background-color: transparent; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Для Safari и Chrome */
+}
 
-// /* Для Firefox */
-// * {
-//   scrollbar-width: none;
-// }
+/* Для Firefox */
+* {
+  scrollbar-width: none;
+}
 body {
   font-family: "Raleway", sans-serif;
 }
