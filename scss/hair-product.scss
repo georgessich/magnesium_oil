@@ -1,6 +1,5 @@
 .hair-product {
-  position: relative;
-  height: 100vh;
+ 
   &--wrapper {
     display: flex;
     padding-top: 69px;
@@ -55,6 +54,6 @@
 }
 
 .item--wrapper {
-  display: flex;
-  align-items: flex-start;
+  position: relative;
+  height: 100vh;
 }
