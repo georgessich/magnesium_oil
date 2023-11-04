@@ -1087,7 +1087,6 @@ body {
   padding-top: 8.75rem;
   padding-bottom: 3.75rem;
   height: 100vh;
-  overflow: hidden;
 }
 
 @media (max-width: 1465px) {
