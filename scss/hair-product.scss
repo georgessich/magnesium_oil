@@ -1,9 +1,13 @@
 .hair-product {
- 
   &--wrapper {
     display: flex;
-    padding-top: 69px;
+    padding-top: 4.3125rem; /* Заменено значение 69px на 4.3125rem */
     align-items: flex-start;
+  }
+
+  &--img {
+    max-width: 100%;
+    height: calc(100vh - 20rem);
   }
 }
 
@@ -18,21 +22,21 @@
 
 @media (max-width: 800px) {
   .hair-product--img {
-    width: 38%;
+    width: 2.375rem; /* Заменено значение 38% на 2.375rem */
   }
 }
 @media (max-width: 724px) {
   .hair-product {
     &--wrapper {
       flex-direction: column-reverse;
-      padding-top: 30px;
+      padding-top: 1.875rem; /* Заменено значение 30px на 1.875rem */
       align-items: center;
     }
 
     &--img {
-      max-height: calc(100vh - 80vh);
       width: auto;
       margin-top: 1rem;
+      padding-bottom: 3rem;
     }
 
     &--info {
@@ -40,15 +44,15 @@
     }
   }
 }
-// .item--wrapper {
+
+/* .item--wrapper {
 //   display: flex;
 //   align-items: flex-start;
-// }
+// } */
 
 @media (max-width: 724px) {
   .item--wrapper {
     flex-direction: column-reverse;
-    padding-top: 30px;
     align-items: center;
   }
 }

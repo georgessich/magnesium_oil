@@ -60,45 +60,54 @@ svg {
 
   height: auto;
 }
-::-webkit-scrollbar {
-  width: 0; /* Для Safari и Chrome */
+html, body {
+  font-size: 16px;
 }
+// ::-webkit-scrollbar {
+//   width: 0; /* Для Safari и Chrome */
+// }
 
-::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Для Safari и Chrome */
-}
+// ::-webkit-scrollbar-thumb {
+//   background-color: transparent; /* Для Safari и Chrome */
+// }
 
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Для Safari и Chrome */
-}
+// ::-webkit-scrollbar-track {
+//   background-color: transparent; /* Для Safari и Chrome */
+// }
 
-/* Для Firefox */
-* {
-  scrollbar-width: none;
-}
+// /* Для Firefox */
+// * {
+//   scrollbar-width: none;
+// }
 body {
   font-family: "Raleway", sans-serif;
 }
 .container {
-  width: 1428px;
-  margin: 0 auto;
+  width: 100%; /* Занимает всю доступную ширину экрана */
+  max-width: 89rem; /* Максимальная ширина контейнера для более крупных экранов */
+  margin: 0 auto; /* Выравнивание по центру */
+  padding-top: 8.75rem;
+  padding-bottom: 3.75rem;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media(max-width: 1465px) {
+@media (max-width: 1465px) {
   .container {
-    width: 1085px;
+    width: 67.8125rem;
   }
 }
 
-@media(max-width: 1140px) {
+@media (max-width: 1140px) {
   .container {
-    width: 988px;
+    width: 61.75rem;
   }
 }
-@media(max-width: 1024px) {
+
+@media (max-width: 1024px) {
   .container {
-    width: 786px;
-    padding: 0 22px;
+    width: 45.125rem;
+
   }
 }
 .nav-scrolled a {
@@ -121,5 +130,11 @@ body {
 @media(max-width: 725px) {
   .container {
     width: auto;
+    padding: 0 1.375rem;
+  }
+}
+@media(max-width: 1025px) and (orientation: landscape) {
+  .container {
+    height: auto;
   }
 }
