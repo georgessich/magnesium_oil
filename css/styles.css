@@ -319,7 +319,7 @@
     width: 100%;
     position: relative;
     height: 100vh;
-    transition: transform 1s ease-in;
+    transition: transform 0.6s ease-in;
   }
   .body-product__name {
     padding-top: 1.25rem;
@@ -1165,6 +1165,54 @@ body {
     padding-top: 0;
   }
 }
+@media screen and (min-width: 812px) and (max-width: 812px) and (min-height: 375px) and (max-height: 375px) and (orientation: landscape) {
+  .container {
+    height: auto;
+    overflow: auto;
+  }
+  .hair__wrapper-img {
+    height: auto;
+  }
+  .hair-product--img {
+    height: auto;
+  }
+  .item--wrapper {
+    height: auto;
+  }
+  .buy__disclaimer {
+    bottom: auto;
+  }
+  .body-product {
+    height: auto;
+  }
+  .body-product__item {
+    height: auto;
+  }
+}
+@media screen and (min-width: 844px) and (max-width: 844px) and (min-height: 390px) and (max-height: 390px) and (orientation: landscape) {
+  .container {
+    height: auto;
+    overflow: auto;
+  }
+  .hair__wrapper-img {
+    height: auto;
+  }
+  .hair-product--img {
+    height: auto;
+  }
+  .item--wrapper {
+    height: auto;
+  }
+  .buy__disclaimer {
+    bottom: auto;
+  }
+  .body-product {
+    height: auto;
+  }
+  .body-product__item {
+    height: auto;
+  }
+}
 .video {
   position: relative;
   padding-bottom: 5.875rem;
@@ -1335,7 +1383,6 @@ body {
     height: 3rem;
   }
 }
-@charset "UTF-8";
 .header {
   backdrop-filter: blur(27px);
   position: fixed;
@@ -1443,7 +1490,7 @@ body {
   .header__mobile-menu {
     background-color: #fff;
     height: 100vh;
-    transform: translateX(-100%); /* Начальная позиция вне экрана */
+    transform: translateX(-100%);
     transition: transform 2.3s ease;
   }
   .header__mobile-burger {
@@ -1488,7 +1535,7 @@ body {
 
 .mobile__wrapper.active {
   width: 90%;
-  animation: animation 0.3s ease; /* указание времени (0.3s) и режима анимации (ease) */
+  animation: animation 0.3s ease;
 }
 
 @keyframes animation {
