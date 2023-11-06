@@ -1,22 +1,23 @@
 .title__wrapper {
-    // padding-top: 8.75rem; /* Заменяем 140px на 8.75rem */
+
 
     span {
-        font-size: 1.375rem; /* Заменяем 22px на 1.375rem */
+        font-size: 1.375rem;
         color: #bdbdbd;
+        margin-bottom: 0.938rem;
     }
 
     h2 {
-        font-size: 2rem; /* Заменяем 32px на 2rem */
+        font-size: 2.25rem;
         font-weight: 600;
     }
 }
 
 @media (max-width: 450px) {
     .title__wrapper {
-        padding-top: 4.5625rem; /* Заменяем 73px на 4.5625rem */
+        padding-top: 6.75rem; 
         h2 {
-            font-size: 1.5rem; /* Заменяем 24px на 1.5rem */
+            font-size: 1.5rem; 
         }
     }
 }

@@ -1,75 +1,66 @@
 .production {
-  padding-bottom: 252px;
+  padding-bottom: 15.75rem;
   position: relative;
   height: 100vh;
   &::before {
     content: "";
     position: absolute;
     background-image: url(../img/leaf-top.png);
-    width: 241px;
-    height: 142px;
+    width: 15.06rem;
+    height: 8.91rem;
     background-size: cover;
     top: 0;
     left: 0;
   }
-
   &::after {
     content: "";
     position: absolute;
     background-image: url(../img/leaf-bottom.png);
-    width: 173px;
-    height: 177px;
+    width: 10.68rem;
+    height: 10.98rem;
     right: 0;
     bottom: 0;
   }
-
   &__items {
     position: relative;
-    padding-top: 70px;
+    padding-top: 4.375rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    font-size: 18px;
-    column-gap: 100px;
+    font-size: 1.125rem;
+    column-gap: 6.25rem;
     font-weight: 400;
     overflow: hidden;
   }
-
   &__wrapper {
     &::after {
       position: absolute;
       content: "";
       background-image: url(../img/chevron-brown.png);
-      width: 66px;
-      height: 66px;
+      width: 4.125rem;
+      height: 4.125rem;
       top: 8%;
-      margin-left: 210px;
+      margin-left: 13.125rem;
     }
   }
-
   &__item {
     position: relative;
-    margin-bottom: 44px;
+    margin-bottom: 2.75rem;
     &-img {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       position: relative;
     }
-
     &-list li {
       list-style: disc;
-      margin-bottom: 12px;
+      margin-bottom: 0.75rem;
     }
-
-    
-
     &-step {
       background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
-      font-size: 18px;
-      padding: 9px 17px;
+      font-size: 1.125rem;
+      padding: 0.5625rem 1.0625rem;
       position: relative;
-      border-radius: 7px;
+      border-radius: 0.4375rem;
     }
   }
-
   &__img {
     position: absolute;
     bottom: 0;
@@ -77,54 +68,52 @@
     z-index: -1;
   }
 }
+
 #button-right,
 #button-left {
   display: none;
 }
+
 .step__wrapper:first-child {
-  margin-bottom: 94px;
- &::after {
+  margin-bottom: 5.875rem;
+  &::after {
     content: "";
     position: absolute;
     background-image: url(../img/chevron-steps.png);
-    width: 66px;
-    height: 66px;
-    left: 109px;
-    top: 95px;
+    width: 4.125rem;
+    height: 4.125rem;
+    left: 6.5625rem;
+    top: 6.5625rem;
   }
 }
 
-@media(max-width:1460px) {
-    .production__img {
-        width: 60%;
+@media (max-width: 1460px) {
+  .production__img {
+    width: 60%;
+  }
+  .step__wrapper:first-child {
+    &::after {
+      left: 4.0625rem;
     }
-    .step__wrapper:first-child {
-
-     &::after {
-    
-        left: 71px;
-
-      }
-    }
+  }
 }
 
-@media(max-width: 1140px) {
-    .production__wrapper::after {
-        margin-left: 150px;
-    }
-
-    .production__item-img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .production__items {
-        font-size: 16px;
-    }
+@media (max-width: 1140px) {
+  .production__wrapper::after {
+    margin-left: 9.375rem;
+  }
+  .production__item-img {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+  .production__items {
+    font-size: 1rem;
+  }
 }
+
 @media (max-width: 1024px) {
   .production {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     &::after {
       display: none;
     }
@@ -132,8 +121,8 @@
       content: "";
       position: absolute;
       background-image: url(../img/body-top-mobile.png);
-      width: 109px;
-      height: 170px;
+      width: 6.8125rem;
+      height: 10.625rem;
       top: 0;
       left: auto;
       right: 0;
@@ -141,82 +130,74 @@
     &__img {
       display: none;
     }
-
     &__items {
-      grid-template-columns: repeat(1, 350px);
+      grid-template-columns: repeat(1, 21.875rem);
       overflow: hidden;
-      padding-top: 25px;
+      padding-top: 1.5625rem;
     }
-
     &__wrapper {
-      margin-bottom: 40px;
-    
+    margin-bottom: 3.188rem;
       &::after {
         position: absolute;
         content: "";
         background-image: url(../img/chevron-down-brown.png);
-        width: 45px;
-        height: 28px;
+        width: 2.8125rem;
+        height: 1.75rem;
         top: auto;
-        margin-left: 160px;
+        margin-left: 10rem;
       }
     }
-    #button-right{
+    #button-right {
       display: block;
     }
-
     &__item {
       display: flex;
-      font-size: 14px;
-        margin-bottom: 0;
+      font-size: 0.875rem;
+      margin-bottom: 0;
       &-img {
-        width: 35px;
-        height: 35px;
+        width: 1.09375rem;
+        height: 1.09375rem;
       }
-
       &-text {
-        padding-left: 8px;
+        padding-left: 0.5rem;
       }
-
       ul {
-        margin-left: 20px;
+        margin-left: 1.25rem;
       }
-
       ul li {
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
       }
-
       &-steps {
         display: flex;
         align-items: center;
         transition: transform 0.3s ease;
-        padding-top: 20px;
+        padding-top: 1.25rem;
+        margin-bottom: 1rem;
       }
-
       &-step {
-        font-size: 14px;
-        padding: 9px 12px;
+        font-size: 0.875rem;
+        padding: 0.5625rem 0.75rem;
         &:first-child::after {
           display: none;
         }
         &:first-child {
-          width: 260px;
-          height: 83px;
+          width: 16.25rem;
+          height: 5.25rem;
         }
         &:last-child {
-          margin-top: 0px;
+          margin-top: 0;
         }
       }
     }
   }
   .step__wrapper {
-    margin-right: 10px;
+    margin-right: 0.625rem;
     margin-bottom: 0;
     &:first-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
     img {
-      margin-right: 10px;
+      margin-right: 0.625rem;
       display: block;
     }
     &:last-child {
@@ -227,22 +208,21 @@
   }
 }
 
-@media(max-width: 671px) {
-    #button-left {
-        display: block;
-    }
+@media (max-width: 671px) {
+  #button-left {
+    display: block;
+  }
 }
 
 @media (max-width: 425px) {
   .production {
     &__item {
       &-text {
-        width: 320px;
+        width: 20rem;
+        margin-bottom: 0.813rem;
       }
     }
   }
-
-
   .production__item-steps.process__active {
     transform: translateX(-50%);
   }

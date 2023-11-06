@@ -1,7 +1,7 @@
 .hair-product {
   &--wrapper {
     display: flex;
-    padding-top: 4.3125rem; /* Заменено значение 69px на 4.3125rem */
+    padding-top: 4.3125rem;
     align-items: flex-start;
   }
 
@@ -22,21 +22,21 @@
 
 @media (max-width: 800px) {
   .hair-product--img {
-    width: 2.375rem; /* Заменено значение 38% на 2.375rem */
+    width: 2.375rem;
   }
 }
 @media (max-width: 724px) {
   .hair-product {
     &--wrapper {
       flex-direction: column-reverse;
-      padding-top: 1.875rem; /* Заменено значение 30px на 1.875rem */
+      padding-top: 1.875rem;
       align-items: center;
     }
 
     &--img {
       width: auto;
       margin-top: 1rem;
-      padding-bottom: 3rem;
+      padding-bottom: 5rem;
     }
 
     &--info {
@@ -45,10 +45,7 @@
   }
 }
 
-/* .item--wrapper {
-//   display: flex;
-//   align-items: flex-start;
-// } */
+
 
 @media (max-width: 724px) {
   .item--wrapper {

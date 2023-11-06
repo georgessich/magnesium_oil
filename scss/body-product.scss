@@ -2,9 +2,9 @@
   height: 100vh;
   &__items {
     display: grid;
-    padding-top: 69px;
+    padding-top: 3.3125vh;
     grid-template-columns: repeat(4, 1fr);
-    column-gap:60px;
+    column-gap: 3.75rem;
   }
 
   &__show {
@@ -26,12 +26,11 @@
 
   &__name {
     color: #000;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 600;
     text-align: center;
-    padding-top: 44px;
-    margin-bottom: 12px;
-
+    padding-top: 2.75rem;
+    margin-bottom: 0.75rem;
     span {
       color: #034c75;
       font-weight: 500;
@@ -42,7 +41,7 @@
 
   &__props {
     list-style: disc;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
   }
 
@@ -51,69 +50,69 @@
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: translateY(-25px);
+      transform: translateY(-1.5625rem);
     }
   }
 
   &__moss {
     position: absolute;
-    margin-left: -150px;
-    margin-top: 400px;
+    margin-left: -9.375rem;
+    margin-top: 25rem;
   }
 }
 
 #hydration .body-product__bottle .body-product__bg {
   position: absolute;
-  margin-top: 145px;
-  margin-left: -65px;
+  margin-top: 9.0625rem;
+  margin-left: -4.0625rem;
 }
 
 #beenergy .body-product__bottle .body-product__bg {
   position: absolute;
-  margin-left: -150px;
-  margin-top: 60px;
+  margin-left: -9.375rem;
+  margin-top: 3.75rem;
   z-index: -1;
 }
 
 #detox .body-product__bottle .body-product__bg {
   position: absolute;
-  margin-left: -100px;
-  margin-top: -60px;
+  margin-left: -6.25rem;
+  margin-top: -3.75rem;
 }
 
 #goodnight .body-product__bottle .body-product__bg {
-  width: 403px;
+  width: 25.1875rem;
   position: absolute;
-  margin-left: -106px;
+  margin-left: -6.625rem;
   z-index: -2;
-  margin-top: -60px;
+  margin-top: -3.75rem;
 }
 
 .product-info {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 0%;
+  width: 0;
   height: 100%;
   background-color: white;
   z-index: 999;
   transition: right 0.3s ease;
 }
-@media(max-width:1525px) {
+@media (max-width: 1525px) {
   .body-product__items {
     column-gap: 0;
   }
 }
-@media(max-width: 1220px) {
+@media (max-width: 1220px) {
   .body-product__items {
-    grid-template-columns: repeat(4, 220px);
+    grid-template-columns: repeat(4, 13.75rem);
   }
 }
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .body-product__items {
     display: flex;
-      flex-direction: column;
-      padding-top: 20px;
+    flex-direction: column;
+    padding-top: 1.25rem;
   }
 }
 @media (max-width: 725px) {
@@ -121,49 +120,44 @@
     &__show {
       position: absolute;
       display: block;
-      right: 20px;
+      right: 1.25rem;
       top: 15%;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       color: #bdbdbd;
       font-style: italic;
       border-bottom: 1px solid #bdbdbd;
     }
-
-
+    &__items {
+      // width: 100%;
+      // height: 400%;
+      // overflow: hidden;
+    }
     &__item {
-      padding-top: 20px;
-      max-width: 92vh;
+      padding-top: 1.25rem;
+      width: 100%;
+      // height: 25%;
+      position: relative;
+      height: 100vh;
       overflow: hidden;
     }
 
-    // &__bottle {
-    //   max-height: 80vh;
-    //   overflow: hidden;
-    // }
-
     &__name {
-      padding-top: 20px;
-      font-size: 15px;
+      padding-top: 1.25rem;
+      font-size: 0.9375rem;
     }
 
     &__props {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
     &__props br {
       display: none;
     }
-    
   }
 
   #beenergy .body-product__bottle .body-product__bg {
-    margin-left: -91px;
-    margin-top: 173px;
-    width: 370px;
+
+    width: 30.125rem;
   }
-  #goodnight .body-product__bottle .body-product__bg {
-    width: 363px;
-    margin-left: -89px;
-    margin-top: 0;
-  }
+
 }

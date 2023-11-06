@@ -83,29 +83,34 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .container {
-  width: 100%; /* Занимает всю доступную ширину экрана */
-  max-width: 89rem; /* Максимальная ширина контейнера для более крупных экранов */
-  margin: 0 auto; /* Выравнивание по центру */
+  width: 100%; 
+  max-width: 89rem; 
+  margin: 0 auto;
   padding-top: 8.75rem;
   padding-bottom: 3.75rem;
   height: 100vh;
-  // overflow: hidden;
+  overflow: hidden;
+}
+.header__wrap {
+  width: 100%; 
+  max-width: 89rem; 
+  margin: 0 auto; 
 }
 
 @media (max-width: 1465px) {
-  .container {
+  .container, .header__wrap {
     width: 67.8125rem;
   }
 }
 
 @media (max-width: 1140px) {
-  .container {
+  .container, .header__wrap {
     width: 61.75rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .container {
+  .container, .header__wrap {
     width: 45.125rem;
 
   }
@@ -128,13 +133,13 @@ body {
 }
 
 @media(max-width: 725px) {
-  .container {
+  .container, .header__wrap {
     width: auto;
     padding: 0 1.375rem;
   }
 }
-@media(max-width: 1025px) and (orientation: landscape) {
-  .container {
+@media(max-width: 844px) and (orientation: landscape) {
+  .container, .header__wrap {
     height: auto;
   }
 }
