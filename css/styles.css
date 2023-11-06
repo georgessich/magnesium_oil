@@ -174,7 +174,7 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3.75rem;
 }
-.body-product__show {
+.body-product__toplink, .body-product__toplink--item {
   display: none;
 }
 .body-product__item {
@@ -265,7 +265,11 @@
 }
 @media (max-width: 1220px) {
   .body-product__items {
-    grid-template-columns: repeat(4, 13.75rem);
+    grid-template-columns: repeat(4, 25%);
+  }
+  .body-product__name {
+    font-size: 1rem;
+    padding-top: 0.75rem;
   }
 }
 @media (max-width: 1024px) {
@@ -274,8 +278,11 @@
     flex-direction: column;
     padding-top: 1.25rem;
   }
+  .body-product__item {
+    height: 100vh;
+  }
 }
-@media (max-width: 725px) {
+@media (max-width: 768px) {
   .body-product__show {
     position: absolute;
     display: block;
@@ -287,11 +294,32 @@
     font-style: italic;
     border-bottom: 1px solid #bdbdbd;
   }
+  .body-product__toplink {
+    display: block;
+    position: absolute;
+    top: -5%;
+    right: 0;
+    font-size: 1rem;
+    color: #bdbdbd;
+    font-style: italic;
+    border-bottom: 1px solid #bdbdbd;
+  }
+  .body-product__toplink--item {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 17%;
+    font-size: 1rem;
+    color: #bdbdbd;
+    font-style: italic;
+    border-bottom: 1px solid #bdbdbd;
+    z-index: 3;
+  }
   .body-product__item {
     width: 100%;
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    transition: transform 1s ease-in;
   }
   .body-product__name {
     padding-top: 1.25rem;
@@ -343,6 +371,7 @@
   padding-top: 4.25rem;
   padding-bottom: 4.875rem;
   max-width: 100%;
+  width: 70%;
 }
 .body__img-mobile {
   display: none;
@@ -416,8 +445,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 17.3125rem;
-  height: 6.5rem;
+  width: 16.3125vw;
+  height: 9.5vh;
   margin-right: 1.625rem;
 }
 .buy__wrapper-link img {
@@ -452,7 +481,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  font-size: 2.5625rem;
+  font-size: 2.5625vw;
   font-weight: 600;
   color: #e0e0e0;
   text-transform: uppercase;
@@ -479,7 +508,7 @@
     row-gap: 0.9375rem;
   }
   .buy__wrapper-link {
-    width: 10.3125rem;
+    width: 9.3125rem;
     height: 4.4375rem;
   }
 }
@@ -535,11 +564,6 @@
   }
   .hair-product--info {
     width: 50%;
-  }
-}
-@media (max-width: 800px) {
-  .hair-product--img {
-    width: 2.375rem;
   }
 }
 @media (max-width: 724px) {
@@ -607,7 +631,6 @@
 @media (max-width: 1435px) {
   .hair__wrapper-text {
     max-width: 17.5rem;
-    padding-top: 6.25rem;
   }
   .hair__wrapper-text:nth-child(3) {
     position: absolute;
@@ -792,6 +815,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 50vh;
   }
 }
 .production {
@@ -1013,6 +1037,7 @@
 #button-left {
   cursor: pointer;
 }
+@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -1076,6 +1101,23 @@ html, body {
   font-size: 16px;
 }
 
+::-webkit-scrollbar {
+  width: 0; /* Для Safari и Chrome */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Для Safari и Chrome */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Для Safari и Chrome */
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: none;
+}
+
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -1084,7 +1126,7 @@ body {
   width: 100%;
   max-width: 89rem;
   margin: 0 auto;
-  padding-top: 8.75rem;
+  padding-top: 13.75vh;
   padding-bottom: 3.75rem;
   height: 100vh;
   overflow: hidden;
@@ -1098,17 +1140,7 @@ body {
 
 @media (max-width: 1465px) {
   .container, .header__wrap {
-    width: 67.8125rem;
-  }
-}
-@media (max-width: 1140px) {
-  .container, .header__wrap {
-    width: 61.75rem;
-  }
-}
-@media (max-width: 1024px) {
-  .container, .header__wrap {
-    width: 45.125rem;
+    width: 90vw;
   }
 }
 .nav-scrolled a {
@@ -1130,13 +1162,7 @@ body {
 
 @media (max-width: 725px) {
   .container, .header__wrap {
-    width: auto;
-    padding: 0 1.375rem;
-  }
-}
-@media (max-width: 844px) and (orientation: landscape) {
-  .container, .header__wrap {
-    height: auto;
+    padding-top: 0;
   }
 }
 .video {
@@ -1483,7 +1509,7 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 730px) {
   .title__wrapper {
     padding-top: 6.75rem;
   }

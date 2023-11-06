@@ -83,7 +83,6 @@ function openNextAccordeonItem() {
       shouldScroll = true;
     
       docSlider.enable(true);
-      console.log('alll scroll')
   }
   
 }
@@ -127,6 +126,22 @@ function autoOpenSecondAccordionItem() {
       const secondItem = accordeonItems[1]; // Второй элемент
       secondItem.classList.add("active");
       const content = secondItem.querySelector(".accordeon__content");
+      content.style.maxHeight = content.scrollHeight + "px";
+      
+    }
+  } else {
+    // Если экран больше 725 пикселей, открываем первый элемент
+    if (accordeonItems.length > 0) {
+      // Закроем все элементы аккордеона
+      accordeonItems.forEach((item) => {
+        item.classList.remove("active");
+        item.querySelector(".accordeon__content").style.maxHeight = "0";
+      });
+
+      // Откроем первый элемент аккордеона
+      const firstItem = accordeonItems[0]; // Первый элемент
+      firstItem.classList.add("active");
+      const content = firstItem.querySelector(".accordeon__content");
       content.style.maxHeight = content.scrollHeight + "px";
     }
   }

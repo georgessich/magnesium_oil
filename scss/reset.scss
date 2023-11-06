@@ -63,22 +63,22 @@ svg {
 html, body {
   font-size: 16px;
 }
-// ::-webkit-scrollbar {
-//   width: 0; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar {
+  width: 0; /* Для Safari и Chrome */
+}
 
-// ::-webkit-scrollbar-thumb {
-//   background-color: transparent; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Для Safari и Chrome */
+}
 
-// ::-webkit-scrollbar-track {
-//   background-color: transparent; /* Для Safari и Chrome */
-// }
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Для Safari и Chrome */
+}
 
-// /* Для Firefox */
-// * {
-//   scrollbar-width: none;
-// }
+/* Для Firefox */
+* {
+  scrollbar-width: none;
+}
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -86,7 +86,7 @@ body {
   width: 100%; 
   max-width: 89rem; 
   margin: 0 auto;
-  padding-top: 8.75rem;
+  padding-top: 13.75vh;
   padding-bottom: 3.75rem;
   height: 100vh;
   overflow: hidden;
@@ -99,22 +99,11 @@ body {
 
 @media (max-width: 1465px) {
   .container, .header__wrap {
-    width: 67.8125rem;
+    width: 90vw;
   }
 }
 
-@media (max-width: 1140px) {
-  .container, .header__wrap {
-    width: 61.75rem;
-  }
-}
 
-@media (max-width: 1024px) {
-  .container, .header__wrap {
-    width: 45.125rem;
-
-  }
-}
 .nav-scrolled a {
   color: black;
 }
@@ -134,12 +123,11 @@ body {
 
 @media(max-width: 725px) {
   .container, .header__wrap {
-    width: auto;
-    padding: 0 1.375rem;
+   padding-top: 0;
   }
 }
-@media(max-width: 844px) and (orientation: landscape) {
-  .container, .header__wrap {
-    height: auto;
-  }
-}
+// @media(max-width: 844px) and (orientation: landscape) {
+//   .container, .header__wrap {
+//     height: auto;
+//   }
+// }

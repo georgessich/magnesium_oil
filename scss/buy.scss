@@ -1,14 +1,14 @@
 .buy {
   &__inner {
-    padding-top: 3vh; 
+    padding-top: 3vh;
   }
   &__wrapper {
-    margin-bottom: 1.625rem; 
+    margin-bottom: 1.625rem;
     padding-left: 0.313rem;
     &-text {
-      font-size: 1.375rem; 
+      font-size: 1.375rem;
       font-weight: 500;
-      margin-bottom: 3vh; 
+      margin-bottom: 3vh;
     }
 
     &-link {
@@ -17,8 +17,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 17.3125rem; 
-      height: 6.5rem; 
+      width: 16.3125vw;
+      height: 9.5vh;
       margin-right: 1.625rem;
       img {
         max-width: 100%;
@@ -33,15 +33,15 @@
     }
   }
   &__info {
-    font-size: 1.125rem; 
+    font-size: 1.125rem;
     font-weight: 500;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 12.5rem; 
+    column-gap: 12.5rem;
 
     &-text {
-      max-width: 26.875rem; 
-      font-size: 1.125rem; 
+      max-width: 26.875rem;
+      font-size: 1.125rem;
       font-weight: 500;
       margin-bottom: 1.3125rem;
     }
@@ -60,7 +60,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    font-size: 2.5625rem; 
+    font-size: 2.5625vw;
     font-weight: 600;
     color: #e0e0e0;
     text-transform: uppercase;
@@ -71,9 +71,9 @@
 .buy__info-link.underline {
   text-decoration: underline;
 }
-@media (max-width: 72.125rem) { 
+@media (max-width: 72.125rem) {
   .buy__info {
-    column-gap: 1.25rem; 
+    column-gap: 1.25rem;
   }
 }
 @media (max-width: 45.3125rem) {
@@ -87,12 +87,12 @@
       &-marketplaces {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 0.9375rem; 
+        row-gap: 0.9375rem;
       }
 
       &-link {
-        width: 10.3125rem;
-        height: 4.4375rem; 
+        width: 9.3125rem;
+        height: 4.4375rem;
       }
     }
   }
