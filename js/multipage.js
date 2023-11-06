@@ -15,7 +15,7 @@ if (window.innerWidth <= 1024) {
     if (pageIndex >= 3 || pageIndex <= 0) {
         setTimeout(function() {
           docSlider.enable(true);
-        }, 600); // Задержка в миллисекундах (в данном случае 1 секунда)
+        }, 600); 
       } else {
         docSlider.enable(false);
       }

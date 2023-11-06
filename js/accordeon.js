@@ -98,7 +98,6 @@ hairBoosterSection.addEventListener('wheel', (event) => {
     } else if (direction === -1 && currentAccordeonItem > 0) {
         currentAccordeonItem--;
 
-        // Закрываем текущий активный элемент и открываем предыдущий
         accordeonItems.forEach(item => {
             item.classList.remove('active');
             item.querySelector('.accordeon__content').style.maxHeight = '0';
@@ -114,32 +113,32 @@ hairBoosterSection.addEventListener('wheel', (event) => {
 });
 function autoOpenSecondAccordionItem() {
   if (window.innerWidth < 725) {
-    // Убедимся, что второй элемент аккордеона существует
+
     if (accordeonItems.length > 1) {
-      // Закроем все элементы аккордеона
+
       accordeonItems.forEach((item) => {
         item.classList.remove("active");
         item.querySelector(".accordeon__content").style.maxHeight = "0";
       });
 
-      // Откроем второй элемент аккордеона
-      const secondItem = accordeonItems[1]; // Второй элемент
+
+      const secondItem = accordeonItems[1];
       secondItem.classList.add("active");
       const content = secondItem.querySelector(".accordeon__content");
       content.style.maxHeight = content.scrollHeight + "px";
       
     }
   } else {
-    // Если экран больше 725 пикселей, открываем первый элемент
+
     if (accordeonItems.length > 0) {
-      // Закроем все элементы аккордеона
+
       accordeonItems.forEach((item) => {
         item.classList.remove("active");
         item.querySelector(".accordeon__content").style.maxHeight = "0";
       });
 
-      // Откроем первый элемент аккордеона
-      const firstItem = accordeonItems[0]; // Первый элемент
+
+      const firstItem = accordeonItems[0];
       firstItem.classList.add("active");
       const content = firstItem.querySelector(".accordeon__content");
       content.style.maxHeight = content.scrollHeight + "px";
@@ -147,6 +146,6 @@ function autoOpenSecondAccordionItem() {
   }
 }
 
-// Вызовем функцию при загрузке страницы и при изменении размера окна
+
 window.addEventListener("load", autoOpenSecondAccordionItem);
 window.addEventListener("resize", autoOpenSecondAccordionItem);
