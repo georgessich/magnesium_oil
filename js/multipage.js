@@ -1,7 +1,8 @@
 if (window.innerWidth <= 768) {
     const pages = document.querySelectorAll('.body-product__item');
-    const productsContainer = document.getElementById('body-products')
+    const productsContainer = document.getElementById('body-products');
     let currentPage = 0;
+    let touchStartY = null;
 
     function scrollToPage(pageIndex) {
         if (pageIndex >= 0 && pageIndex < pages.length) {
@@ -9,24 +10,47 @@ if (window.innerWidth <= 768) {
             const newPosition = pageIndex * 100;
             pages.forEach((page) => {
                 page.style.transform = `translateY(-${newPosition}%)`;
-            })
-            if(pageIndex === 3 || pageIndex === 0) {
-                docSlider.enable(true)
+            });
+
+            if (pageIndex >= 3 || pageIndex === 0) {
+                docSlider.enable(true);
             } else {
-                docSlider.enable(false)
+                docSlider.enable(false);
             }
-            console.log(pageIndex)
-            // document.querySelector('.body-product__items').style.transform = `translateY(-${newPosition}%)`;
+            console.log(pageIndex);
         }
     }
 
-    productsContainer.addEventListener('wheel', (event) => {
+    productsContainer.addEventListener('scroll', (event) => {
         if (event.deltaY > 0) {
             // Прокрутка вниз
             scrollToPage(currentPage + 1);
         } else if (event.deltaY < 0) {
             // Прокрутка вверх
             scrollToPage(currentPage - 1);
+        }
+    });
+
+    productsContainer.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    productsContainer.addEventListener('touchmove', (event) => {
+        if (touchStartY !== null) {
+            const touchMoveY = event.touches[0].clientY;
+            const deltaY = touchMoveY - touchStartY;
+            console.log(deltaY);
+            if (deltaY > 50) {
+                // Свайп вниз
+                scrollToPage(currentPage - 1);
+                touchStartY = null; // Сброс touchStartY
+                console.log('swipe down');
+            } else if (deltaY < -50) {
+                // Свайп вверх
+                scrollToPage(currentPage + 1);
+                touchStartY = null; // Сброс touchStartY
+                console.log('swipe up');
+            }
         }
     });
 
