@@ -90,23 +90,22 @@
     }
 
     &__img {
-      display: none;
-
-      &-mobile {
-        display: block;
-        max-width: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 50w;
-        height: 50%;
-      }
+      width: 100%;
     }
   }
 }
 
 @media(max-width: 390px) {
+  .body__img {
+    display: none;
+  }
   .body__img-mobile {
+    display: block;
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
     width: 100vw;
     height: 60vh;
   }

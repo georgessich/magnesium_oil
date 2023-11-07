@@ -437,6 +437,11 @@
     max-width: none;
   }
   .body__img {
+    width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  .body__img {
     display: none;
   }
   .body__img-mobile {
@@ -445,12 +450,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 50w;
-    height: 50%;
-  }
-}
-@media (max-width: 390px) {
-  .body__img-mobile {
     width: 100vw;
     height: 60vh;
   }
@@ -1313,7 +1312,7 @@ body {
     margin-bottom: 2rem;
   }
 }
-@media screen and (min-height: 0) and (max-height: 825) and (min-width: 1025px) {
+@media screen and (min-height: 0) and (max-height: 825) and (min-width: 1024px) {
   .container {
     height: auto;
   }
