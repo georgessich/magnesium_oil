@@ -160,3 +160,9 @@
         }
     }
 }
+
+@media(max-width: 375px) {
+    .hero__title {
+        padding-top: 4.8rem;
+    }
+}
