@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const showProductInfoButton = document.getElementById("show-product-info");
   
     showProductInfoButton.addEventListener("click", function () {
-        console.log("click")
       if (productInfo.style.right === "-100%") {
         productInfo.style.right = "0";
         productInfo.style.width = "100%";

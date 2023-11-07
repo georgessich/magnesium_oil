@@ -118,3 +118,16 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .accordeon__content-text {
+    font-size: 0.775rem;
+   }
+   .accordeon__works-text {
+    font-size: 0.775rem;
+   }
+   .accordeon__works-img {
+    width: 2rem;
+    height: 2rem;
+   }
+}

@@ -115,3 +115,9 @@
     }
   }
 }
+
+@media(max-width: 375px) {
+  .hair__wrapper-img--mobile {
+    height: 45vh;
+  }
+}

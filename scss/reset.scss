@@ -187,3 +187,25 @@ body {
       height: auto;
     }
 }
+
+
+@media (max-width: 375px) {
+ .title__wrapper {
+  padding-top: 4.75rem;
+ }
+
+ .body__info {
+  font-size: 0.775rem;
+  padding-top: 0.75rem;
+  gap: 0.7rem;
+ }
+ .body__img-mobile {
+  height: 60vh;
+ }
+ .contacts__bottom {
+  padding-top: 4rem;
+ }
+ .production__wrapper {
+  margin-bottom: 2rem;
+ }
+}
