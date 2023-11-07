@@ -220,6 +220,11 @@
   margin-top: 25rem;
 }
 
+@media (min-height: 1100px) {
+  .body-product__item {
+    height: auto;
+  }
+}
 #hydration .body-product__bottle .body-product__bg {
   position: absolute;
   margin-top: 9.0625rem;
@@ -347,6 +352,11 @@
     width: 30.125rem;
   }
 }
+@media (max-width: 375px) {
+  .body-product__item {
+    height: 132vh;
+  }
+}
 .body {
   position: relative;
 }
@@ -435,8 +445,14 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    width: 50w;
+    height: 50%;
+  }
+}
+@media (max-width: 390px) {
+  .body__img-mobile {
     width: 100vw;
-    height: calc(100vh - 22rem);
+    height: 60vh;
   }
 }
 .buy__inner {
@@ -626,9 +642,9 @@
   display: none;
 }
 .hair__wrapper-text {
-  max-width: 22.5625rem;
+  max-width: 22.5625vw;
   padding-top: 15vh;
-  font-size: 1.375rem;
+  font-size: 1.375vw;
 }
 .hair__wrapper-text--mobile {
   display: none;
@@ -643,9 +659,6 @@
 }
 
 @media (max-width: 1435px) {
-  .hair__wrapper-text {
-    max-width: 17.5rem;
-  }
   .hair__wrapper-text:nth-child(3) {
     position: absolute;
     right: 0%;
@@ -653,15 +666,12 @@
 }
 @media (max-width: 1024px) {
   .hair__wrapper-text {
-    max-width: 12.5rem;
+    font-size: 2vw;
   }
 }
 @media (max-width: 844px) and (orientation: landscape) {
   .hair__wrapper {
     height: auto;
-  }
-  .hair__wrapper-text {
-    padding-top: 0;
   }
 }
 @media (max-width: 725px) {
@@ -1253,10 +1263,7 @@ body {
     height: auto;
   }
 }
-@media (max-width: 375px) {
-  .title__wrapper {
-    padding-top: 4.75rem;
-  }
+@media (max-width: 400px) {
   .body__info {
     font-size: 0.775rem;
     padding-top: 0.75rem;
@@ -1633,13 +1640,21 @@ body {
 @media (max-width: 730px) {
   .title__wrapper {
     padding-top: 6.75rem;
+    z-index: 3;
+    position: relative;
   }
   .title__wrapper h2 {
     font-size: 1.5rem;
   }
 }
-@media screen and ((max-width: 375px)) {
+@media (max-width: 400px) {
   .title__wrapper {
     padding-top: 4.75rem;
+  }
+  .title__wrapper span {
+    font-size: 1rem;
+  }
+  .title__wrapper h2 {
+    font-size: 1.2rem;
   }
 }
