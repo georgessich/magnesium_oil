@@ -23,13 +23,9 @@ if (window.innerWidth <= 1024 && window.innerHeight > 390) {
 
   productsContainer.addEventListener("wheel", (event) => {
     if (event.deltaY > 0) {
-      // Прокрутка вниз
       scrollToPage(currentPage + 1);
-      console.log(currentPage);
     } else if (event.deltaY < 0) {
-      // Прокрутка вверх
       scrollToPage(currentPage - 1);
-      console.log(currentPage);
     }
   });
 
@@ -41,17 +37,16 @@ if (window.innerWidth <= 1024 && window.innerHeight > 390) {
     if (touchStartY !== null) {
       const touchMoveY = event.touches[0].clientY;
       const deltaY = touchMoveY - touchStartY;
-      console.log(deltaY);
       if (deltaY > 50) {
-        // Свайп вниз
+
         scrollToPage(currentPage - 1);
-        touchStartY = null; // Сброс touchStartY
-        console.log("swipe down");
+        touchStartY = null; 
+
       } else if (deltaY < -50) {
-        // Свайп вверх
+
         scrollToPage(currentPage + 1);
-        touchStartY = null; // Сброс touchStartY
-        console.log("swipe up");
+        touchStartY = null; 
+
       }
     }
   });

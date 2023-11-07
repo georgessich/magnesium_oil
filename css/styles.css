@@ -493,6 +493,11 @@
   text-decoration: underline;
 }
 
+@media (max-width: 80rem) {
+  .buy__disclaimer {
+    font-size: 2vw;
+  }
+}
 @media (max-width: 72.125rem) {
   .buy__info {
     column-gap: 1.25rem;
@@ -559,9 +564,6 @@
 }
 
 @media (max-width: 1465px) {
-  .hair-product--img {
-    width: 50%;
-  }
   .hair-product--info {
     width: 50%;
   }
@@ -916,6 +918,23 @@
   }
   .step__wrapper:first-child::after {
     left: 4.0625rem;
+    top: 5.5625rem;
+  }
+}
+@media (max-width: 1280px) {
+  .production__item-img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .production__items {
+    font-size: 1rem;
+    padding-top: 2.375rem;
+  }
+  .production__item-step {
+    font-size: 1rem;
+  }
+  .production__title {
+    padding-top: 1rem;
   }
 }
 @media (max-width: 1140px) {
@@ -946,6 +965,9 @@
     top: 0;
     left: auto;
     right: 0;
+  }
+  .production__title {
+    padding-top: 0;
   }
   .production__img {
     display: none;
@@ -1104,6 +1126,7 @@ svg {
 
 html, body {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

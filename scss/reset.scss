@@ -62,6 +62,8 @@ svg {
 }
 html, body {
   font-size: 16px;
+  scroll-behavior: smooth;
+
 }
 ::-webkit-scrollbar {
   width: 0; /* Для Safari и Chrome */

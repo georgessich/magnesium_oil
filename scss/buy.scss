@@ -71,6 +71,11 @@
 .buy__info-link.underline {
   text-decoration: underline;
 }
+@media (max-width: 80rem) {
+  .buy__disclaimer {
+    font-size: 2vw;
+  }
+}
 @media (max-width: 72.125rem) {
   .buy__info {
     column-gap: 1.25rem;

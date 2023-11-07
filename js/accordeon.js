@@ -149,3 +149,5 @@ function autoOpenSecondAccordionItem() {
 
 window.addEventListener("load", autoOpenSecondAccordionItem);
 window.addEventListener("resize", autoOpenSecondAccordionItem);
+
+
