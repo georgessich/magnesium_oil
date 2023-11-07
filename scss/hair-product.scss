@@ -7,7 +7,7 @@
 
   &--img {
     max-width: 100%;
-    height: calc(100vh - 20rem);
+    height: 70vh;
   }
 }
 
@@ -17,9 +17,18 @@
     width: 50%;
   }
 }
+@media(max-width:1260px) {
+  .hair-product--img {
+    height: 60vh;
+  }
+}
+@media(max-width:1080px) {
+  .hair-product--img {
+    height: 50vh;
+  }
+}
 
-
-@media (max-width: 724px) {
+@media (max-width: 780px) {
   .hair-product {
     &--wrapper {
       flex-direction: column-reverse;

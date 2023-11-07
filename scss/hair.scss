@@ -114,3 +114,10 @@
     height: 45vh;
   }
 }
+@media(min-width: 2040px) {
+  .hair__wrapper-text {
+    max-width: 17.5625vw;
+
+    font-size: 1.1vw;
+  }
+}
