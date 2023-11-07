@@ -1,24 +1,33 @@
+let lastScrollTime = 0;
+let lastScrollDistance = 0;
+const minScrollDistance = 50;
+
 document.addEventListener('wheel', function(event) {
-    if (event.deltaMode === WheelEvent.DOM_DELTA_PIXEL) {
-        // Событие вызвано прокруткой мыши, а не трекпадом
-        console.log('Событие вызвано прокруткой мыши.');
-        return;
+    if (event.deltaMode !== 0) {
+        event.preventDefault();
+
+        const now = new Date().getTime();
+        const deltaTime = now - lastScrollTime;
+        lastScrollTime = now;
+
+        const deltaY = event.deltaY;
+        const direction = deltaY > 0 ? 'next' : 'prev';
+        const scrollDistance = Math.abs(deltaY);
+
+        if (deltaTime > 100 || scrollDistance > lastScrollDistance) {
+            // Прокрутка на одну страницу, если прошло достаточно времени
+            // или расстояние прокрутки больше минимального значения
+            const to = direction === 'next' ? docSlider.getCurrentIndex() + 1 : docSlider.getCurrentIndex() - 1;
+
+            if (to >= 0 && to < docSlider.getElements().pages.length) {
+                // Проверка на граничные страницы
+                if (direction === 'next') {
+                    docSlider.nextPage();
+                } else {
+                    docSlider.prevPage();
+                }
+            }
+            lastScrollDistance = scrollDistance;
+        }
     }
-
-    // Событие вызвано движением трекпада
-    console.log('Событие вызвано движением трекпада.');
-
-    const deltaY = event.deltaY;
-    if (deltaY > 0) {
-        // Прокрутка вниз
-        console.log('Прокрутка вниз');
-        docSlider.nextPage();
-    } else if (deltaY < 0) {
-        // Прокрутка вверх
-        console.log('Прокрутка вверх');
-        docSlider.prevPage();
-    }
-
-    // Предотвращаем дополнительное прокручивание страницы
-    event.preventDefault();
 });
