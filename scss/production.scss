@@ -183,8 +183,8 @@
       font-size: 0.875rem;
       margin-bottom: 0;
       &-img {
-        width: 1.09375rem;
-        height: 1.09375rem;
+        width: 9.09375vw;
+        height: 4.09375vh;
       }
       &-text {
         padding-left: 0.5rem;
@@ -257,4 +257,10 @@
 #button-right,
 #button-left {
   cursor: pointer;
+}
+
+@media(max-width: 380px) {
+  .production__item {
+    font-size: 0.775rem;
+  }
 }

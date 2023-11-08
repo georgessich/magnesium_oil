@@ -2,13 +2,15 @@
   &__inner {
     padding-top: 3vh;
   }
+
   &__wrapper {
     margin-bottom: 1.625rem;
     padding-left: 0.313rem;
+
     &-text {
       font-size: 1.375rem;
       font-weight: 500;
-      margin-bottom: 3vh;
+      margin-bottom: 2vh;
     }
 
     &-link {
@@ -20,18 +22,20 @@
       width: 16.3125vw;
       height: 9.5vh;
       margin-right: 1.625rem;
+
       img {
         max-width: 100%;
       }
     }
 
-    &-img {
-    }
+    &-img {}
+
     &-marketplaces {
       display: flex;
       align-items: center;
     }
   }
+
   &__info {
     font-size: 1.125rem;
     font-weight: 500;
@@ -48,6 +52,7 @@
 
     &-link {
       color: #000;
+
       img {
         max-width: 100%;
       }
@@ -68,21 +73,26 @@
     letter-spacing: 0.24rem;
   }
 }
+
 .buy__info-link.underline {
   text-decoration: underline;
 }
+
 @media (max-width: 80rem) {
   .buy__disclaimer {
     font-size: 2vw;
   }
 }
+
 @media (max-width: 72.125rem) {
   .buy__info {
     column-gap: 1.25rem;
   }
 }
+
 @media (max-width: 45.3125rem) {
   .buy {
+
     &__info,
     &__disclaimer {
       display: none;
@@ -96,8 +106,8 @@
       }
 
       &-link {
-        width: 9.3125rem;
-        height: 4.4375rem;
+        width: 38.3125vw;
+        height: 9.4375vh;
       }
     }
   }

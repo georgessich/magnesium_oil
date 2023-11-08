@@ -3,6 +3,7 @@ const sectionOne = document.querySelector(".hero");
 const headerLinks = document.querySelectorAll('.header__menu-link');
 const headerBtn = document.querySelector('.header__btn');
 const logoImg = document.getElementById("logo-img");
+const headerMobileLogo = document.querySelector('#mobile__logo-img');
 const sectionOneOptions = {
   rootMargin: "-200px 0px 0px 0px",
 };
@@ -15,9 +16,13 @@ const sectionOneObserver = new IntersectionObserver(function (
     if (!entry.isIntersecting) {
       header.classList.add("nav-scrolled");
       logoImg.src = "./img/logo-black.png";
+      headerMobileLogo.src = "./img/logo-black.png";
+      headerMobileLogo.style.width = "99px"
     } else {
       header.classList.remove("nav-scrolled");
       logoImg.src = "./img/logo-white.png";
+      headerMobileLogo.src = "./img/logo-link.png";
+
     }
   });
 },

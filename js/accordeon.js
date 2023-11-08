@@ -59,57 +59,57 @@ window.addEventListener("resize", () => {
     image.style.maxHeight = "100%";
   }
 });
-let currentAccordeonItem = 0; 
+let currentAccordeonItem = 0;
 const hairBoosterSection = document.getElementById('hair-booster');
 let shouldScroll = true;
 
 function openNextAccordeonItem() {
   if (currentAccordeonItem < accordeonItems.length) {
 
-      accordeonItems.forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('.accordeon__content').style.maxHeight = '0';
-      });
+    accordeonItems.forEach(item => {
+      item.classList.remove('active');
+      item.querySelector('.accordeon__content').style.maxHeight = '0';
+    });
 
-     
-      accordeonItems[currentAccordeonItem].classList.add('active');
-      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-          accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
 
-   
-      currentAccordeonItem++;
-      docSlider.enable(false);
+    accordeonItems[currentAccordeonItem].classList.add('active');
+    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+
+
+    currentAccordeonItem++;
+    docSlider.enable(false);
   } else {
-      shouldScroll = true;
-    
-      docSlider.enable(true);
+    shouldScroll = true;
+
+    docSlider.enable(true);
   }
-  
+
 }
 
 hairBoosterSection.addEventListener('wheel', (event) => {
-    if (!shouldScroll) return;
-   
-    const direction = event.deltaY > 0 ? 1 : -1;
+  if (!shouldScroll) return;
 
-    if (direction === 1) {
-        openNextAccordeonItem();
-      
-    } else if (direction === -1 && currentAccordeonItem > 0) {
-        currentAccordeonItem--;
+  const direction = event.deltaY > 0 ? 1 : -1;
 
-        accordeonItems.forEach(item => {
-            item.classList.remove('active');
-            item.querySelector('.accordeon__content').style.maxHeight = '0';
-         
-        });
+  if (direction === 1) {
+    openNextAccordeonItem();
 
-        accordeonItems[currentAccordeonItem].classList.add('active');
-        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-            accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
-    }
+  } else if (direction === -1 && currentAccordeonItem > 0) {
+    currentAccordeonItem--;
 
-    event.preventDefault();
+    accordeonItems.forEach(item => {
+      item.classList.remove('active');
+      item.querySelector('.accordeon__content').style.maxHeight = '0';
+
+    });
+
+    accordeonItems[currentAccordeonItem].classList.add('active');
+    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+  }
+
+  event.preventDefault();
 });
 function autoOpenSecondAccordionItem() {
   if (window.innerWidth < 725) {
@@ -126,7 +126,20 @@ function autoOpenSecondAccordionItem() {
       secondItem.classList.add("active");
       const content = secondItem.querySelector(".accordeon__content");
       content.style.maxHeight = content.scrollHeight + "px";
-      
+      if (isMobile) {
+        let totalContentHeight = 0;
+        accordeonItems.forEach((otherItem) => {
+          if (otherItem.classList.contains("active")) {
+            totalContentHeight += otherItem.querySelector(".accordeon__content").scrollHeight;
+          }
+        });
+    
+        const newImageHeight = originalImageHeight - totalContentHeight;
+        image.style.maxHeight = newImageHeight + "px";
+      } else {
+        image.style.maxHeight = "100%";
+      }
+   
     }
   } else {
 

@@ -63,6 +63,9 @@
   }
 }
 @media (max-width: 789px) {
+  #mobile__logo-img {
+    width: 117px;
+  }
   .header {
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(13.5px);
@@ -79,7 +82,7 @@
     background-color: #fff;
     width: 100%;
     backdrop-filter: blur(13.5px);
-    padding: 14px 5px;
+    padding: 14px 20px;
     align-items: center;
     justify-content: space-between;
     &-list {
@@ -100,10 +103,11 @@
 
     &-btn {
       border: 1px solid #000;
-      padding: 8px 8px;
+      padding: 5px 14px;
       color: #000;
       border-radius: 21px;
       font-weight: 500;
+      font-size: 12px;
     }
     &-menu {
       background-color: #fff;
@@ -141,6 +145,7 @@
 .header__mobile.active {
   flex-direction: row-reverse;
   justify-content: space-between;
+  padding: 14px 20px;
 }
 .header__mobile.active .header__mobile--logo {
   margin-left: 0;
