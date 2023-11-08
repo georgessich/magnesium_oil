@@ -325,12 +325,12 @@
     display: block;
     position: absolute;
     right: 10%;
-    top: 17%;
     font-size: 1rem;
     color: #bdbdbd;
     font-style: italic;
     border-bottom: 1px solid #bdbdbd;
     z-index: 3;
+    margin-top: -1.4rem;
   }
   .body-product__item {
     width: 100%;
@@ -1577,6 +1577,9 @@ body {
 }
 @media (max-width: 789px) {
   #mobile__logo-img {
+    width: 117px;
+  }
+  #logo-img {
     width: 117px;
   }
   .header {
