@@ -111,9 +111,10 @@
   .body-product__name {
     font-size: 1rem;
     padding-top: 0.75rem;
+    margin-bottom: 0.25rem;
   }
   .body-product__props {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 @media (max-width: 1525px) {
@@ -153,43 +154,11 @@
     // overflow: hidden;
   }
 
-  // .body-product__item {
-  //   height: 100vh;
-  // }
+
 }
 
 @media(min-height: 900px) {
-  //   .body-product__img {
-  //     height: 55vh;
-  //   }
-  //   .body-product__bg {
-  //     height: 55vh;
-  //   }
-  //   #hydration .body-product__bottle .body-product__bg {
-  //     margin-top: 1.0625rem;
-  //     margin-left: -6.5rem;
-  //   }
 
-  //   #beenergy .body-product__bottle .body-product__bg {
-  //     margin-top: 1.0625rem;
-  //     margin-left: -9.5rem;
-  //   }
-
-  //   #detox .body-product__bottle .body-product__bg {
-  //     margin-top: 1.4rem;
-  //     margin-left: -6.5rem;
-  //     width: 23%;
-  //   }
-  //   .body-product__moss {
-  //     margin-top: 21rem;
-  // }
-  //   #goodnight .body-product__bottle .body-product__bg {
-  //     margin-left: -7.3rem;
-  //     margin-top: 0.75rem;
-  //   }
-  //   .body-product__name {
-  //     padding-top: 1.75rem;
-  //   }
   .body-product__name {
     font-size: 1rem;
     padding-top: 0.75rem;
