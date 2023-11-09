@@ -220,11 +220,6 @@
   margin-top: 25rem;
 }
 
-@media (min-height: 1100px) {
-  .body-product__item {
-    height: auto;
-  }
-}
 #hydration .body-product__bottle .body-product__bg {
   position: absolute;
   margin-top: 9.0625rem;
@@ -263,6 +258,18 @@
   transition: right 0.3s ease;
 }
 
+@media (max-width: 1420px) {
+  .body-product__items {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .body-product__name {
+    font-size: 1rem;
+    padding-top: 0.75rem;
+  }
+  .body-product__props {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 1525px) {
   .body-product__items {
     column-gap: 0;
@@ -280,13 +287,9 @@
     font-size: 1rem;
   }
 }
-@media (max-width: 1220px) {
-  .body-product__items {
-    grid-template-columns: repeat(4, 25%);
-  }
-  .body-product__name {
-    font-size: 1rem;
-    padding-top: 0.75rem;
+@media (min-height: 1100px) {
+  .body-product__item {
+    height: auto;
   }
 }
 @media (max-width: 1024px) {
@@ -295,8 +298,11 @@
     flex-direction: column;
     padding-top: 1.25rem;
   }
-  .body-product__item {
-    height: 100vh;
+}
+@media (min-height: 900px) {
+  .body-product__name {
+    font-size: 1rem;
+    padding-top: 0.75rem;
   }
 }
 @media (max-width: 768px) {

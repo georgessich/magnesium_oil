@@ -1,5 +1,6 @@
 .body-product {
   height: 100vh;
+
   // overflow: hidden;
   &__items {
     display: grid;
@@ -7,13 +8,17 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 3.75rem;
   }
-  &__toplink, &__toplink--item {
+
+  &__toplink,
+  &__toplink--item {
     display: none;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     ul {
       display: flex;
       flex-direction: column;
@@ -29,6 +34,7 @@
     text-align: center;
     padding-top: 2.75rem;
     margin-bottom: 0.75rem;
+
     span {
       color: #034c75;
       font-weight: 500;
@@ -58,11 +64,7 @@
     margin-top: 25rem;
   }
 }
-@media (min-height: 1100px) {
-  .body-product__item {
-    height: auto;
-  }
-} 
+
 
 #hydration .body-product__bottle .body-product__bg {
   position: absolute;
@@ -101,32 +103,48 @@
   z-index: 999;
   transition: right 0.3s ease;
 }
-@media (max-width: 1525px) {
+@media (max-width: 1420px) {
   .body-product__items {
-    column-gap: 0;
+    grid-template-columns: repeat(4, 25%);
   }
-}
-@media(max-width: 1280px) {
-  .body-product__items {
-    padding-top: 0.3125vh;
-  }
+
   .body-product__name {
-    padding-top: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    padding-top: 0.75rem;
   }
   .body-product__props {
     font-size: 1rem;
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 1525px) {
   .body-product__items {
-    grid-template-columns: repeat(4, 25%);
-  }
-  .body-product__name {
-    font-size: 1rem;
-    padding-top: 0.75rem;
+    column-gap: 0;
   }
 }
+
+@media(max-width: 1280px) {
+  .body-product__items {
+    padding-top: 0.3125vh;
+  }
+
+  .body-product__name {
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .body-product__props {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (min-height: 1100px) {
+  .body-product__item {
+    height: auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .body-product__items {
     display: flex;
@@ -135,10 +153,50 @@
     // overflow: hidden;
   }
 
-  .body-product__item {
-    height: 100vh;
-  }
+  // .body-product__item {
+  //   height: 100vh;
+  // }
 }
+
+@media(min-height: 900px) {
+  //   .body-product__img {
+  //     height: 55vh;
+  //   }
+  //   .body-product__bg {
+  //     height: 55vh;
+  //   }
+  //   #hydration .body-product__bottle .body-product__bg {
+  //     margin-top: 1.0625rem;
+  //     margin-left: -6.5rem;
+  //   }
+
+  //   #beenergy .body-product__bottle .body-product__bg {
+  //     margin-top: 1.0625rem;
+  //     margin-left: -9.5rem;
+  //   }
+
+  //   #detox .body-product__bottle .body-product__bg {
+  //     margin-top: 1.4rem;
+  //     margin-left: -6.5rem;
+  //     width: 23%;
+  //   }
+  //   .body-product__moss {
+  //     margin-top: 21rem;
+  // }
+  //   #goodnight .body-product__bottle .body-product__bg {
+  //     margin-left: -7.3rem;
+  //     margin-top: 0.75rem;
+  //   }
+  //   .body-product__name {
+  //     padding-top: 1.75rem;
+  //   }
+  .body-product__name {
+    font-size: 1rem;
+    padding-top: 0.75rem;
+  }
+
+}
+
 
 @media (max-width: 768px) {
   .body-product {
@@ -153,6 +211,7 @@
       font-style: italic;
       border-bottom: 1px solid #bdbdbd;
     }
+
     &__toplink {
       display: block;
       position: absolute;
@@ -163,6 +222,7 @@
       font-style: italic;
       border-bottom: 1px solid #bdbdbd;
     }
+
     &__toplink--item {
       display: block;
       position: absolute;
@@ -174,6 +234,7 @@
       z-index: 3;
       margin-top: -1.4rem;
     }
+
     &__item {
       width: 100%;
       position: relative;
@@ -189,6 +250,7 @@
     &__props {
       font-size: 0.875rem;
     }
+
     &__props br {
       display: none;
     }
