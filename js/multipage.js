@@ -1,4 +1,4 @@
-if (window.innerWidth <= 1024 && window.innerHeight > 375) {
+if (window.innerWidth <= 1024 && window.innerHeight > 325) {
   const pages = document.querySelectorAll(".body-product__item");
   const productsContainer = document.getElementById("body-products");
   let currentPage = 0;

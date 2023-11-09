@@ -629,7 +629,6 @@
   .hair-product--img {
     width: auto;
     margin-top: 1rem;
-    padding-bottom: 5rem;
   }
   .hair-product--info {
     width: 100%;
@@ -1116,7 +1115,7 @@
   }
   .production__item-step:first-child {
     width: 33.25vh;
-    height: 14.25vh;
+    height: 15.25vh;
   }
   .production__item-step:last-child {
     margin-top: 0;
