@@ -5,8 +5,6 @@
 
   &__wrapper {
     margin-bottom: 1.625rem;
-    padding-left: 0.313rem;
-
     &-text {
       font-size: 1.375rem;
       font-weight: 500;
@@ -21,14 +19,15 @@
       align-items: center;
       width: 16.3125vw;
       height: 9.5vh;
-      margin-right: 1.625rem;
-
+      margin-right: 1.625vh;
+      margin-left: 0.313rem;
       img {
         max-width: 100%;
       }
     }
 
-    &-img {}
+    &-img {
+    }
 
     &-marketplaces {
       display: flex;
@@ -92,7 +91,6 @@
 
 @media (max-width: 45.3125rem) {
   .buy {
-
     &__info,
     &__disclaimer {
       display: none;
@@ -106,8 +104,9 @@
       }
 
       &-link {
-        width: 38.3125vw;
-        height: 9.4375vh;
+        width: 39.3125vw;
+        height: 10.4375vh;
+        padding: 1rem;
       }
     }
   }
