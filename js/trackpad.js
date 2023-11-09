@@ -1,4 +1,12 @@
+let isScrolling = false;
+
 document.addEventListener('wheel', function (event) {
+    if (isScrolling) return;
+    isScrolling = true;
+    setTimeout(function () {
+        isScrolling = false;
+    }, 100);
+
     if (event.deltaMode !== 0) {
         event.preventDefault();
         const maxScrollDelta = 200;
