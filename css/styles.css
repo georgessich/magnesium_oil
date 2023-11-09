@@ -359,6 +359,8 @@
 }
 .body {
   position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 .body::before {
   position: absolute;
@@ -390,7 +392,7 @@
 .body__img {
   display: flex;
   margin: 0 auto;
-  padding-top: 4.25rem;
+  padding-top: 4.25vw;
   padding-bottom: 4.875vw;
   max-width: 100%;
   width: 70%;
@@ -634,11 +636,13 @@
 .item--wrapper {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .hair {
   color: #000;
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .hair__wrapper {
   display: flex;
@@ -877,6 +881,7 @@
   padding-bottom: 15.75rem;
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .production::before {
   content: "";

@@ -1,6 +1,7 @@
 .body {
   position: relative;
-
+  height: 100vh;
+  overflow: hidden;
   &::before {
     position: absolute;
     content: "";
@@ -36,7 +37,7 @@
   &__img {
     display: flex;
     margin: 0 auto;
-    padding-top: 4.25rem;
+    padding-top: 4.25vw;
     padding-bottom: 4.875vw;
     max-width: 100%;
     width: 70%;

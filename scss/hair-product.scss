@@ -1,4 +1,5 @@
 .hair-product {
+
   &--wrapper {
     display: flex;
     padding-top: 4.3125rem;
@@ -60,4 +61,5 @@
 .item--wrapper {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
