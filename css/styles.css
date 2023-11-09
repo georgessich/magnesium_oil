@@ -391,7 +391,7 @@
   display: flex;
   margin: 0 auto;
   padding-top: 4.25rem;
-  padding-bottom: 4.875rem;
+  padding-bottom: 4.875vw;
   max-width: 100%;
   width: 70%;
 }
@@ -864,7 +864,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 50vh;
+    height: 40vh;
   }
 }
 @media (max-width: 375px) {
