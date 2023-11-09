@@ -23,15 +23,15 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 424px) {
     .title__wrapper {
         padding-top: 4.75rem; 
     
     }
     .title__wrapper span {
-        font-size: 1rem;
+        font-size: 1.5vh;
     }
     .title__wrapper h2 {
-        font-size: 1.2rem;
+        font-size: 3vh;
     }
 }

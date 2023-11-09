@@ -153,7 +153,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                height: 40vh;
+                height: 44vh;
                 object-fit: cover;
             }
         }
@@ -162,6 +162,14 @@
 
 @media(max-width: 375px) {
     .hero__title {
-        padding-top: 4.8rem;
+        padding-top: 14.8vh;
+        font-size: 4.0625vh;
+    }
+    .hero__subtitle {
+        font-size: 2.2vh;
+        margin-bottom: 2.375vh;
+    }
+    .hero__descr {
+        margin-bottom: 2.6875vh;
     }
 }

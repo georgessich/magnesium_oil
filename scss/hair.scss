@@ -110,9 +110,21 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 424px) {
+  .hair__wrapper {
+    padding-top: 1.875vh;
+
+    &-text {
+      font-size: 0.785rem;
+
+      &--mobile {
+        font-size: 0.785rem;
+      }
+    }
+  }
   .hair__wrapper-img--mobile {
     height: 45vh;
+    object-fit: fill;
   }
 }
 @media(min-width: 2040px) {
