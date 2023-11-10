@@ -173,3 +173,10 @@
         margin-bottom: 2.6875vh;
     }
 }
+
+@media (max-width: 365px) {
+    .hero__product-mobile {
+        height: 40vh;
+        object-fit: fill;
+    }
+}

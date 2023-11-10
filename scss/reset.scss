@@ -210,7 +210,7 @@ body {
   gap: 0.7vh;
  }
  .body__img-mobile {
-  height: 55vh;
+  max-height: 55vh;
   object-fit: fill;
  }
  .contacts__bottom {

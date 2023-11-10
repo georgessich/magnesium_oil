@@ -4,6 +4,7 @@ const headerLinks = document.querySelectorAll('.header__menu-link');
 const headerBtn = document.querySelector('.header__btn');
 const logoImg = document.getElementById("logo-img");
 const headerMobileLogo = document.querySelector('#mobile__logo-img');
+const headerWrap = document.querySelector('.header__wrap');
 const sectionOneOptions = {
   rootMargin: "-200px 0px 0px 0px",
 };
@@ -16,11 +17,15 @@ const sectionOneObserver = new IntersectionObserver(function (
     if (!entry.isIntersecting) {
       header.classList.add("nav-scrolled");
       logoImg.src = "./img/logo-black.png";
+      logoImg.style.padding = "0";
+      headerWrap.style.paddingTop = "19px";
       headerMobileLogo.src = "./img/logo-black.png";
       headerMobileLogo.style.width = "99px"
     } else {
       header.classList.remove("nav-scrolled");
       logoImg.src = "./img/logo-white.png";
+      logoImg.style.padding = "10px 0";
+      // headerWrap.style.paddingTop = "35px";
       headerMobileLogo.src = "./img/logo-link.png";
 
     }

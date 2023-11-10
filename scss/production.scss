@@ -3,6 +3,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -13,6 +14,7 @@
     top: 0;
     left: 0;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -22,6 +24,7 @@
     right: 0;
     bottom: 0;
   }
+
   &__items {
     position: relative;
     padding-top: 4.375vh;
@@ -32,6 +35,7 @@
     font-weight: 400;
     overflow: hidden;
   }
+
   &__wrapper {
     &::after {
       position: absolute;
@@ -43,17 +47,21 @@
       margin-left: 13.125rem;
     }
   }
+
   &__item {
     position: relative;
     margin-bottom: 2.75vw;
+
     &-img {
       margin-bottom: 1.25rem;
       position: relative;
     }
+
     &-list li {
       list-style: disc;
       margin-bottom: 0.75rem;
     }
+
     &-step {
       background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
       font-size: 1.125rem;
@@ -62,6 +70,7 @@
       border-radius: 0.4375rem;
     }
   }
+
   &__img {
     position: absolute;
     bottom: 0;
@@ -78,6 +87,7 @@
 
 .step__wrapper:first-child {
   margin-bottom: 5.875rem;
+
   &::after {
     content: "";
     position: absolute;
@@ -93,55 +103,67 @@
   .production__img {
     width: 60%;
   }
+
   .step__wrapper:first-child {
     &::after {
       left: 4.0625rem;
       top: 5.5625rem;
     }
   }
+
   .production__item-img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
   }
+
   .production__items {
-    font-size: 1rem;
+    font-size: 1.2vw;
     padding-top: 2.375vh;
   }
+
   .production__item-step {
     font-size: 1rem;
   }
+
   .production__title {
     padding-top: 1rem;
   }
+
   .production__wrapper::after {
     top: 2%;
   }
 }
+
 @media (max-width: 1180px) {
   .production__items {
     padding-top: 1.375rem;
     column-gap: 2.25rem;
   }
 }
+
 @media (max-width: 1140px) {
   .production__wrapper::after {
     margin-left: 9.375rem;
   }
+
   .production__item-img {
     width: 4.375rem;
     height: 4.375rem;
   }
+
   .production__items {
-    font-size: 1rem;
+    font-size: 1.2vw;
   }
 }
 
 @media (max-width: 1024px) {
   .production {
     padding-bottom: 0;
+
     &::after {
       display: none;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -152,20 +174,25 @@
       left: auto;
       right: 0;
     }
+
     &__title {
       padding-top: 0;
     }
+
     &__img {
       display: none;
     }
+
     &__items {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      padding-top: 1.5625vh;
+      padding-top: 7.5625vh;
     }
+
     &__wrapper {
       margin-bottom: 3.188rem;
+
       &::after {
         position: absolute;
         content: "";
@@ -177,27 +204,34 @@
         margin-left: 10rem;
       }
     }
+
     #button-right {
       display: block;
     }
+
     &__item {
       display: flex;
       font-size: 0.875rem;
       margin-bottom: 0;
+
       &-img {
         width: 6.09375vh;
         height: 6.09375vh;
         margin-bottom: 0;
       }
+
       &-text {
         padding-left: 0.5rem;
       }
+
       ul {
         margin-left: 1.25rem;
       }
+
       ul li {
         margin-bottom: 0.3125rem;
       }
+
       &-steps {
         display: flex;
         align-items: center;
@@ -205,32 +239,34 @@
         padding-top: 1.25vh;
         margin-bottom: 1vh;
       }
+
       &-step {
-        font-size: 1.967vh;
+        font-size: 1.47vh;
         padding: 0.5625rem 0.75rem;
+        width: 34.25vh;
+        height: 9.75vh;
+
         &:first-child::after {
           display: none;
         }
-        &:first-child {
-          width: 33.25vh;
-          height: 15.25vh;
-        }
-        &:last-child {
-          margin-top: 0;
-        }
+
       }
     }
   }
+
   .step__wrapper {
     margin-right: 0.625rem;
     margin-bottom: 0;
+
     &:first-child {
       margin-bottom: 0;
     }
+
     img {
       margin-right: 0.625rem;
       display: block;
     }
+
     &:first-child::after {
       display: none;
     }
@@ -251,6 +287,7 @@
       }
     }
   }
+
   .production__item-steps.process__active {
     transform: translateX(-50%);
   }
