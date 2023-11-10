@@ -300,7 +300,7 @@
     padding-top: 1.25rem;
   }
 }
-@media (min-height: 900px) {
+@media (max-height: 900px) {
   .body-product__name {
     font-size: 1rem;
     padding-top: 0.75rem;
@@ -929,7 +929,7 @@
 }
 .production__items {
   position: relative;
-  padding-top: 4.375rem;
+  padding-top: 4.375vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-size: 1.125rem;
@@ -1005,7 +1005,7 @@
   }
   .production__items {
     font-size: 1rem;
-    padding-top: 2.375rem;
+    padding-top: 2.375vh;
   }
   .production__item-step {
     font-size: 1rem;
