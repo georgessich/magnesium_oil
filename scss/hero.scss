@@ -1,13 +1,12 @@
 @mixin aspect-ratio($width, $height) {
-    position: fixed;
+    position: relative;
     width: 100%;
     padding-bottom: percentage(calc($height / $width));
-    bottom: 0;
-    // height: 50vh;
     img {
-      position: absolute;
+      position: fixed;
       width: 100vw;
-      height: 100%;
+      height: 40vh;
+      bottom: 0;
       object-fit: fill;
       display: block;
       margin-left: -5vw;

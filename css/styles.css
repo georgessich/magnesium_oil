@@ -860,15 +860,15 @@
     display: none;
   }
   .hero__product-mobile {
-    position: fixed;
+    position: relative;
     width: 100%;
     padding-bottom: 77.6923076923%;
-    bottom: 0;
   }
   .hero__product-mobile img {
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 100%;
+    height: 40vh;
+    bottom: 0;
     object-fit: fill;
     display: block;
     margin-left: -5vw;
