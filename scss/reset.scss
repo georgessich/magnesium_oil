@@ -85,13 +85,17 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .container {
+  // position: relative;
   width: 100%; 
   max-width: 89rem; 
   margin: 0 auto;
   padding-top: 13.75vh;
   padding-bottom: 3.75rem;
   height: 100vh;
-  overflow: hidden;
+  // overflow-y: hidden;
+}
+.product__container {
+  position: relative;
 }
 .header__wrap {
   width: 100%; 
@@ -207,7 +211,7 @@ body {
  .body__info {
   font-size: 2vh;
   padding-top: 0.75vh;
-  gap: 0.7vh;
+  gap: 0;
  }
  .body__img-mobile {
   max-height: 55vh;

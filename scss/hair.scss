@@ -1,3 +1,17 @@
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  width: 100%;
+  padding-bottom: percentage(calc($height / $width));
+  height: 52vh;
+  img {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    margin-left: -5vw;
+  }
+}
 .hair {
   color: #000;
   position: relative;
@@ -74,6 +88,7 @@
       display: flex;
       flex-direction: column;
       padding-top: 1.875rem;
+      height: auto;
       &-text {
         max-width: none;
         font-size: 0.875rem;
@@ -98,7 +113,9 @@
       }
       &-img {
         display: none;
-
+        &--container {
+          @include aspect-ratio(130, 131);
+        }
         &--mobile {
           display: block;
           position: absolute;
@@ -135,3 +152,82 @@
     font-size: 1.1vw;
   }
 }
+// @mixin adjustTextHeight($imageHeight) {
+//   height: calc(100% - #{$imageHeight});
+// }
+
+// .hair {
+//   color: #000;
+//   position: relative;
+//   height: 100vh;
+//   overflow: hidden;
+
+//   &__wrapper {
+//     display: flex;
+//     position: relative;
+//     padding-top: 2.875rem;
+
+//     // Use the mixin to adjust text height
+//     @include adjustTextHeight(12.5rem);
+
+//     &-img {
+//       max-width: 100%;
+//       padding-bottom: 3vh;
+//       width: 100%;
+//       object-fit: cover;
+
+//       &--mobile {
+//         display: none;
+//       }
+//     }
+
+//     &-text {
+//       max-width: 22.5625vw;
+//       padding-top: 15vh;
+//       font-size: 1.375vw;
+
+//       &--mobile {
+//         display: none;
+//       }
+//     }
+
+//     &-text:nth-child(1) {
+//       position: absolute;
+//       left: 0;
+//     }
+
+//     &-text:nth-child(3) {
+//       position: absolute;
+//       right: 0;
+//     }
+//   }
+// }
+
+// // Add your media queries for different screen sizes here
+
+// @media (max-width: 725px) {
+//   .hair {
+//     &__wrapper {
+//       // Use the mixin with adjusted height for smaller screens
+//       @include adjustTextHeight(0);
+
+//       display: flex;
+//       flex-direction: column;
+//       padding-top: 1.875rem;
+
+//       &-img {
+//         display: none;
+
+//         &--mobile {
+//           display: block;
+//           position: absolute;
+//           bottom: 0;
+//           width: 100vw;
+//           max-height: 60vh;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Add more media queries as needed

@@ -16,7 +16,7 @@ function serve() {
     server: './',
   });
   gulp.watch('scss/**/*.scss', compileSass);
-  gulp.watch('index.html').on('change', browserSync.reload);
+  gulp.watch('index2.html').on('change', browserSync.reload);
 }
 
 gulp.task('default', gulp.series(compileSass, serve));

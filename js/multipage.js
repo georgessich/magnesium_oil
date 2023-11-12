@@ -1,6 +1,6 @@
 if (window.innerWidth <= 1024 && window.innerHeight > 325) {
-  const pages = document.querySelectorAll(".body-product__item");
-  const productsContainer = document.getElementById("body-products");
+  const pages = document.querySelectorAll(".body__product-item");
+  const productsContainer = document.getElementById("body__product");
   let currentPage = 0;
   let touchStartY = null;
 

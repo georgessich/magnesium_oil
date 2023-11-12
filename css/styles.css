@@ -165,219 +165,6 @@
     height: 149px;
   }
 }
-.body-product {
-  height: 100vh;
-}
-.body-product__items {
-  display: grid;
-  padding-top: 3.3125vh;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 3.75rem;
-}
-.body-product__toplink, .body-product__toplink--item {
-  display: none;
-}
-.body-product__toplink--desktop {
-  display: block;
-  position: absolute;
-  right: 10%;
-  font-size: 1rem;
-  color: #bdbdbd;
-  font-style: italic;
-  border-bottom: 1px solid #bdbdbd;
-  z-index: 3;
-  margin-top: -1.4rem;
-}
-.body-product__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.body-product__item ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.body-product__name {
-  color: #000;
-  font-size: 1.375rem;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 2.75rem;
-  margin-bottom: 0.75rem;
-}
-.body-product__name span {
-  color: #034c75;
-  font-weight: 500;
-  font-style: italic;
-  text-decoration: underline;
-}
-.body-product__props {
-  list-style: disc;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-.body-product__img {
-  position: relative;
-  transition: transform 0.3s ease;
-}
-.body-product__img:hover {
-  transform: translateY(-1.5625rem);
-}
-.body-product__moss {
-  position: absolute;
-  margin-left: -9.375rem;
-  margin-top: 25rem;
-}
-
-#hydration .body-product__bottle .body-product__bg {
-  position: absolute;
-  margin-top: 9.0625rem;
-  margin-left: -4.0625rem;
-}
-
-#beenergy .body-product__bottle .body-product__bg {
-  position: absolute;
-  margin-left: -9.375rem;
-  margin-top: 3.75rem;
-  z-index: -1;
-}
-
-#detox .body-product__bottle .body-product__bg {
-  position: absolute;
-  margin-left: -6.25rem;
-  margin-top: -3.75rem;
-}
-
-#goodnight .body-product__bottle .body-product__bg {
-  width: 25.1875rem;
-  position: absolute;
-  margin-left: -6.625rem;
-  z-index: -2;
-  margin-top: -3.75rem;
-}
-
-.product-info {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 0;
-  height: 100%;
-  background-color: white;
-  z-index: 999;
-  transition: right 0.3s ease;
-}
-
-@media (max-width: 1420px) {
-  .body-product__items {
-    grid-template-columns: repeat(4, 25%);
-  }
-  .body-product__name {
-    font-size: 1rem;
-    padding-top: 0.75rem;
-    margin-bottom: 0.25rem;
-  }
-  .body-product__props {
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 1525px) {
-  .body-product__items {
-    column-gap: 0;
-  }
-}
-@media (max-width: 1280px) {
-  .body-product__items {
-    padding-top: 0.3125vh;
-  }
-  .body-product__name {
-    padding-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .body-product__props {
-    font-size: 1rem;
-  }
-}
-@media (min-height: 1100px) {
-  .body-product__item {
-    height: auto;
-  }
-}
-@media (max-width: 1024px) {
-  .body-product__items {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1.25rem;
-  }
-}
-@media (max-height: 900px) {
-  .body-product__name {
-    font-size: 1rem;
-    padding-top: 0.75rem;
-  }
-}
-@media (max-width: 768px) {
-  .body-product__show {
-    position: absolute;
-    display: block;
-    right: 1.25rem;
-    top: 15%;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #bdbdbd;
-    font-style: italic;
-    border-bottom: 1px solid #bdbdbd;
-  }
-  .body-product__toplink {
-    display: block;
-    position: absolute;
-    top: -5%;
-    right: 0;
-    font-size: 1rem;
-    color: #bdbdbd;
-    font-style: italic;
-    border-bottom: 1px solid #bdbdbd;
-  }
-  .body-product__toplink--item {
-    display: block;
-    position: absolute;
-    right: 10%;
-    font-size: 1rem;
-    color: #bdbdbd;
-    font-style: italic;
-    border-bottom: 1px solid #bdbdbd;
-    z-index: 3;
-    margin-top: -1.4rem;
-  }
-  .body-product__toplink--desktop {
-    display: none;
-  }
-  .body-product__item {
-    width: 100%;
-    position: relative;
-    height: 100vh;
-    transition: transform 0.6s ease-in;
-  }
-  .body-product__name {
-    padding-top: 1.25rem;
-    font-size: 0.9375rem;
-  }
-  .body-product__props {
-    font-size: 0.875rem;
-  }
-  .body-product__props br {
-    display: none;
-  }
-  #beenergy .body-product__bottle .body-product__bg {
-    width: 30.125rem;
-  }
-}
-@media (max-width: 375px) {
-  .body-product__item {
-    height: 132vh;
-  }
-}
 .body {
   position: relative;
   height: 100vh;
@@ -464,17 +251,181 @@
   }
 }
 @media (max-width: 430px) {
+  .body__info p {
+    margin-bottom: 2vh;
+  }
   .body__img {
     display: none;
   }
-  .body__img-mobile {
-    display: block;
-    max-width: 100%;
+  .body__img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 112.8205128205%;
+    height: 50vh;
+  }
+  .body__img-container img {
     position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100vw;
-    max-height: 55vh;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    margin-left: -5vw;
+  }
+}
+.body__product {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.body__product-items {
+  padding-top: 4.313rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.body__product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.body__product-item ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.body__product-toplink, .body__product-toplink--item {
+  display: none;
+}
+.body__product-toplink--desktop {
+  display: block;
+  position: absolute;
+  right: 0%;
+  font-size: 1rem;
+  color: #bdbdbd;
+  font-style: italic;
+  border-bottom: 1px solid #bdbdbd;
+  z-index: 3;
+  margin-top: -1.4rem;
+}
+.body__product-bottlelink {
+  position: relative;
+}
+.body__product-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.body__product-img:hover {
+  transform: translateY(-1.5625rem);
+}
+.body__product-name {
+  color: #000;
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.body__product-name span {
+  color: #034c75;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+.body__product-props {
+  list-style: disc;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+#hydration::before {
+  content: url(../img/hydration-bottle-bg.png);
+  position: absolute;
+  bottom: 0;
+  margin-left: -155px;
+}
+
+#beenergy::before {
+  content: url(../img/beenergy-bottle-bg.png);
+  position: absolute;
+  bottom: 0;
+  margin-left: -236px;
+}
+
+#detox::before {
+  content: url(../img/detox-bottle-bg.png);
+  position: absolute;
+  bottom: 0;
+  margin-left: -178px;
+}
+
+#goodnight::before {
+  content: url(../img/goodnight-bg.png);
+  position: absolute;
+  bottom: 0;
+  margin-left: -215px;
+}
+
+@media (max-width: 1420px) {
+  .body__product-items {
+    padding-top: 1rem;
+  }
+  .body__product-img {
+    height: 55vh;
+  }
+}
+@media (max-width: 1024px) {
+  .body__product-items {
+    flex-direction: column;
+  }
+  .body__product-item {
+    height: 100vh;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  .body__product-toplink {
+    display: block;
+    position: absolute;
+    top: -5%;
+    right: 0;
+    font-size: 1rem;
+    color: #bdbdbd;
+    font-style: italic;
+    border-bottom: 1px solid #bdbdbd;
+  }
+  .body__product-toplink--item {
+    display: block;
+    position: absolute;
+    right: 10%;
+    font-size: 1rem;
+    color: #bdbdbd;
+    font-style: italic;
+    border-bottom: 1px solid #bdbdbd;
+    z-index: 3;
+    margin-top: -1.4rem;
+  }
+  .body__product-toplink--desktop {
+    display: none;
+  }
+  .body__product-bottlelink {
+    overflow-y: clip;
+  }
+}
+@media (max-width: 725px) {
+  .body__product-name {
+    font-size: 15px;
+  }
+  .body__product-props {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .body__product-img {
+    height: 50vh;
   }
 }
 .buy__inner {
@@ -718,6 +669,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 1.875rem;
+    height: auto;
   }
   .hair__wrapper-text {
     max-width: none;
@@ -741,6 +693,20 @@
   }
   .hair__wrapper-img {
     display: none;
+  }
+  .hair__wrapper-img--container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100.7692307692%;
+    height: 52vh;
+  }
+  .hair__wrapper-img--container img {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    margin-left: -5vw;
   }
   .hair__wrapper-img--mobile {
     display: block;
@@ -823,7 +789,7 @@
   bottom: 0;
   right: 0;
 }
-.hero__product-mobile {
+.hero__product-mobile--img {
   display: none;
 }
 
@@ -894,13 +860,20 @@
     display: none;
   }
   .hero__product-mobile {
-    display: block;
+    position: fixed;
     width: 100%;
+    padding-bottom: 77.6923076923%;
+  }
+  .hero__product-mobile img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 44vh;
-    object-fit: cover;
+    width: 100vw;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    margin-left: -5vw;
+  }
+  .hero__product-mobile--img {
+    display: block;
   }
 }
 @media (max-width: 425px) {
@@ -914,12 +887,6 @@
   }
   .hero__descr {
     margin-bottom: 2.6875vh;
-  }
-}
-@media (max-width: 365px) {
-  .hero__product-mobile {
-    height: 40vh;
-    object-fit: fill;
   }
 }
 .production {
@@ -1266,7 +1233,10 @@ body {
   padding-top: 13.75vh;
   padding-bottom: 3.75rem;
   height: 100vh;
-  overflow: hidden;
+}
+
+.product__container {
+  position: relative;
 }
 
 .header__wrap {
@@ -1359,7 +1329,7 @@ body {
   .body__info {
     font-size: 2vh;
     padding-top: 0.75vh;
-    gap: 0.7vh;
+    gap: 0;
   }
   .body__img-mobile {
     max-height: 55vh;

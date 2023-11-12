@@ -61,7 +61,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       if(targetId === "hair-booster") {
         headerLinks[0].classList.add('active-link');
       }
-      if(targetId === "body-products") {
+      if(targetId === "body__product") {
         headerLinks[1].classList.add('active-link');
       }
     }
