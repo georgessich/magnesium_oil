@@ -594,6 +594,7 @@
   .hair-product--img {
     width: auto;
     margin-top: 1rem;
+    padding-bottom: 3vh;
   }
   .hair-product--info {
     width: 100%;
