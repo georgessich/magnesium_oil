@@ -76,7 +76,19 @@ function openNextAccordeonItem() {
 
     docSlider.enable(true);
   }
+  if (isMobile) {
+    let totalContentHeight = 0;
+    accordeonItems.forEach((otherItem) => {
+      if (otherItem.classList.contains("active")) {
+        totalContentHeight += otherItem.querySelector(".accordeon__content").scrollHeight;
+      }
+    });
 
+    const newImageHeight = originalImageHeight - totalContentHeight;
+    image.style.maxHeight = newImageHeight + "px";
+  } else {
+    image.style.maxHeight = "100%";
+  }
 }
 
 hairBoosterSection.addEventListener('wheel', (event) => {
@@ -104,33 +116,41 @@ hairBoosterSection.addEventListener('wheel', (event) => {
   event.preventDefault();
 });
 
+let touchStartY = 0;
+let touchEndY = 0;
+
 hairBoosterSection.addEventListener('touchstart', (event) => {
   touchStartY = event.touches[0].clientY;
 });
 
 hairBoosterSection.addEventListener('touchmove', (event) => {
-  if (!shouldScroll) return;
-
-  const touchEndY = event.touches[0].clientY;
-  const direction = touchEndY > touchStartY ? -1 : 1;
-
-  if (direction === 1) {
-    openNextAccordeonItem();
-  } else if (direction === -1 && currentAccordeonItem > 0) {
-    currentAccordeonItem--;
-
-    accordeonItems.forEach(item => {
-      item.classList.remove('active');
-      item.querySelector('.accordeon__content').style.maxHeight = '0';
-    });
-
-    accordeonItems[currentAccordeonItem].classList.add('active');
-    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
-  }
-
-  event.preventDefault();
+  touchEndY = event.touches[0].clientY;
 });
+
+hairBoosterSection.addEventListener('touchend', () => {
+  const deltaY = touchEndY - touchStartY;
+
+  if (Math.abs(deltaY) > 50) { // Adjust the threshold as needed
+    const direction = deltaY > 0 ? -1 : 1; // Reverse the direction comparison
+
+    if (direction === 1) {
+      openNextAccordeonItem();
+    } else if (direction === -1 && currentAccordeonItem > 0) {
+      currentAccordeonItem--;
+
+      accordeonItems.forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.accordeon__content').style.maxHeight = '0';
+      });
+
+      accordeonItems[currentAccordeonItem].classList.add('active');
+      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+    }
+  }
+});
+
+
 
 // const accordeonItems = document.querySelectorAll(".accordeon__item");
 // const image = document.querySelector(".hair-product--img");
