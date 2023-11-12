@@ -186,4 +186,10 @@
       height: 149px;
     }
   }
+
+  #hydration-info {
+    &::before {
+      display: none;
+    }
+  }
 }

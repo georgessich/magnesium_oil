@@ -164,6 +164,9 @@
     width: 142px;
     height: 149px;
   }
+  #hydration-info::before {
+    display: none;
+  }
 }
 .body {
   position: relative;
@@ -409,7 +412,7 @@
   .body__product-toplink--item {
     display: block;
     position: absolute;
-    right: 10%;
+    right: 0%;
     font-size: 1rem;
     color: #bdbdbd;
     font-style: italic;
