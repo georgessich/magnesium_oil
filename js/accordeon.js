@@ -130,9 +130,8 @@ hairBoosterSection.addEventListener('touchmove', (event) => {
 hairBoosterSection.addEventListener('touchend', () => {
   const deltaY = touchEndY - touchStartY;
 
-  if (Math.abs(deltaY) > 50) { // Adjust the threshold as needed
-    const direction = deltaY > 0 ? -1 : 1; // Reverse the direction comparison
-
+  if (Math.abs(deltaY) > 50) { 
+    const direction = deltaY > 0 ? -1 : 1; 
     if (direction === 1) {
       openNextAccordeonItem();
     } else if (direction === -1 && currentAccordeonItem > 0) {

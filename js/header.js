@@ -25,7 +25,6 @@ const sectionOneObserver = new IntersectionObserver(function (
       header.classList.remove("nav-scrolled");
       logoImg.src = "./img/logo-white.png";
       logoImg.style.padding = "10px 0";
-      // headerWrap.style.paddingTop = "35px";
       headerMobileLogo.src = "./img/logo-link.png";
 
     }

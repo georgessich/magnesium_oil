@@ -51,6 +51,9 @@
         transform: translateY(-1.5625rem);
       }
   }
+  &-moss {
+    position: absolute;
+  }
   &-name {
     color: #000;
     font-size: 1.375rem;
@@ -95,6 +98,15 @@
     position: absolute;
     bottom: 0;
     margin-left: -178px;
+  }
+
+}
+#detox {
+  &::after {
+    content: url(../img/detox-moss.png);
+    position: absolute;
+    bottom: 0;
+    // right: 0;
   }
 }
 #goodnight {
