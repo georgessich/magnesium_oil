@@ -51,14 +51,6 @@ accordeonItems.forEach((item, index) => {
   }
 });
 
-window.addEventListener("resize", () => {
-  isMobile = window.innerWidth < 725;
-  if (isMobile) {
-    autoOpenSecondAccordionItem();
-  } else {
-    image.style.maxHeight = "100%";
-  }
-});
 let currentAccordeonItem = 0;
 const hairBoosterSection = document.getElementById('hair-booster');
 let shouldScroll = true;
@@ -112,7 +104,33 @@ hairBoosterSection.addEventListener('wheel', (event) => {
   event.preventDefault();
 });
 
+hairBoosterSection.addEventListener('touchstart', (event) => {
+  touchStartY = event.touches[0].clientY;
+});
 
+hairBoosterSection.addEventListener('touchmove', (event) => {
+  if (!shouldScroll) return;
+
+  const touchEndY = event.touches[0].clientY;
+  const direction = touchEndY > touchStartY ? -1 : 1;
+
+  if (direction === 1) {
+    openNextAccordeonItem();
+  } else if (direction === -1 && currentAccordeonItem > 0) {
+    currentAccordeonItem--;
+
+    accordeonItems.forEach(item => {
+      item.classList.remove('active');
+      item.querySelector('.accordeon__content').style.maxHeight = '0';
+    });
+
+    accordeonItems[currentAccordeonItem].classList.add('active');
+    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
+      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+  }
+
+  event.preventDefault();
+});
 
 // const accordeonItems = document.querySelectorAll(".accordeon__item");
 // const image = document.querySelector(".hair-product--img");

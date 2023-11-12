@@ -25,11 +25,9 @@ itemSteps.addEventListener('touchend', () => {
 });
 
 buttonLeft.addEventListener('click', () => {
-
-    itemSteps.classList.toggle('process__active');
+    itemSteps.classList.remove('process__active');
 });
 
 buttonRight.addEventListener('click', () => {
-
-    itemSteps.classList.toggle('process__active');
+    itemSteps.classList.add('process__active');
 });
