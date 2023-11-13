@@ -24,4 +24,3 @@ checkScreenWidth();
 
 window.addEventListener('resize', checkScreenWidth);
 
-document.addEventListener('DOMContentLoaded', checkContactsAvailability);
