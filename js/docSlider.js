@@ -878,39 +878,3 @@ const docSlider = (function () {
 
 
 })();
-
-// let lastScrollTime = 0;
-
-// document.addEventListener('wheel', function(event) {
-//     const currentTime = new Date().getTime();
-//     const timeDifference = currentTime - lastScrollTime;
-
-//     if (timeDifference < 200) {
-//         event.preventDefault(); // Prevent rapid scrolling events
-//         return;
-//     }
-
-//     const deltaY = event.deltaY;
-//     const direction = deltaY > 0 ? 'next' : 'prev';
-//     const to = direction === 'next' ? docSlider.getCurrentIndex() + 1 : docSlider.getCurrentIndex() - 1;
-
-//     // Check if scrolling is allowed in the specified direction
-//     if ((direction === 'next' && to >= docSlider.getElements().pages.length) || 
-//         (direction === 'prev' && to < 0)) {
-//         event.preventDefault();
-//         return;
-//     }
-
-//     // Update last scroll time
-//     lastScrollTime = currentTime;
-
-//     // Prevent default scroll behavior
-//     event.preventDefault();
-
-//     // Scroll to the next or previous section
-//     if (direction === 'next') {
-//         docSlider.nextPage();
-//     } else {
-//         docSlider.prevPage();
-//     }
-// });

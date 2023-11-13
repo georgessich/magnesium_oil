@@ -890,7 +890,7 @@
     display: block;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 440px) {
   .hero__title {
     padding-top: 14.8vh;
     font-size: 4.0625vh;
