@@ -28,26 +28,36 @@
   <body>
     <header class="header">
       <div class="header__wrap">
-        <a href="#hero" class="header__logo"
+        <a href="#page1" class="header__logo" data-menuanchor="page1"
           ><img id="logo-img" alt="Логотип Mindly"
         /></a>
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a href="#hair" class="header__menu-link">Для волос</a>
+              <a href="#page2" data-menuanchor="page2" class="header__menu-link"
+                >Для волос</a
+              >
             </li>
             <li class="header__menu-item">
-              <a href="#body" class="header__menu-link">Для тела</a>
+              <a href="#page4" data-menuanchor="page4" class="header__menu-link"
+                >Для тела</a
+              >
             </li>
             <li class="header__menu-item">
-              <a href="#video" class="header__menu-link">Видео</a>
+              <a href="#page6" data-menuanchor="page6" class="header__menu-link"
+                >Видео</a
+              >
             </li>
             <li class="header__menu-item">
-              <a href="#production" class="header__menu-link">Производство</a>
+              <a href="#page7" data-menuanchor="page7" class="header__menu-link"
+                >Производство</a
+              >
             </li>
           </ul>
         </nav>
-        <a href="#buy" class="header__btn">Где купить</a>
+        <a href="#page8" data-menuanchor="page8" class="header__btn"
+          >Где купить</a
+        >
       </div>
 
       <div class="mobile__wrapper">
@@ -57,37 +67,37 @@
             <div class="header__mobile-burger--bar"></div>
             <div class="header__mobile-burger--bar"></div>
           </div>
-          <a href="#hero" class="header__mobile--logo"
+          <a href="#page1" data-menuanchor="page1" class="header__mobile--logo"
             ><img
               src="img/logo-link.png"
               id="mobile__logo-img"
               alt="Логотип Mindly"
           /></a>
-          <a href="#buy" class="header__mobile-btn">Где купить</a>
+          <a href="#page8" data-menuanchor="page8" class="header__mobile-btn">Где купить</a>
         </div>
 
         <div class="header__mobile-menu">
           <nav class="header__mobile-nav">
             <ul class="header__mobile-list">
               <li class="header__mobile-item">
-                <a href="#hair" class="header__mobile-link">Для волос</a>
+                <a href="#page2" data-menuanchor="page2" class="header__mobile-link">Для волос</a>
               </li>
               <li class="header__mobile-item">
-                <a href="#body" class="header__mobile-link">Для тела</a>
+                <a href="#page4" data-menuanchor="page4" class="header__mobile-link">Для тела</a>
               </li>
               <li class="header__mobile-item">
-                <a href="#video" class="header__mobile-link">Видео</a>
+                <a href="#page6" data-menuanchor="page6" class="header__mobile-link">Видео</a>
               </li>
               <li class="header__mobile-item">
-                <a href="#production" class="header__mobile-link"
+                <a href="#page7" data-menuanchor="page7" class="header__mobile-link"
                   >Производство</a
                 >
               </li>
               <li class="header__mobile-item">
-                <a href="#buy" class="header__mobile-link">Где купить</a>
+                <a href="#page8" data-menuanchor="page8" class="header__mobile-link">Где купить</a>
               </li>
               <li class="header__mobile-item">
-                <a href="#contacts" class="header__mobile-link">Контакты</a>
+                <a href="#page9" data-menuanchor="page9" class="header__mobile-link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -95,8 +105,8 @@
       </div>
     </header>
     <div id="fullpage">
-      <div class="section">
-        <section id="hero" data-anchor="heroAnchor">
+      <div class="section" data-anchor="page1">
+        <section id="hero">
           <div class="hero">
             <div class="container">
               <h1 class="hero__title">МАГНИЕВОЕ МАСЛО</h1>
@@ -106,9 +116,13 @@
                 принести как можно больше пользы
               </p>
               <div class="hero__links">
-                <a href="#hair" class="hero__link">Для волос</a>
+                <a href="#page2" class="hero__link" data-menuanchor="page2"
+                  >Для волос</a
+                >
 
-                <a href="#body" class="hero__link">Для тела</a>
+                <a href="#page4" data-menuanchor="page4" class="hero__link"
+                  >Для тела</a
+                >
               </div>
               <div class="hero__product-mobile">
                 <img
@@ -126,8 +140,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="hair" data-anchor="hairAnchor">
+      <div class="section" data-anchor="page2">
+        <section id="hair">
           <div class="hair">
             <div class="container">
               <div class="hair__title title__wrapper">
@@ -165,8 +179,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="hair-booster"  data-anchor="hair-boosterAnchor" class="docSlider-scroll">
+      <div class="section" data-anchor="page3">
+        <section id="hair-booster">
           <div class="hair-product item--wrapper" id="hair-booster-wrap">
             <div class="container">
               <div class="hair-product--title title__wrapper">
@@ -310,8 +324,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="body"  data-anchor="bodyAnchor" class="docSlider-scroll">
+      <div class="section" data-anchor="page4">
+        <section id="body">
           <div class="body">
             <div class="container">
               <div class="body__title title__wrapper">
@@ -350,8 +364,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="body__product"  data-anchor="body__productAnchor">
+      <div class="section" data-anchor="page5">
+        <section id="body__product">
           <div class="body__product">
             <div class="container">
               <div class="body__product-title title__wrapper">
@@ -471,8 +485,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="video" data-anchor="videoAnchor" class="docSlider-scroll">
+      <div class="section" data-anchor="page6">
+        <section id="video">
           <div class="video">
             <div class="container">
               <div class="body-product__title title__wrapper">
@@ -491,7 +505,11 @@
                 ></iframe>
 
                 <p class="video__wrapper-name">Аврамова Карина Игоревна</p>
-                <a href="#production" class="video__wrapper-btn">
+                <a
+                  href="#page7"
+                  data-menuanchor="page7"
+                  class="video__wrapper-btn"
+                >
                   <img src="img/button-down.png" alt="Иконка шеврон" />
                 </a>
               </div>
@@ -499,8 +517,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="production" data-anchor="productionAnchor">
+      <div class="section" data-anchor="page7">
+        <section id="production">
           <div class="production">
             <div class="container">
               <div class="production__title title__wrapper">
@@ -612,8 +630,8 @@
           </div>
         </section>
       </div>
-      <div class="section">
-        <section id="buy"  data-anchor="buyAnchor">
+      <div class="section" data-anchor="page8">
+        <section id="buy">
           <div class="buy">
             <div class="container">
               <div class="buy__title title__wrapper">
@@ -700,7 +718,7 @@
           </div>
         </section>
       </div>
-      <div class="section" id="contacts"  data-anchor="contactsAnchor">
+      <div class="section" id="contactssec" data-anchor="page9">
         <section class="contacts">
           <div>
             <div class="container">
@@ -750,23 +768,46 @@
         //options here
         autoScrolling: true,
         scrollHorizontally: true,
-        lockAnchors: false,
-        anchors:['heroAnchor', 'hairAnchor', 'hair-boosterAnchor', 'bodyAnchor', 'body__productAnchor', 'videoAnchor', 'productionAnchor', 'buyAnchor', 'contactsAnchor']
+        anchors: [
+          "page1",
+          "page2",
+          "page3",
+          "page4",
+          "page5",
+          "page6",
+          "page7",
+          "page8",
+          "page9",
+        ],
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 600,
+        scrollBar: false,
+        easing: "easeInOutCubic",
+        easingcss3: "ease",
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: "#element1, .element2",
+        scrollOverflow: true,
+        scrollOverflowMacStyle: false,
+        scrollOverflowReset: false,
+        touchSensitivity: 15,
+        bigSectionsDestination: null,
       });
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script> -->
-    <script src="js/trackpad.js"></script>
     <script src="js/contacts.js"></script>
     <script src="js/accordeon.js"></script>
-    <!-- <script src="js/docSlider.js"></script>
-    <script>
-      docSlider.init({
-        speed: 500,
-        easing: "ease-in-out",
-        scrollReset: false,
-        pager: false,
-      });
-    </script> -->
     <script src="js/header.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/productbutton.js"></script>

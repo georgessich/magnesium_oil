@@ -1141,7 +1141,7 @@
     display: block;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 440px) {
   .production__item-text {
     margin-bottom: 0.813vh;
   }
@@ -1595,6 +1595,10 @@ body {
 }
 .header__mobile-menu {
   display: none;
+}
+
+.product__header {
+  z-index: 21;
 }
 
 .product__header .header__menu-link {

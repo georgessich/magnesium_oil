@@ -1,5 +1,5 @@
 
-const contactsSection = document.getElementById('contacts');
+const contactsSection = document.getElementById('contactssec');
 
 
 function checkScreenWidth() {
@@ -23,23 +23,5 @@ checkScreenWidth();
 
 
 window.addEventListener('resize', checkScreenWidth);
-
-// function initDocSlider() {
-    
-//     if (typeof docSlider === 'undefined') {
-      
-//         docSlider.init();
-//     }
-// }
-
-
-// function checkContactsAvailability() {
-//     const contactsSection = document.getElementById('contacts');
-//     if (contactsSection) {
-       
-//         initDocSlider();
-//     }
-// }
-
 
 document.addEventListener('DOMContentLoaded', checkContactsAvailability);

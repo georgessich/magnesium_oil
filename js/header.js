@@ -38,13 +38,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const targetId = entry.target.id;
-      
+      const targetURI = entry.target.baseURI;
+      const targetRef = targetURI.split('#')[1]
       headerLinks.forEach((link) => {
         link.classList.remove("active-link");
       });
 
       headerLinks.forEach((link) => {
-        if (link.getAttribute("href") === `#${targetId}`) {
+        if (link.getAttribute("href") === `#${targetRef}`) {
           link.classList.add("active-link");
           activeLinkId = targetId;
         } else {

@@ -44,6 +44,9 @@
     display: none;
   }
 }
+.product__header {
+  z-index: 21;
+}
 .product__header .header__menu-link {
   color: #000;
 }
