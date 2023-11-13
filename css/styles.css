@@ -558,7 +558,7 @@
 @media (max-width: 725px) {
   .contacts {
     display: block;
-    height: 0;
+    height: auto;
   }
   .contacts__bottom {
     padding-top: 7vh;
@@ -1365,6 +1365,9 @@ body {
   .container {
     height: auto;
   }
+}
+.fp-watermark {
+  display: none;
 }
 .video {
   position: relative;

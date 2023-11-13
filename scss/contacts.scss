@@ -27,7 +27,7 @@
 @media(max-width: 725px) {
     .contacts {
         display: block;
-        height: 0;
+        height: auto;
 
         &__bottom {
             padding-top: 7vh;

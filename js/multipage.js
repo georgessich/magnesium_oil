@@ -14,10 +14,10 @@ if (window.innerWidth <= 1024 && window.innerHeight > 325) {
     }
     if (pageIndex >= 3 || pageIndex <= 0) {
         setTimeout(function() {
-          docSlider.enable(true);
+          fullpage_api.setAllowScrolling(true);;
         }, 600); 
       } else {
-        docSlider.enable(false);
+        fullpage_api.setAllowScrolling(false);;
       }
   }
 

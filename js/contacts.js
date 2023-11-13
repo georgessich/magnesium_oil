@@ -3,7 +3,7 @@ const contactsSection = document.getElementById('contacts');
 
 
 function checkScreenWidth() {
-    const docSliderInner = document.querySelector('.docSlider-inner');
+    const docSliderInner = document.querySelector('#fullpage');
     if (window.innerWidth > 725) {
        
         if (contactsSection.parentNode) {
@@ -24,22 +24,22 @@ checkScreenWidth();
 
 window.addEventListener('resize', checkScreenWidth);
 
-function initDocSlider() {
+// function initDocSlider() {
     
-    if (typeof docSlider === 'undefined') {
+//     if (typeof docSlider === 'undefined') {
       
-        docSlider.init();
-    }
-}
+//         docSlider.init();
+//     }
+// }
 
 
-function checkContactsAvailability() {
-    const contactsSection = document.getElementById('contacts');
-    if (contactsSection) {
+// function checkContactsAvailability() {
+//     const contactsSection = document.getElementById('contacts');
+//     if (contactsSection) {
        
-        initDocSlider();
-    }
-}
+//         initDocSlider();
+//     }
+// }
 
 
 document.addEventListener('DOMContentLoaded', checkContactsAvailability);

@@ -70,11 +70,11 @@ function openNextAccordeonItem() {
 
 
     currentAccordeonItem++;
-    docSlider.enable(false);
+    fullpage_api.setAllowScrolling(false);
   } else {
     shouldScroll = true;
 
-    docSlider.enable(true);
+    fullpage_api.setAllowScrolling(true);
   }
   if (isMobile) {
     let totalContentHeight = 0;
