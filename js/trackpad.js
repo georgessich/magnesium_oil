@@ -9,7 +9,7 @@ var swipeInProgress = false;
 
 hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
-hammer.on('panleft panright panup pandown press', function (e) {
+hammer.on('panleft panright panup pandown press tap swipe', function (e) {
     if (!swipeInProgress) {
         e.preventDefault();
 
