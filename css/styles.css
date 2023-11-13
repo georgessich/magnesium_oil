@@ -280,7 +280,7 @@
   overflow-y: hidden;
 }
 .body__product-items {
-  padding-top: 4.313rem;
+  padding-top: 4.313vh;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -317,7 +317,7 @@
 .body__product-img {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 60vh;
   display: block;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
@@ -382,7 +382,7 @@
   margin-left: -215px;
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1620px) {
   .body__product-items {
     padding-top: 1rem;
   }
@@ -901,6 +901,11 @@
   }
   .hero__descr {
     margin-bottom: 2.6875vh;
+  }
+}
+@media (max-height: 650px) {
+  .hero__product-mobile img {
+    object-fit: fill;
   }
 }
 .production {

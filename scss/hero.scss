@@ -192,9 +192,8 @@
     }
 }
 
-// @media (max-width: 365px) {
-//     .hero__product-mobile {
-//         height: 40vh;
-//         object-fit: fill;
-//     }
-// }
+@media(max-height: 650px) {
+    .hero__product-mobile img {
+        object-fit: fill;
+    }
+}
