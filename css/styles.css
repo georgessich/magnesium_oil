@@ -264,7 +264,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 112.8205128205%;
-    height: 50%;
+    height: 50vh;
   }
   .body__img-container img {
     position: absolute;
@@ -1226,9 +1226,11 @@ svg {
   height: auto;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
   scroll-behavior: smooth;
+  height: -webkit-fill-available !important;
 }
 
 ::-webkit-scrollbar {
@@ -1271,7 +1273,8 @@ body {
 }
 
 @media (max-width: 1465px) {
-  .container, .header__wrap {
+  .container,
+  .header__wrap {
     width: 90vw;
   }
 }
@@ -1293,7 +1296,8 @@ body {
 }
 
 @media (max-width: 725px) {
-  .container, .header__wrap {
+  .container,
+  .header__wrap {
     padding-top: 0;
   }
 }

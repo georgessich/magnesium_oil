@@ -59,13 +59,14 @@ img {
 
 img,
 svg {
-
   height: auto;
 }
-html, body {
+html,
+body {
   font-size: 16px;
   scroll-behavior: smooth;
 
+  height: -webkit-fill-available!important;
 }
 ::-webkit-scrollbar {
   width: 0; /* Для Safari и Chrome */
@@ -88,8 +89,8 @@ body {
 }
 .container {
   // position: relative;
-  width: 100%; 
-  max-width: 89rem; 
+  width: 100%;
+  max-width: 89rem;
   margin: 0 auto;
   padding-top: 13.75vh;
   // padding-bottom: 3.75rem;
@@ -100,23 +101,23 @@ body {
   position: relative;
 }
 .header__wrap {
-  width: 100%; 
-  max-width: 89rem; 
-  margin: 0 auto; 
+  width: 100%;
+  max-width: 89rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 1465px) {
-  .container, .header__wrap {
+  .container,
+  .header__wrap {
     width: 90vw;
   }
 }
-
 
 .nav-scrolled a {
   color: black;
 }
 
-.nav-scrolled .header__btn{
+.nav-scrolled .header__btn {
   border: 1px solid #000;
 }
 
@@ -126,12 +127,13 @@ body {
 
 .nav-scrolled .active-btn {
   background-color: #000;
-  color:#fff;
+  color: #fff;
 }
 
-@media(max-width: 725px) {
-  .container, .header__wrap {
-   padding-top: 0;
+@media (max-width: 725px) {
+  .container,
+  .header__wrap {
+    padding-top: 0;
   }
 }
 // @media(max-width: 844px) and (orientation: landscape) {
@@ -201,30 +203,27 @@ body {
   .body-product {
     height: auto;
   }
-    .body-product__item {
-      height: auto;
-    }
+  .body-product__item {
+    height: auto;
+  }
 }
 
-
 @media (max-width: 425px) {
- 
-
- .body__info {
-  font-size: 2vh;
-  padding-top: 0.75vh;
-  gap: 0;
- }
- .body__img-mobile {
-  max-height: 55vh;
-  object-fit: fill;
- }
- .contacts__bottom {
-  padding-top: 7vh;
- }
- .production__wrapper {
-  margin-bottom: 2rem;
- }
+  .body__info {
+    font-size: 2vh;
+    padding-top: 0.75vh;
+    gap: 0;
+  }
+  .body__img-mobile {
+    max-height: 55vh;
+    object-fit: fill;
+  }
+  .contacts__bottom {
+    padding-top: 7vh;
+  }
+  .production__wrapper {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (min-height: 0) and (max-height: 825) and (min-width: 1024px) {
