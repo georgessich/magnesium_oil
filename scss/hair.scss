@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   padding-bottom: percentage(calc($height / $width));
-  height: 52%;
+  height: 52vh;
   img {
     position: absolute;
     width: 100vw;
@@ -25,7 +25,7 @@
     &-img {
       max-width: 100%;
       padding-bottom: 3vh;
-      width: 100%;
+      width: 100vw;
   
       object-fit: cover;
       &--mobile {

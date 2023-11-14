@@ -642,7 +642,7 @@
 .hair__wrapper-img {
   max-width: 100%;
   padding-bottom: 3vh;
-  width: 100%;
+  width: 100vw;
   object-fit: cover;
 }
 .hair__wrapper-img--mobile {
@@ -715,7 +715,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 100.7692307692%;
-    height: 52%;
+    height: 52vh;
   }
   .hair__wrapper-img--container img {
     position: absolute;
@@ -813,7 +813,7 @@
 
 @media (max-width: 91.5625rem) {
   .hero__product {
-    width: 70%;
+    width: 70vh;
   }
   .hero__title {
     font-size: 3.375rem;
