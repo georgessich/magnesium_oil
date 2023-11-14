@@ -84,6 +84,10 @@ html, body {
 body {
   font-family: "Raleway", sans-serif;
 }
+.section {
+  height: 100vh;
+  overflow: hidden;
+}
 .container {
   // position: relative;
   width: 100%; 
