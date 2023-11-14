@@ -1375,10 +1375,6 @@ body {
 .fp-watermark {
   display: none;
 }
-
-.fp-section {
-  height: 100vh !important;
-}
 .video {
   position: relative;
   padding-bottom: 5.875rem;
