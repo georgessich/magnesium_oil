@@ -846,7 +846,6 @@
 }
 @media (max-width: 49.0625rem) {
   .hero {
-    height: auto;
     background-image: url(../img/hero-bg-mobile.png);
     text-align: center;
   }
