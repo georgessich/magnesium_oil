@@ -1244,12 +1244,6 @@ html, body {
 
 body {
   font-family: "Raleway", sans-serif;
-  height: 100vh;
-}
-
-section {
-  height: 100vh;
-  overflow: hidden;
 }
 
 .container {
@@ -1372,9 +1366,6 @@ section {
   .container {
     height: auto;
   }
-}
-.fp-watermark {
-  display: none;
 }
 .video {
   position: relative;
