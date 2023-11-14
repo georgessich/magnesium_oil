@@ -630,7 +630,6 @@
 .hair {
   color: #000;
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 .hair__wrapper {
@@ -761,7 +760,6 @@
   color: #fff;
   position: relative;
   background-position: center center;
-  height: 100vh;
   overflow: hidden;
 }
 .hero__title {
@@ -1199,6 +1197,10 @@ main {
   display: block;
 }
 
+section {
+  height: 100vh;
+}
+
 h1,
 h2,
 h3,
@@ -1255,6 +1257,7 @@ body {
   max-width: 89rem;
   margin: 0 auto;
   padding-top: 13.75vh;
+  height: 100vh;
 }
 
 .product__container {

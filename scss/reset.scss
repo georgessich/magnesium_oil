@@ -34,7 +34,9 @@ section,
 main {
   display: block;
 }
-
+section {
+  height: 100vh;
+}
 h1,
 h2,
 h3,
@@ -91,7 +93,7 @@ body {
   margin: 0 auto;
   padding-top: 13.75vh;
   // padding-bottom: 3.75rem;
-  // height: 100vh;
+  height: 100vh;
   // overflow-y: hidden;
 }
 .product__container {
