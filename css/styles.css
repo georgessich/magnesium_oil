@@ -264,7 +264,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 112.8205128205%;
-    height: 50vh;
+    height: 50%;
   }
   .body__img-container img {
     position: absolute;
@@ -711,7 +711,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 100.7692307692%;
-    height: 52vh;
+    height: 52%;
   }
   .hair__wrapper-img--container img {
     position: absolute;
@@ -881,7 +881,7 @@
   .hero__product-mobile img {
     position: fixed;
     width: 100vw;
-    height: 45vh;
+    height: 45%;
     bottom: 0;
     object-fit: cover;
     display: block;
