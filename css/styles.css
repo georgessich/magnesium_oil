@@ -1366,6 +1366,9 @@ body {
     height: auto;
   }
 }
+.fp-watermark {
+  display: none;
+}
 .video {
   position: relative;
   padding-bottom: 5.875rem;
