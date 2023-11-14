@@ -170,7 +170,7 @@
 }
 .body {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 .body::before {
@@ -276,7 +276,7 @@
   }
 }
 .body__product {
-  height: 100vh;
+  height: 100%;
   overflow-y: hidden;
 }
 .body__product-items {
@@ -620,13 +620,13 @@
 }
 .item--wrapper {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 .hair {
   color: #000;
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 .hair__wrapper {
@@ -912,7 +912,7 @@
 .production {
   padding-bottom: 15.75rem;
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 .production::before {
@@ -1371,7 +1371,7 @@ body {
 .video {
   position: relative;
   padding-bottom: 5.875rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
