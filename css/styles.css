@@ -1244,9 +1244,10 @@ html, body {
 
 body {
   font-family: "Raleway", sans-serif;
+  height: 100vh;
 }
 
-.section {
+section {
   height: 100vh;
   overflow: hidden;
 }
