@@ -170,7 +170,6 @@
 }
 .body {
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 .body::before {
@@ -204,7 +203,6 @@
   display: flex;
   margin: 0 auto;
   padding-top: 4.25vw;
-  padding-bottom: 4.875vw;
   max-width: 100%;
   width: 70%;
 }
@@ -440,7 +438,6 @@
   }
 }
 .buy {
-  height: 100vh;
   overflow: hidden;
 }
 .buy__inner {
@@ -624,7 +621,6 @@
 }
 .item--wrapper {
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 .hair {
@@ -760,7 +756,6 @@
   color: #fff;
   position: relative;
   background-position: center center;
-  height: 100vh;
   overflow: hidden;
 }
 .hero__title {
@@ -879,16 +874,14 @@
   .hero__product-mobile {
     position: relative;
     width: 100%;
-    padding-bottom: 77.6923076923%;
   }
   .hero__product-mobile img {
-    position: fixed;
+    position: absolute;
     width: 100vw;
-    height: 45vh;
+    height: 44vh;
     bottom: 0;
     object-fit: cover;
     display: block;
-    margin-left: -5vw;
   }
   .hero__product-mobile--img {
     display: block;
@@ -913,9 +906,7 @@
   }
 }
 .production {
-  padding-bottom: 15.75rem;
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 .production::before {
@@ -1198,10 +1189,6 @@ main {
   display: block;
 }
 
-section {
-  height: 100vh;
-}
-
 h1,
 h2,
 h3,
@@ -1382,8 +1369,6 @@ body {
 }
 .video {
   position: relative;
-  padding-bottom: 5.875rem;
-  height: 100vh;
   width: 100%;
   overflow: hidden;
 }

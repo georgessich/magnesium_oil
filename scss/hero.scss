@@ -1,15 +1,15 @@
 @mixin aspect-ratio($width, $height) {
     position: relative;
     width: 100%;
-    padding-bottom: percentage(calc($height / $width));
+    // padding-bottom: percentage(calc($height / $width));
+    // aspect-ratio: $width / $height;
     img {
-      position: fixed;
-      width: 100vw;
-      height: 45vh;
-      bottom: 0;
-      object-fit: cover;
-      display: block;
-      margin-left: -5vw;
+        position: absolute;
+        width: 100vw;
+        height: 44vh;
+        bottom: 0;
+        object-fit: cover;
+        display: block;
     }
   }
 .hero {
@@ -19,7 +19,7 @@
     color: #fff;
     position: relative;
     background-position: center center;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
     &__title {
         font-size: 4.375rem;
