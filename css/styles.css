@@ -1270,12 +1270,6 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 1465px) {
-  .container,
-  .header__wrap {
-    width: 90vw;
-  }
-}
 .nav-scrolled a {
   color: black;
 }

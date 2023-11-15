@@ -38,5 +38,5 @@ new fullpage("#fullpage", {
     scrollOverflowReset: false,
     touchSensitivity: 15,
     bigSectionsDestination: null,
-    // fixedElements: '.header',
+    fixedElements: '.header',
   });
