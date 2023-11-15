@@ -70,11 +70,12 @@ function openNextAccordeonItem() {
 
 
     currentAccordeonItem++;
-    fullpage_api.setAllowScrolling(false);
+    shouldScroll = false;
   } else {
     shouldScroll = true;
 
     fullpage_api.setAllowScrolling(true);
+    console.log('should scroll')
   }
   if (isMobile) {
     let totalContentHeight = 0;
@@ -121,6 +122,12 @@ let touchEndY = 0;
 
 hairBoosterSection.addEventListener('touchstart', (event) => {
   touchStartY = event.touches[0].clientY;
+  fullpage_api.setAllowScrolling(false);
+  if (!shouldScroll) {
+    fullpage_api.setAllowScrolling(false);
+  } else {
+    fullpage_api.setAllowScrolling(true);
+  }
 });
 
 hairBoosterSection.addEventListener('touchmove', (event) => {
