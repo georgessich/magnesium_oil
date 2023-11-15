@@ -873,7 +873,6 @@
   }
   .hero__product-mobile {
     position: relative;
-    width: 100%;
   }
   .hero__product-mobile img {
     position: absolute;
@@ -1253,6 +1252,7 @@ body {
   margin: 0 auto;
   padding-top: 13.75vh;
   height: 100vh;
+  overflow-y: clip;
 }
 
 .product__container {

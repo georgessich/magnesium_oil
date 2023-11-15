@@ -97,6 +97,7 @@ body {
   // padding-bottom: 3.75rem;
   height: 100vh;
   // overflow-y: hidden;
+  overflow-y: clip;
 }
 .product__container {
   position: relative;
