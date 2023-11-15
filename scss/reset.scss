@@ -106,7 +106,10 @@ body {
   max-width: 89rem;
   margin: 0 auto;
 }
-
+.section-wrap {
+  height: 100vh;
+  overflow: hidden;
+}
 @media (max-width: 1465px) {
   .container,
   .header__wrap {
