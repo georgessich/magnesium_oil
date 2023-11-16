@@ -35,7 +35,7 @@ if (window.innerWidth <= 1024 && window.innerHeight > 325) {
  productsContainer.addEventListener("touchmove", (event) => {
     touchEndY = event.touches[0].clientY;
   });
-  productsContainer.addEventListener("touchend", () => {
+  productsContainer.addEventListener("touchmove", () => {
     if (touchStartY !== 0) {
      
       const deltaY = touchEndY - touchStartY;
