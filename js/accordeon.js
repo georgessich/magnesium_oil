@@ -217,12 +217,12 @@ hairBoosterSection.addEventListener("touchend", () => {
         accordeonItems[currentAccordeonItem].querySelector(
           ".accordeon__content"
         ).scrollHeight + "px";
-      
-      if (currentAccordeonItem === 1) {
         setTimeout(function () {
-          fullpage_api.setAllowScrolling(true);
+          if (currentAccordeonItem <= 1) {
+            fullpage_api.setAllowScrolling(true);
+          }
         }, 600);
-      }
+    
     }
   }
 });

@@ -1,11 +1,6 @@
 @mixin aspect-ratio($width, $height) {
-    position: absolute;
-    bottom: 0;
-    // width: 100%;
-    // padding-bottom: percentage(calc($height / $width));
-    // aspect-ratio: $width / $height;
+
     img {
-        position: absolute;
         width: 100vw;
         height: 44vh;
         bottom: 0;
@@ -141,7 +136,7 @@
 
         &__title {
             font-size: 2.0625rem;
-            padding-top: 4.438rem;
+            padding-top: 3.438rem;
         }
 
         &__subtitle {

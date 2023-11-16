@@ -142,7 +142,6 @@ body {
 }
 
 @media (max-width: 725px) {
-  .container,
   .header__wrap {
     padding-top: 0;
   }
@@ -278,3 +277,12 @@ body {
   //   height: 50vh;
   // }
 }
+
+@media(max-width: 700px) {
+  .fp-overflow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
