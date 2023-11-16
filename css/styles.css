@@ -954,6 +954,11 @@
     height: 50vh;
   }
 }
+@media (min-width: 2048px) {
+  .hero__product {
+    width: 70vw;
+  }
+}
 .production {
   position: relative;
   overflow: hidden;

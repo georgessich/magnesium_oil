@@ -71,7 +71,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-
+       
         &-mobile--img {
             display: none;
         }
@@ -236,5 +236,11 @@ and (-webkit-device-pixel-ratio: 3) {
  and (-webkit-device-pixel-ratio: 2) { 
     .hero__product-mobile img {
         height: 50vh;
+    }
+ }
+
+ @media (min-width: 2048px) {
+    .hero__product {
+        width: 70vw;
     }
  }
