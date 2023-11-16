@@ -184,6 +184,16 @@
         }
     }
 }
+/* 1170×2532 pixels at 460ppi */
+@media only screen 
+    and (width: 390px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        .hero__title {
+            padding-top: 4.438rem;
+        }
+
+
+     }
 @media only screen 
     and (width: 375px) 
 
