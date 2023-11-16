@@ -1839,3 +1839,8 @@ body {
     padding-top: 5.5rem;
   }
 }
+@media only screen and (width: 390px) and (-webkit-device-pixel-ratio: 3) {
+  .title__wrapper {
+    padding-top: 5.5rem;
+  }
+}
