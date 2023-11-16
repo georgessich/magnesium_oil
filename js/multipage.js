@@ -1,9 +1,9 @@
 if (window.innerWidth <= 1024 && window.innerHeight > 325) {
   const pages = document.querySelectorAll(".body__product-item");
-  const productsContainer = document.getElementById("body__products");
+  const productsContainer = document.getElementById("body__product");
   let currentPage = 0;
-  let touchStartY = null;
-
+  let touchStartY = 0;
+  let touchEndY = 0;
   function scrollToPage(pageIndex) {
     if (pageIndex >= 0 && pageIndex < pages.length) {
       currentPage = pageIndex;
@@ -32,20 +32,23 @@ if (window.innerWidth <= 1024 && window.innerHeight > 325) {
   productsContainer.addEventListener("touchstart", (event) => {
     touchStartY = event.touches[0].clientY;
   });
-
-  productsContainer.addEventListener("touchend", (event) => {
-    if (touchStartY !== null) {
-      const touchMoveY = event.touches[0].clientY;
-      const deltaY = touchMoveY - touchStartY;
-      if (deltaY > 50) {
-
-        scrollToPage(currentPage - 1);
-        touchStartY = null; 
-
-      } else if (deltaY < -50) {
+ productsContainer.addEventListener("touchmove", (event) => {
+    touchEndY = event.touches[0].clientY;
+  });
+  productsContainer.addEventListener("touchmove", () => {
+    if (touchStartY !== 0) {
+     
+      const deltaY = touchEndY - touchStartY;
+      const direction = deltaY > 0 ? -1 : 1;
+      if (direction === 1) {
 
         scrollToPage(currentPage + 1);
-        touchStartY = null; 
+        touchStartY = 0; 
+
+      } else if (direction === -1) {
+
+        scrollToPage(currentPage - 1);
+        touchStartY = 0; 
 
       }
     }
