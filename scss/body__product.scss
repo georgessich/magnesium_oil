@@ -42,9 +42,9 @@
   }
   &-img {
     position: relative;
-    height: 60vh;
+    height: 55vh;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
     &:hover {
         transform: translateY(-1.5625rem);
@@ -116,7 +116,11 @@
     margin-left: -215px;
   }
 }
-
+@media(max-width: 1465px) {
+  .body__product-toplink--desktop {
+    right: 15%;
+  }
+}
 @media(max-width: 1620px) {
     .body__product {
         &-items {
@@ -136,7 +140,7 @@
         &-item {
             
             height: 100vh;
-            transition: transform .3s ease;
+            transition: transform 1s ease;
             position: relative;
         }
         &-toplink {
@@ -153,7 +157,7 @@
           &-toplink--item {
             display: block;
             position: absolute;
-            right: 0%;
+            right: 17%;
             font-size: 1rem;
             color: #bdbdbd;
             font-style: italic;

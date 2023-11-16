@@ -1,36 +1,32 @@
 @mixin aspect-ratio($width, $height) {
-  position: relative;
-  width: 100%;
-  padding-bottom: percentage(calc($height / $width));
-  height: 50vh;
+  position: absolute;
+  bottom: 0;
+
+  // width: 100%;
+  // padding-bottom: percentage(calc($height / $width));
+  height: 54vh;
   img {
     position: absolute;
+
     width: 100vw;
     height: 100%;
     object-fit: fill;
     display: block;
-    margin-left: -5vw;
+
   }
 }
 .body {
   position: relative;
-  // height: 100vh;
   overflow: hidden;
   &::before {
     position: absolute;
-    content: "";
-    background-image: url(../img/body-leaf-top.png);
-    width: 18.3125rem;
-    height: 32.5rem;
-    top: 25%;
+    content:  url(../img/body-leaf-top.png);
+    top: 30%;
   }
 
   &::after {
     position: absolute;
-    content: "";
-    background-image: url(../img/body-leaf-bottom.png);
-    width: 10.75rem;
-    height: 15.5rem;
+    content:  url(../img/body-leaf-bottom.png);
     bottom: 0;
     right: 0;
   }
@@ -95,19 +91,16 @@
 
     &__info {
       flex-direction: column;
-      padding-top: 1.75rem;
+      padding-top: 0.75rem;
       font-size: 0.875rem;
-      gap: 0.938rem;
-      margin-bottom: 1.75rem;
+      gap: 0;
+      margin-bottom: 0.75rem;
 
       p {
         max-width: none;
       }
     }
 
-    &__img {
-      width: 100%;
-    }
   }
 }
 
@@ -132,3 +125,18 @@
     // object-fit: cover;
   }
 }
+@media (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+  .body__img-container {
+    height: 60vh;
+  }
+}
+@media only screen 
+    and (width: 375px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+      .body__img-container {
+        height: 60vh;
+      }
+      .body__img-container img{
+        height: auto;
+      }
+    }

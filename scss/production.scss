@@ -16,11 +16,8 @@
   }
 
   &::after {
-    content: "";
+    content:  url(../img/leaf-bottom.png);
     position: absolute;
-    background-image: url(../img/leaf-bottom.png);
-    width: 10.68rem;
-    height: 10.98rem;
     right: 0;
     bottom: 0;
   }
@@ -201,7 +198,7 @@
         height: 2.75vh;
         background-size: cover;
         top: auto;
-        margin-left: 10rem;
+        margin-left: 12rem;
       }
     }
 

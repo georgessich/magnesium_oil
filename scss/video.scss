@@ -1,17 +1,12 @@
 .video {
   position: relative;
-  // padding-bottom: 5.875rem; 
-  // height: 100vh;
   width: 100%;
   overflow: hidden;
   &::after {
-    content: "";
+    content: url(../img/leafs-bg.png);
     position: absolute;
-    background-image: url(../img/leafs-bg.png);
     bottom: 0;
     right: 0;
-    width: 21.813rem; 
-    height: 27.625rem; 
   }
 
   &__wrapper {

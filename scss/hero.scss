@@ -1,5 +1,6 @@
 @mixin aspect-ratio($width, $height) {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     // width: 100%;
     // padding-bottom: percentage(calc($height / $width));
     // aspect-ratio: $width / $height;
@@ -77,7 +78,7 @@
     }
 }
 
-@media(max-width: 91.5625rem) {
+@media(max-width: 1465px) {
     .hero {
         &__product {
             width: 70vh;
@@ -106,7 +107,13 @@
     }
 }
 
-@media(max-width: 69.0625rem) {
+@media (max-width: 1366px) {
+    .hero__title {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 1105px) {
     .hero {
         &__title {
             font-size: 2.5rem;
@@ -127,14 +134,14 @@
         height: auto;
     }
 }
-@media (max-width: 49.0625rem) { 
+@media (max-width: 785px) { 
     .hero {
         background-image: url(../img/hero-bg-mobile.png);
         text-align: center;
 
         &__title {
             font-size: 2.0625rem;
-            padding-top: 8.438rem;
+            padding-top: 4.438rem;
         }
 
         &__subtitle {
@@ -177,23 +184,43 @@
         }
     }
 }
+@media only screen 
+    and (width: 375px) 
 
-@media(max-width: 440px) {
-    .hero__title {
-        padding-top: 14.8vh;
-        font-size: 4.0625vh;
-    }
-    .hero__subtitle {
-        font-size: 2.2vh;
-        margin-bottom: 2.375vh;
-    }
-    .hero__descr {
-        margin-bottom: 2.6875vh;
-    }
-}
+    and (-webkit-device-pixel-ratio: 2) {
+        .hero {
 
-@media(max-height: 650px) {
+            &__subtitle {
+                margin-bottom: 0.375rem;
+            }
+
+            &__descr {
+                margin-bottom: 0.6875rem;
+            }
+
+            &__product-mobile img {
+                height: 40vh;
+                object-fit: fill;
+            }
+        }
+     }
+
+     /* 1080×2340 pixels at 476ppi */
+@media only screen 
+and (width: 375px) 
+
+and (-webkit-device-pixel-ratio: 3) {
+    .hero {
+        &__title {
+            padding-top: 3.438rem;
+        }
+    }
+ }
+ @media only screen 
+ and (width: 375px) 
+
+ and (-webkit-device-pixel-ratio: 2) { 
     .hero__product-mobile img {
-        object-fit: fill;
+        height: 50vh;
     }
-}
+ }

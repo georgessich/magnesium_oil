@@ -27,7 +27,9 @@ function toggleAccordionItem(item) {
     let totalContentHeight = 0;
     accordeonItems.forEach((otherItem) => {
       if (otherItem.classList.contains("active")) {
-        totalContentHeight += otherItem.querySelector(".accordeon__content").scrollHeight;
+        totalContentHeight += otherItem.querySelector(
+          ".accordeon__content"
+        ).scrollHeight;
       }
     });
 
@@ -52,36 +54,36 @@ accordeonItems.forEach((item, index) => {
 });
 
 let currentAccordeonItem = 0;
-const hairBoosterSection = document.getElementById('hair-booster');
+const hairBoosterSection = document.getElementById("hair-booster-wrap");
 let shouldScroll = true;
 
 function openNextAccordeonItem() {
   if (currentAccordeonItem < accordeonItems.length) {
-
-    accordeonItems.forEach(item => {
-      item.classList.remove('active');
-      item.querySelector('.accordeon__content').style.maxHeight = '0';
+    accordeonItems.forEach((item) => {
+      item.classList.remove("active");
+      item.querySelector(".accordeon__content").style.maxHeight = "0";
     });
 
-
-    accordeonItems[currentAccordeonItem].classList.add('active');
-    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
-
+    accordeonItems[currentAccordeonItem].classList.add("active");
+    accordeonItems[currentAccordeonItem].querySelector(
+      ".accordeon__content"
+    ).style.maxHeight =
+      accordeonItems[currentAccordeonItem].querySelector(".accordeon__content")
+        .scrollHeight + "px";
 
     currentAccordeonItem++;
     shouldScroll = false;
   } else {
     shouldScroll = true;
-
-    fullpage_api.setAllowScrolling(true);
-    console.log('should scroll')
   }
+
   if (isMobile) {
     let totalContentHeight = 0;
     accordeonItems.forEach((otherItem) => {
       if (otherItem.classList.contains("active")) {
-        totalContentHeight += otherItem.querySelector(".accordeon__content").scrollHeight;
+        totalContentHeight += otherItem.querySelector(
+          ".accordeon__content"
+        ).scrollHeight;
       }
     });
 
@@ -90,28 +92,44 @@ function openNextAccordeonItem() {
   } else {
     image.style.maxHeight = "100%";
   }
+  console.log(currentAccordeonItem);
 }
 
-hairBoosterSection.addEventListener('wheel', (event) => {
-  if (!shouldScroll) return;
+hairBoosterSection.addEventListener("wheel", (event) => {
+  // if (!shouldScroll) return;
 
   const direction = event.deltaY > 0 ? 1 : -1;
 
   if (direction === 1) {
     openNextAccordeonItem();
-
+    if (currentAccordeonItem >= 4) {
+      setTimeout(function () {
+        fullpage_api.setAllowScrolling(true);
+      }, 600);
+    } else {
+      fullpage_api.setAllowScrolling(false);
+    }
   } else if (direction === -1 && currentAccordeonItem > 0) {
     currentAccordeonItem--;
 
-    accordeonItems.forEach(item => {
-      item.classList.remove('active');
-      item.querySelector('.accordeon__content').style.maxHeight = '0';
-
+    accordeonItems.forEach((item) => {
+      item.classList.remove("active");
+      item.querySelector(".accordeon__content").style.maxHeight = "0";
     });
 
-    accordeonItems[currentAccordeonItem].classList.add('active');
-    accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+    accordeonItems[currentAccordeonItem].classList.add("active");
+    accordeonItems[currentAccordeonItem].querySelector(
+      ".accordeon__content"
+    ).style.maxHeight =
+      accordeonItems[currentAccordeonItem].querySelector(".accordeon__content")
+        .scrollHeight + "px";
+    if (currentAccordeonItem <= 1) {
+      setTimeout(function () {
+        fullpage_api.setAllowScrolling(true);
+      }, 600);
+    } else {
+      fullpage_api.setAllowScrolling(false);
+    }
   }
 
   event.preventDefault();
@@ -120,43 +138,53 @@ hairBoosterSection.addEventListener('wheel', (event) => {
 let touchStartY = 0;
 let touchEndY = 0;
 
-hairBoosterSection.addEventListener('touchstart', (event) => {
+hairBoosterSection.addEventListener("touchstart", (event) => {
   touchStartY = event.touches[0].clientY;
   fullpage_api.setAllowScrolling(false);
-  if (!shouldScroll) {
-    fullpage_api.setAllowScrolling(false);
-  } else {
-    fullpage_api.setAllowScrolling(true);
-  }
 });
 
-hairBoosterSection.addEventListener('touchmove', (event) => {
+hairBoosterSection.addEventListener("touchmove", (event) => {
   touchEndY = event.touches[0].clientY;
 });
 
-hairBoosterSection.addEventListener('touchend', () => {
+hairBoosterSection.addEventListener("touchend", () => {
   const deltaY = touchEndY - touchStartY;
 
-  if (Math.abs(deltaY) > 50) { 
-    const direction = deltaY > 0 ? -1 : 1; 
+  console.log(currentAccordeonItem);
+  if (Math.abs(deltaY) > 50) {
+    const direction = deltaY > 0 ? -1 : 1;
     if (direction === 1) {
       openNextAccordeonItem();
-    } else if (direction === -1 && currentAccordeonItem > 0) {
+      if (currentAccordeonItem >= 4) {
+        setTimeout(function () {
+          fullpage_api.setAllowScrolling(true);
+        }, 600);
+      } else {
+        fullpage_api.setAllowScrolling(false);
+      }
+    } else if (direction === -1 && currentAccordeonItem >= 1) {
       currentAccordeonItem--;
 
-      accordeonItems.forEach(item => {
-        item.classList.remove('active');
-        item.querySelector('.accordeon__content').style.maxHeight = '0';
+      accordeonItems.forEach((item) => {
+        item.classList.remove("active");
+        item.querySelector(".accordeon__content").style.maxHeight = "0";
       });
 
-      accordeonItems[currentAccordeonItem].classList.add('active');
-      accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').style.maxHeight =
-        accordeonItems[currentAccordeonItem].querySelector('.accordeon__content').scrollHeight + 'px';
+      accordeonItems[currentAccordeonItem].classList.add("active");
+      accordeonItems[currentAccordeonItem].querySelector(
+        ".accordeon__content"
+      ).style.maxHeight =
+        accordeonItems[currentAccordeonItem].querySelector(
+          ".accordeon__content"
+        ).scrollHeight + "px";
+      if (currentAccordeonItem <= 1) {
+        setTimeout(function () {
+          fullpage_api.setAllowScrolling(true);
+        }, 600);
+      }
     }
   }
 });
-
-
 
 // const accordeonItems = document.querySelectorAll(".accordeon__item");
 // const image = document.querySelector(".hair-product--img");

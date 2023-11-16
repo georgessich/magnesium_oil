@@ -40,10 +40,11 @@ const sectionObserver = new IntersectionObserver((entries) => {
       const targetId = entry.target.id;
       const targetURI = entry.target.baseURI;
       const targetRef = targetURI.split('#')[1]
+      console.log(entry.target)
       headerLinks.forEach((link) => {
         link.classList.remove("active-link");
       });
-
+      
       headerLinks.forEach((link) => {
         if (link.getAttribute("href") === `#${targetRef}`) {
           link.classList.add("active-link");
@@ -58,7 +59,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       } else {
         headerBtn.classList.remove('active-btn')
       }
-      if(targetId === "hair-booster") {
+      if(targetId === "hair-booster-wrap") {
         headerLinks[0].classList.add('active-link');
       }
       if(targetId === "body__product") {
@@ -68,7 +69,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".section");
 sections.forEach((section) => {
   sectionObserver.observe(section);
 });

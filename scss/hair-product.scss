@@ -2,7 +2,7 @@
 
   &--wrapper {
     display: flex;
-    padding-top: 4.3125rem;
+    padding-top: 2.3125rem;
     align-items: flex-start;
   }
 
@@ -41,6 +41,7 @@
       width: auto;
       margin-top: 1rem;
       padding-bottom: 3vh;
+      height: 40vh;
     }
 
     &--info {
@@ -63,3 +64,11 @@
   // height: 100vh;
   overflow: hidden;
 }
+
+@media only screen 
+    and (width: 375px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+      .hair-product--img {
+        height: 30vh;
+      }
+    }
