@@ -1830,6 +1830,6 @@ body {
 }
 @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2) {
   .body__product-title {
-    padding-top: 5.5rem;
+    padding-top: 7.5rem;
   }
 }
