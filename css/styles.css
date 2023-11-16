@@ -1383,7 +1383,7 @@ body {
 }
 @media (max-width: 425px) {
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
   .contacts__bottom {
     padding-top: 7vh;
