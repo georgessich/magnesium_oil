@@ -444,6 +444,11 @@
     height: 50vh;
   }
 }
+@media (min-width: 3200px) {
+  .body__product-img {
+    height: 42vh;
+  }
+}
 .buy {
   overflow: hidden;
 }
@@ -464,8 +469,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16.3125vw;
-  height: 9.5vh;
+  width: 19.575rem;
+  height: 5.938rem;
   margin-right: 1.625vh;
   margin-left: 0.501vh;
 }
@@ -514,6 +519,12 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1440px) {
+  .buy__wrapper-link {
+    width: 16.575rem;
+    height: 4.938rem;
+  }
+}
 @media (max-width: 80rem) {
   .buy__disclaimer {
     font-size: 2vw;
@@ -537,6 +548,18 @@
     width: 39.3125vw;
     height: 10.4375vh;
     padding: 1rem;
+  }
+}
+@media (min-width: 2048px) {
+  .buy__wrapper-link {
+    width: 14.575rem;
+    height: 5.938rem;
+  }
+}
+@media (min-width: 3200px) {
+  .buy__wrapper-link {
+    width: 10.575rem;
+    height: 4.938rem;
   }
 }
 .contacts {
@@ -811,7 +834,7 @@
 
 @media (max-width: 1465px) {
   .hero__product {
-    width: 70vh;
+    width: 70vw;
   }
   .hero__title {
     font-size: 3.375rem;
@@ -1250,6 +1273,10 @@ body {
   height: -webkit-fill-available !important;
 }
 
+iframe {
+  height: 31.25rem;
+}
+
 ::-webkit-scrollbar {
   width: 0; /* Для Safari и Chrome */
 }
@@ -1461,10 +1488,6 @@ body {
 }
 
 @media (max-width: 28.125rem) {
-  .video__wrapper iframe {
-    width: 21.625rem;
-    height: 12.063rem;
-  }
   .video__wrapper-name {
     font-size: 0.875rem;
     margin-bottom: 15.625rem;
@@ -1612,7 +1635,7 @@ body {
   }
 }
 .header {
-  backdrop-filter: blur(27px);
+  backdrop-filter: blur(1.6875rem);
   position: fixed;
   top: 0;
   left: 0;
@@ -1622,8 +1645,8 @@ body {
 .header__wrap {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 18px;
-  font-size: 18px;
+  padding-bottom: 1.125rem;
+  font-size: 1.125rem;
   font-weight: 400;
   align-items: center;
 }
@@ -1631,20 +1654,20 @@ body {
   display: flex;
 }
 .header__menu-link {
-  margin-right: 50px;
+  margin-right: 3.125rem;
   color: #fff;
   font-weight: 500;
 }
 .header__btn {
   border: 1px solid #fff;
-  padding: 8px 50px;
-  border-radius: 21px;
+  padding: 0.5rem 3.125rem;
+  border-radius: 1.3125rem;
   color: #fff;
   font-weight: 500;
 }
 
 .header__wrap {
-  padding-top: 19px;
+  padding-top: 1.1875rem;
 }
 
 .header__mobile {
@@ -1664,33 +1687,33 @@ body {
 
 .product__header .header__btn {
   border: 1px solid #000;
-  padding: 8px 50px;
-  border-radius: 21px;
+  padding: 0.5rem 3.125rem;
+  border-radius: 1.3125rem;
   color: #000;
 }
 
 @media (max-width: 1025px) {
   .header__wrap {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .header__menu-link {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 }
 @media (max-width: 789px) {
   #mobile__logo-img {
-    width: 117px;
+    width: 7.3125rem;
   }
   #logo-img {
-    width: 117px;
+    width: 7.3125rem;
   }
   .header {
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(13.5px);
+    backdrop-filter: blur(0.84375rem);
   }
   .mobile__wrapper {
     width: 100%;
-    box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.1875rem 0 1rem rgba(0, 0, 0, 0.25);
   }
   .header__wrap {
     display: none;
@@ -1699,32 +1722,32 @@ body {
     display: flex;
     background-color: #fff;
     width: 100%;
-    backdrop-filter: blur(13.5px);
-    padding: 14px 20px;
+    backdrop-filter: blur(0.84375rem);
+    padding: 0.875rem 1.25rem;
     align-items: center;
     justify-content: space-between;
   }
   .header__mobile-list {
-    padding: 0 22px;
+    padding: 0 1.375rem;
   }
   .header__mobile-item {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     border-top: 1px solid #dfdfdf;
   }
   .header__mobile-item:last-child {
     border-bottom: 1px solid #dfdfdf;
   }
   .header__mobile-link {
-    font-size: 16px;
+    font-size: 1rem;
     color: #000;
   }
   .header__mobile-btn {
     border: 1px solid #000;
-    padding: 5px 14px;
+    padding: 0.3125rem 0.875rem;
     color: #000;
-    border-radius: 21px;
+    border-radius: 1.3125rem;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .header__mobile-menu {
     background-color: #fff;
@@ -1733,15 +1756,15 @@ body {
     transition: transform 2.3s ease;
   }
   .header__mobile-burger {
-    padding-top: 10px;
+    padding-top: 0.625rem;
   }
   .header__mobile-burger:hover {
     cursor: pointer;
   }
   .header__mobile-burger--bar {
-    width: 29px;
-    height: 2px;
-    margin-bottom: 7px;
+    width: 1.8125rem;
+    height: 0.125rem;
+    margin-bottom: 0.4375rem;
     background-color: black;
   }
   .header__mobile-burger.active .header__mobile-burger--bar:nth-child(1) {

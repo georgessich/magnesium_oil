@@ -19,8 +19,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 16.3125vw;
-      height: 9.5vh;
+      width: 19.575rem;
+      height: 5.938rem;
       margin-right: 1.625vh;
       margin-left: 0.501vh;
       img {
@@ -79,7 +79,12 @@
 .buy__info-link.underline {
   text-decoration: underline;
 }
-
+@media (max-width: 1440px) {
+  .buy__wrapper-link {
+    width: 16.575rem;
+    height: 4.938rem;
+  }
+}
 @media (max-width: 80rem) {
   .buy__disclaimer {
     font-size: 2vw;
@@ -112,5 +117,17 @@
         padding: 1rem;
       }
     }
+  }
+}
+@media (min-width: 2048px) {
+  .buy__wrapper-link {
+    width: 14.575rem;
+    height: 5.938rem;
+  }
+}
+@media (min-width: 3200px) {
+  .buy__wrapper-link {
+    width: 10.575rem;
+    height: 4.938rem;
   }
 }

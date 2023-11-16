@@ -70,6 +70,9 @@ body {
 
   height: -webkit-fill-available!important;
 }
+iframe {
+  height: 31.25rem;
+}
 ::-webkit-scrollbar {
   width: 0; /* Для Safari и Chrome */
 }
@@ -271,4 +274,7 @@ body {
   html, body {
     font-size: 30px;
   }
+  // iframe {
+  //   height: 50vh;
+  // }
 }
