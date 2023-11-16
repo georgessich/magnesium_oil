@@ -98,9 +98,9 @@ function openNextAccordeonItem() {
 hairBoosterSection.addEventListener("wheel", (event) => {
   // if (!shouldScroll) return;
 
-  const direction = event.deltaY > 0 ? 1 : -1;
+  const directionAcc = event.deltaY > 0 ? 1 : -1;
 
-  if (direction === 1) {
+  if (directionAcc === 1) {
     openNextAccordeonItem();
     if (currentAccordeonItem >= 4) {
       setTimeout(function () {
@@ -109,7 +109,7 @@ hairBoosterSection.addEventListener("wheel", (event) => {
     } else {
       fullpage_api.setAllowScrolling(false);
     }
-  } else if (direction === -1 && currentAccordeonItem > 0) {
+  } else if (directionAcc === -1 && currentAccordeonItem > 0) {
     currentAccordeonItem--;
 
     accordeonItems.forEach((item) => {
@@ -135,25 +135,25 @@ hairBoosterSection.addEventListener("wheel", (event) => {
   event.preventDefault();
 });
 
-let touchStartY = 0;
-let touchEndY = 0;
+let touchStartAccY = 0;
+let touchEndAccY = 0;
 
 hairBoosterSection.addEventListener("touchstart", (event) => {
-  touchStartY = event.touches[0].clientY;
+  touchStartAccY = event.touches[0].clientY;
   fullpage_api.setAllowScrolling(false);
 });
 
 hairBoosterSection.addEventListener("touchmove", (event) => {
-  touchEndY = event.touches[0].clientY;
+  touchEndAccY = event.touches[0].clientY;
 });
 
 hairBoosterSection.addEventListener("touchend", () => {
-  const deltaY = touchEndY - touchStartY;
+  const deltaY = touchEndAccY - touchStartAccY;
 
   console.log(currentAccordeonItem);
   if (Math.abs(deltaY) > 50) {
-    const direction = deltaY > 0 ? -1 : 1;
-    if (direction === 1) {
+    const directionAcc = deltaY > 0 ? -1 : 1;
+    if (directionAcc === 1) {
       openNextAccordeonItem();
       if (currentAccordeonItem >= 4) {
         setTimeout(function () {
@@ -162,7 +162,7 @@ hairBoosterSection.addEventListener("touchend", () => {
       } else {
         fullpage_api.setAllowScrolling(false);
       }
-    } else if (direction === -1 && currentAccordeonItem >= 1) {
+    } else if (directionAcc === -1 && currentAccordeonItem >= 1) {
       currentAccordeonItem--;
 
       accordeonItems.forEach((item) => {
@@ -292,11 +292,11 @@ hairBoosterSection.addEventListener("touchend", () => {
 //   if (isHairBoosterSectionHovered) {
 //     if (!shouldScroll) return;
 
-//     const direction = event.deltaY > 0 ? 1 : -1;
+//     const directionAcc = event.deltaY > 0 ? 1 : -1;
 
-//     if (direction === 1) {
+//     if (directionAcc === 1) {
 //       openNextAccordeonItem();
-//     } else if (direction === -1 && currentAccordeonItem > 0) {
+//     } else if (directionAcc === -1 && currentAccordeonItem > 0) {
 //       currentAccordeonItem--;
 
 //       accordeonItems.forEach((item) => {
