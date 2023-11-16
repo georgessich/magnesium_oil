@@ -1,6 +1,6 @@
 if (window.innerWidth <= 1024 && window.innerHeight > 325) {
   const pages = document.querySelectorAll(".body__product-item");
-  const productsContainer = document.getElementById("body__product");
+  const productsContainer = document.getElementById("body__products");
   let currentPage = 0;
   let touchStartY = null;
 
@@ -33,7 +33,7 @@ if (window.innerWidth <= 1024 && window.innerHeight > 325) {
     touchStartY = event.touches[0].clientY;
   });
 
-  productsContainer.addEventListener("touchmove", (event) => {
+  productsContainer.addEventListener("touchend", (event) => {
     if (touchStartY !== null) {
       const touchMoveY = event.touches[0].clientY;
       const deltaY = touchMoveY - touchStartY;
