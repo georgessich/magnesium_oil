@@ -209,8 +209,8 @@
     &__item {
       display: flex;
       font-size: 0.875rem;
-      margin-bottom: 0;
-
+      margin-bottom: .5rem;
+      align-items: center;
       &-img {
         width: 6.09375vh;
         height: 6.09375vh;
@@ -218,11 +218,12 @@
       }
 
       &-text {
-        padding-left: 0.5rem;
+        padding-left: 1rem;
       }
 
       ul {
         margin-left: 1.25rem;
+        padding-left: 1rem;
       }
 
       ul li {
