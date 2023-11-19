@@ -105,7 +105,7 @@ hairBoosterSection.addEventListener("wheel", (event) => {
     if (currentAccordeonItem >= 4) {
       setTimeout(function () {
         fullpage_api.setAllowScrolling(true);
-      }, 600);
+      }, 300);
     } else {
       fullpage_api.setAllowScrolling(false);
     }
@@ -126,7 +126,7 @@ hairBoosterSection.addEventListener("wheel", (event) => {
     if (currentAccordeonItem <= 1) {
       setTimeout(function () {
         fullpage_api.setAllowScrolling(true);
-      }, 600);
+      }, 300);
     } else {
       fullpage_api.setAllowScrolling(false);
     }
@@ -158,7 +158,7 @@ hairBoosterSection.addEventListener("touchmove", (event) => {
 //       if (currentAccordeonItem >= 4) {
 //         setTimeout(function () {
 //           fullpage_api.setAllowScrolling(true);
-//         }, 600);
+//         }, 300);
 //       } else {
 //         fullpage_api.setAllowScrolling(false);
 //       }
@@ -180,7 +180,7 @@ hairBoosterSection.addEventListener("touchmove", (event) => {
 //       if (currentAccordeonItem === 1) {
 //         setTimeout(function () {
 //           fullpage_api.setAllowScrolling(true);
-//         }, 600);
+//         }, 300);
 //       }
 //     }
 //   }
@@ -201,7 +201,7 @@ hairBoosterSection.addEventListener("touchend", () => {
         } else {
           fullpage_api.setAllowScrolling(false);
         }
-      }, 600);
+      }, 300);
     } else if (directionAcc === -1 && currentAccordeonItem >= 1) {
       currentAccordeonItem--;
 
@@ -221,7 +221,7 @@ hairBoosterSection.addEventListener("touchend", () => {
           if (currentAccordeonItem <= 1) {
             fullpage_api.setAllowScrolling(true);
           }
-        }, 600);
+        }, 300);
     
     }
   }

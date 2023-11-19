@@ -10,11 +10,11 @@
   }
 
   &__wrapper {
-    padding-top: 2.75rem; 
+    padding-top: 2.75rem;
 
     &-name {
-      font-size: 1.625rem; 
-      padding-top: 3rem; 
+      font-size: 1.625rem;
+      padding-top: 3rem;
       font-weight: 400;
     }
 
@@ -30,34 +30,36 @@
   }
 }
 
-@media (max-width: 28.125rem) {
+@media (max-width: 450px) {
   .video {
     &__wrapper {
-
       &-name {
-        font-size: 0.875rem; 
-        margin-bottom: 15.625rem; 
+        font-size: 0.875rem;
+        margin-bottom: 15.625rem;
       }
 
       &-btn {
         z-index: 2;
-      
+
         display: flex;
         left: 45%;
         margin: 0 auto;
         bottom: 6.25rem;
         img {
-            padding-top: 0;
-            height: 0.813rem; 
-            width: 1.625rem;
+          padding-top: 0;
+          height: 0.813rem;
+          width: 1.625rem;
         }
       }
     }
 
     &::after {
-        left: 35%;
-        right: 14.625rem; 
+      left: 35%;
+      right: 14.625rem;
     }
+  }
+  iframe {
+    height: 14.25rem;
   }
 }
 

@@ -112,32 +112,22 @@
       }
       &-img {
         display: none;
-        &--container {
-          @include aspect-ratio(130, 131);
-        }
+
         &--mobile {
           display: block;
-          // position: absolute;
-          // bottom: 0;
+          position: absolute;
+          bottom: 0;
           width: 100vw;
-          max-height: 60vh;
+          height: 22.75rem;
+          object-fit: contain;
+          object-position: bottom;
         }
       }
     }
   }
 }
-
-@media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2) {
-  .hair {
-    &__wrapper {
-      padding-top: 0.875rem;
-      &-img--container {
-        height: 45vh;
-      }
-
-      &-img--container img {
-        object-fit: cover;
-      }
-    }
+@media (max-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+  .hair__wrapper-img--mobile {
+    height: 18.75rem;
   }
 }
