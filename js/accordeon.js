@@ -88,11 +88,11 @@ function openNextAccordeonItem() {
   } else {
     image.style.maxHeight = "100%";
   }
-  console.log(currentAccordeonItem);
+
 }
 
 hairBoosterSection.addEventListener("wheel", (event) => {
-  // if (!shouldScroll) return;
+
 
   const directionAcc = event.deltaY > 0 ? 1 : -1;
 
@@ -144,11 +144,10 @@ hairBoosterSection.addEventListener("touchmove", (event) => {
 
 hairBoosterSection.addEventListener("touchend", () => {
   const deltaAccY = touchEndAccY - touchStartAccY;
-  // fullpage_api.setAllowScrolling(false);
-  console.log(currentAccordeonItem);
+
   if (Math.abs(deltaAccY) > 50) {
     const directionAcc = deltaAccY > 0 ? -1 : 1;
-    console.log(directionAcc);
+
     if (directionAcc === 1) {
       openNextAccordeonItem();
       setTimeout(function () {

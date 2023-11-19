@@ -62,10 +62,6 @@ new fullpage("#fullpage", {
   fixedElements: ".header",
   afterLoad: function (origin, destination, direction, trigger) {
     var origin = this;
-    console.log(origin)
-    console.log(fullpage_api.setAllowScrolling)
-    //using index
-   
     if(origin.index == 1 && window.innerWidth <= 724) {
       fullpage_api.setAllowScrolling(false);
     }
@@ -96,12 +92,10 @@ function initSwiper() {
       on: {
         reachBeginning: function () {
           swipeEnd = true;
-          console.log("swipe end");
           fullpage_api.setAllowScrolling(true);
         },
         reachEnd: function () {
           swipeEnd = true;
-          console.log("swipe end");
     
           fullpage_api.setAllowScrolling(true);
         },
