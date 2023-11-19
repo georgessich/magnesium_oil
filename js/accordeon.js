@@ -105,7 +105,7 @@ hairBoosterSection.addEventListener("wheel", (event) => {
     if (currentAccordeonItem >= 4) {
       setTimeout(function () {
         fullpage_api.setAllowScrolling(true);
-      }, 300);
+      }, 600);
     } else {
       fullpage_api.setAllowScrolling(false);
     }
@@ -126,7 +126,7 @@ hairBoosterSection.addEventListener("wheel", (event) => {
     if (currentAccordeonItem <= 1) {
       setTimeout(function () {
         fullpage_api.setAllowScrolling(true);
-      }, 300);
+      }, 600);
     } else {
       fullpage_api.setAllowScrolling(false);
     }
@@ -147,45 +147,6 @@ hairBoosterSection.addEventListener("touchmove", (event) => {
   touchEndAccY = event.touches[0].clientY;
 });
 
-// hairBoosterSection.addEventListener("touchend", () => {
-//   const deltaAccY = touchEndAccY - touchStartAccY;
-
-//   console.log(currentAccordeonItem);
-//   if (Math.abs(deltaAccY) > 50) {
-//     const directionAcc = deltaAccY > 0 ? -1 : 1;
-//     if (directionAcc === 1) {
-//       openNextAccordeonItem();
-//       if (currentAccordeonItem >= 4) {
-//         setTimeout(function () {
-//           fullpage_api.setAllowScrolling(true);
-//         }, 300);
-//       } else {
-//         fullpage_api.setAllowScrolling(false);
-//       }
-//     } else if (directionAcc === -1 && currentAccordeonItem >= 1) {
-//       currentAccordeonItem--;
-
-//       accordeonItems.forEach((item) => {
-//         item.classList.remove("active");
-//         item.querySelector(".accordeon__content").style.maxHeight = "0";
-//       });
-
-//       accordeonItems[currentAccordeonItem].classList.add("active");
-//       accordeonItems[currentAccordeonItem].querySelector(
-//         ".accordeon__content"
-//       ).style.maxHeight =
-//         accordeonItems[currentAccordeonItem].querySelector(
-//           ".accordeon__content"
-//         ).scrollHeight + "px";
-//       if (currentAccordeonItem === 1) {
-//         setTimeout(function () {
-//           fullpage_api.setAllowScrolling(true);
-//         }, 300);
-//       }
-//     }
-//   }
-// });
-
 hairBoosterSection.addEventListener("touchend", () => {
   const deltaAccY = touchEndAccY - touchStartAccY;
 
@@ -201,7 +162,7 @@ hairBoosterSection.addEventListener("touchend", () => {
         } else {
           fullpage_api.setAllowScrolling(false);
         }
-      }, 300);
+      }, 600);
     } else if (directionAcc === -1 && currentAccordeonItem >= 1) {
       currentAccordeonItem--;
 
@@ -221,7 +182,7 @@ hairBoosterSection.addEventListener("touchend", () => {
           if (currentAccordeonItem <= 1) {
             fullpage_api.setAllowScrolling(true);
           }
-        }, 300);
+        }, 600);
     
     }
   }
