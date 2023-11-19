@@ -40,7 +40,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
       const targetId = entry.target.id;
       const targetURI = entry.target.baseURI;
       const targetRef = targetURI.split('#')[1]
-      console.log(entry.target)
       headerLinks.forEach((link) => {
         link.classList.remove("active-link");
       });

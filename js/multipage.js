@@ -62,19 +62,27 @@ new fullpage("#fullpage", {
   fixedElements: ".header",
   afterLoad: function (origin, destination, direction, trigger) {
     var origin = this;
-
+    console.log(origin)
+    console.log(fullpage_api.setAllowScrolling)
     //using index
+   
+    if(origin.index == 1 && window.innerWidth <= 724) {
+      fullpage_api.setAllowScrolling(false);
+    }
     if (origin.index == 3 && window.innerWidth < 1024) {
       fullpage_api.setAllowScrolling(false);
     }
-    console.log(swipeEnd);
-    console.log(origin);
+
+
   },
-  // beforeLeave: function (origin, destination, direction, trigger) {
-  //   if (origin.index == 3) {
-  //     swiper.slideTo(0);
-  //   }
-  // },
+  onSlideLeave: function (origin, destination, direction, trigger) {
+    if (origin.index == 3) {
+      swiper.slideTo(0);
+    }
+    if (origin.index == 1) {
+      fullpage_api.setAllowScrolling(true);
+    }
+  },
 });
 function initSwiper() {
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

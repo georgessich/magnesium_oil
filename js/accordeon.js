@@ -1,6 +1,6 @@
 const accordeonItems = document.querySelectorAll(".accordeon__item");
 const image = document.querySelector(".hair-product--img");
-
+const heroSection = document.querySelector(".hero");
 let isMobile = window.innerWidth < 725;
 let originalImageHeight = image.getBoundingClientRect().height;
 
@@ -55,7 +55,6 @@ accordeonItems.forEach((item, index) => {
 
 let currentAccordeonItem = 0;
 const hairBoosterSection = document.getElementById("hair-booster-wrap");
-let shouldScroll = true;
 
 function openNextAccordeonItem() {
   if (currentAccordeonItem < accordeonItems.length) {
@@ -72,9 +71,6 @@ function openNextAccordeonItem() {
         .scrollHeight + "px";
 
     currentAccordeonItem++;
-    shouldScroll = false;
-  } else {
-    shouldScroll = true;
   }
 
   if (isMobile) {
@@ -140,7 +136,6 @@ let touchEndAccY = 0;
 
 hairBoosterSection.addEventListener("touchstart", (event) => {
   touchStartAccY = event.touches[0].clientY;
-  fullpage_api.setAllowScrolling(false);
 });
 
 hairBoosterSection.addEventListener("touchmove", (event) => {
@@ -149,21 +144,19 @@ hairBoosterSection.addEventListener("touchmove", (event) => {
 
 hairBoosterSection.addEventListener("touchend", () => {
   const deltaAccY = touchEndAccY - touchStartAccY;
-
+  // fullpage_api.setAllowScrolling(false);
   console.log(currentAccordeonItem);
   if (Math.abs(deltaAccY) > 50) {
     const directionAcc = deltaAccY > 0 ? -1 : 1;
-    
+    console.log(directionAcc);
     if (directionAcc === 1) {
       openNextAccordeonItem();
       setTimeout(function () {
         if (currentAccordeonItem >= 4) {
           fullpage_api.setAllowScrolling(true);
-        } else {
-          fullpage_api.setAllowScrolling(false);
         }
       }, 600);
-    } else if (directionAcc === -1 && currentAccordeonItem >= 1) {
+    } else if (directionAcc === -1) {
       currentAccordeonItem--;
 
       accordeonItems.forEach((item) => {
@@ -178,12 +171,16 @@ hairBoosterSection.addEventListener("touchend", () => {
         accordeonItems[currentAccordeonItem].querySelector(
           ".accordeon__content"
         ).scrollHeight + "px";
-        setTimeout(function () {
-          if (currentAccordeonItem <= 1) {
-            fullpage_api.setAllowScrolling(true);
-          }
-        }, 600);
-    
+      setTimeout(function () {
+        if (currentAccordeonItem === 0) {
+          fullpage_api.setAllowScrolling(true);
+          currentAccordeonItem++;
+        }
+      }, 600);
     }
   }
+});
+
+heroSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
 });

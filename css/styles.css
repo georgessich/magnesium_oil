@@ -411,6 +411,9 @@
   }
 }
 @media (max-width: 725px) {
+  .body__product-item {
+    padding-top: 1rem;
+  }
   .body__product-name {
     font-size: 15px;
   }

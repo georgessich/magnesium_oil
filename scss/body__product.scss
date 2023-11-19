@@ -168,6 +168,9 @@
 }
 @media (max-width: 725px) {
   .body__product {
+    &-item {
+      padding-top: 1rem;
+    }
     &-name {
       font-size: 15px;
     }
