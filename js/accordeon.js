@@ -6,7 +6,7 @@ const bodySection = document.querySelector(".body");
 const videoSection = document.querySelector(".video");
 const productionSection = document.querySelector(".production");
 const buySection = document.querySelector(".buy");
-const contactsSection = document.querySelector(".contacts");
+const contactsScrollSection = document.querySelector(".contacts");
 let isMobile = window.innerWidth < 725;
 let originalImageHeight = image.getBoundingClientRect().height;
 
@@ -189,9 +189,9 @@ hairBoosterSection.addEventListener("touchend", () => {
 heroSection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
-// hairSection.addEventListener("touchstart", () => {
-//   fullpage_api.setAllowScrolling(true);
-// });
+hairSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
 bodySection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
@@ -204,6 +204,6 @@ productionSection.addEventListener("touchstart", () => {
 buySection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
-contactsSection.addEventListener("touchstart", () => {
+contactsScrollSection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
