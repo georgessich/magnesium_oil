@@ -66,7 +66,7 @@ new fullpage("#fullpage", {
       fullpage_api.setAllowScrolling(false);
     }
     if (origin.index == 3 && window.innerWidth < 1024) {
-      fullpage_api.setAllowScrolling(false);
+      fullpage_api.setAllowScrolling(false, 'down');
     }
 
 
@@ -74,6 +74,7 @@ new fullpage("#fullpage", {
   onSlideLeave: function (origin, destination, direction, trigger) {
     if (origin.index == 3) {
       swiper.slideTo(0);
+      fullpage_api.setAllowScrolling(true);
     }
     if (origin.index == 1) {
       fullpage_api.setAllowScrolling(true);
