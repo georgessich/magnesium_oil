@@ -375,7 +375,7 @@
     padding-top: 1rem;
   }
   .body__product-img {
-    height: 55vh;
+    height: 53vh;
   }
 }
 @media (max-width: 1024px) {
@@ -1753,6 +1753,9 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+.title__wrapper, .hair-product--title {
+  padding-top: 3dvh;
 }
 .title__wrapper span, .hair-product--title span {
   font-size: 1.375rem;
