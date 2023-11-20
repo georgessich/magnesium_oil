@@ -51,6 +51,7 @@ accordeonItems.forEach((item, index) => {
 
   title.addEventListener("click", () => {
     toggleAccordionItem(item);
+    fullpage_api.setAllowScrolling(true)
   });
 
   if (index === 0) {
