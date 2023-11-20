@@ -1229,7 +1229,7 @@ body {
   margin: 0 auto;
   padding-top: 8.75dvh;
   padding-bottom: 3.75rem;
-  height: 90dvh;
+  height: 100dvh;
   overflow-y: clip;
 }
 
@@ -1351,7 +1351,7 @@ body {
   }
   .container {
     height: 100vh;
-    padding-top: 13.75dvh;
+    padding-top: 8.75dvh;
   }
 }
 @media (max-width: 375px) {
