@@ -1,6 +1,12 @@
 const accordeonItems = document.querySelectorAll(".accordeon__item");
 const image = document.querySelector(".hair-product--img");
 const heroSection = document.querySelector(".hero");
+const hairSection = document.querySelector(".hair");
+const bodySection = document.querySelector(".body");
+const videoSection = document.querySelector(".video");
+const productionSection = document.querySelector(".production");
+const buySection = document.querySelector(".buy");
+const contactsSection = document.querySelector(".contacts");
 let isMobile = window.innerWidth < 725;
 let originalImageHeight = image.getBoundingClientRect().height;
 
@@ -181,5 +187,23 @@ hairBoosterSection.addEventListener("touchend", () => {
 });
 
 heroSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+hairSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+bodySection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+videoSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+productionSection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+buySection.addEventListener("touchstart", () => {
+  fullpage_api.setAllowScrolling(true);
+});
+contactsSection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
