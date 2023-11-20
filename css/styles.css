@@ -1424,6 +1424,11 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1366px) {
+  iframe {
+    height: 26.25rem;
+  }
+}
 @media (max-width: 450px) {
   .video__wrapper-name {
     font-size: 0.875rem;
