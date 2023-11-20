@@ -189,9 +189,9 @@ hairBoosterSection.addEventListener("touchend", () => {
 heroSection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
-hairSection.addEventListener("touchstart", () => {
-  fullpage_api.setAllowScrolling(true);
-});
+// hairSection.addEventListener("touchstart", () => {
+//   fullpage_api.setAllowScrolling(true);
+// });
 bodySection.addEventListener("touchstart", () => {
   fullpage_api.setAllowScrolling(true);
 });
