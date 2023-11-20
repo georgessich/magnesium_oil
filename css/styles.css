@@ -1770,7 +1770,7 @@ body {
 
 @media (max-width: 730px) {
   .title__wrapper {
-    padding-top: 0.75rem;
+    padding-top: 3.75dvh;
     position: relative;
   }
   .title__wrapper h2 {
