@@ -57,6 +57,9 @@
       top: 35%;
       background-size: cover;
     }
+    &__img {
+      width: 50%;
+    }
   }
 }
 
@@ -93,12 +96,13 @@
       }
     }
   }
-}
-
-@media (max-width: 430px) {
   .body__img {
     display: none;
   }
+}
+
+@media (max-width: 430px) {
+  
   .body__img-container {
     display: block;
     position: absolute;

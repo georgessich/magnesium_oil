@@ -83,7 +83,6 @@
     content: url(../img/hydration-bottle-bg.png);
     position: absolute;
     bottom: 0;
-
   }
 }
 #beenergy {
@@ -91,7 +90,6 @@
     content: url(../img/beenergy-bottle-bg.png);
     position: absolute;
     bottom: 0;
-   
   }
 }
 #detox {
@@ -129,7 +127,11 @@
     &-img {
       height: 53vh;
     }
+    &-bottlelink {
+      transform: scale(0.8);
+    }
   }
+  
 }
 @media (max-width: 1024px) {
   .body__product {
@@ -184,7 +186,6 @@
     height: 45vh;
   }
 }
-
 
 @media (min-width: 3200px) {
   .body__product-img {

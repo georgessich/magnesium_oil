@@ -1,4 +1,18 @@
 let swipeEnd = false;
+function handleResize() {
+  const devicePixelRatio = window.devicePixelRatio;
+  const logoChangeWidth = document.querySelector('#logo-img')
+  if (devicePixelRatio > 1 && window.innerWidth > 700) {
+    const scalingFactor = devicePixelRatio;
+    document.body.style.fontSize = '11px';
+    document.documentElement.style.fontSize = '11px';
+    logoChangeWidth.style.width = "7rem"
+    // Дополнительные действия при изменении размера окна
+  }
+}
+
+window.addEventListener('load', handleResize);
+window.addEventListener('resize', handleResize);
 const bodyWrapper = document.querySelector('.body__product-wrapper')
 const bodyItems = document.querySelector('.body__product-items')
 const bodyItemCard = document.querySelectorAll('.body__product-item')
